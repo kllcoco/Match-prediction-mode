@@ -30,7 +30,7 @@ class Params:
     idle_days: float = 120.0      # 长时间不比赛开始回归
     form_alpha: float = 0.15
     clutch_alpha: float = 0.05
-    k_big: float = 1.5            # 大赛(世界赛/MSI/Major)内的比赛：评分更新更快，跟上「赛中回暖/下滑」
+    k_big: float = 1.0            # 大赛内比赛的更新倍数；回测显示调大没有帮助，默认不加速
 
 
 @dataclass
