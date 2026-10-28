@@ -3,6 +3,7 @@
   update [lol|cs]                 联网同步最新赛果
   search <关键词> [--game lol]     网页 + Liquipedia 搜索
   predict <A队> <B队> [--bo 5] [--game lol] [--news]   预测一场比赛（胜率/比分/观点）
+  analyze <A队> <B队> [--bo 5]       完整赛前分析：逐位置对比 / BP / 胜负手 / 逐局胜率 / 比分
   status <队名> [--game lol]       查看队伍档案
   chat [--game lol]               对话模式
   backtest [lol|cs] [--full]      回测往届世界赛 / Major
@@ -21,6 +22,8 @@ def main(argv=None):
     p = sub.add_parser("predict"); p.add_argument("a"); p.add_argument("b")
     p.add_argument("--bo", type=int); p.add_argument("--game", default="lol"); p.add_argument("--news", action="store_true")
     p.add_argument("--update", action="store_true", help="预测前先联网同步")
+    p = sub.add_parser("analyze"); p.add_argument("a"); p.add_argument("b")
+    p.add_argument("--bo", type=int); p.add_argument("--game", default="lol"); p.add_argument("--update", action="store_true")
     p = sub.add_parser("status"); p.add_argument("team"); p.add_argument("--game", default="lol")
     p = sub.add_parser("chat"); p.add_argument("--game", default="lol")
     p = sub.add_parser("backtest"); p.add_argument("game", nargs="?", default="lol"); p.add_argument("--full", action="store_true")
@@ -45,6 +48,10 @@ def main(argv=None):
         from . import predict as P
         m = P.build(a.game, update=a.update)
         print(P.predict(m, a.a, a.b, a.bo, news=a.news)["text"])
+    elif a.cmd == "analyze":
+        from . import predict as P
+        m = P.build(a.game, update=a.update)
+        print(P.analysis(m, a.a, a.b, a.bo))
     elif a.cmd == "status":
         from . import predict as P, chat
         m = P.build(a.game)

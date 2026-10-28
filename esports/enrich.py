@@ -37,6 +37,8 @@ def rosters(root):
             parts = [x.strip() for x in p.split("|")]
             kv = dict(x.split("=", 1) for x in parts if "=" in x)
             name = next((x for x in parts if "=" not in x), None)
+            if name:
+                name = re.sub(r"\s*\(.*?\)\s*$", "", name)  # 去掉消歧义后缀，如 "Berserker (Korean player)"
             if not name or kv.get("type") == "staff" or kv.get("status") in ("sub", "former", "inactive"):
                 continue
             role = ROLES.get(kv.get("role", "").split(",")[0].strip().lower())

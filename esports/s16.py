@@ -59,7 +59,27 @@ def swiss_state(m):
     return dict(rec), played, swiss
 
 
-def simulate(m, rec, played, n=20000, seed=7):
+def upcoming_pairs(m, ttl=600):
+    """联网读瑞士轮页面里「已公布但未开打」的对阵。"""
+    import html as H
+    import re
+    from . import liquipedia as L, net
+    d = net.get(L.API.format(wiki="leagueoflegends"), dict(action="parse", page=EVENT + "/Swiss Stage", prop="text",
+                                                           format="json"), gap=31, as_json=True, ttl=ttl)
+    h = d.get("parse", {}).get("text", {}).get("*", "")
+    out = []
+    for c in re.split(r'<div class="brkts-(?:matchlist-match|match) ', h)[1:]:
+        names = list(dict.fromkeys(H.unescape(x) for x in re.findall(r'aria-label="([^"]+)"', c[:6000])))
+        sc = re.findall(r'brkts-matchlist-score[^>]*>\s*<div class="brkts-matchlist-cell-content">([^<]*)<', c)
+        if len(names) >= 2 and len(sc) >= 2 and not sc[0].strip() and "View match details" not in names[:2]:
+            try:
+                out.append((P.resolve(m, names[0]), P.resolve(m, names[1])))
+            except KeyError:
+                pass
+    return out
+
+
+def simulate(m, rec, played, n=20000, seed=7, fixed=()):
     teams = sorted(rec)
     pg = {(a, b): m.p_game(a, b) for a in teams for b in teams if a != b}
     home = m.rater.s.home
@@ -78,6 +98,17 @@ def simulate(m, rec, played, n=20000, seed=7):
             active = [t for t in teams if r[t][0] < 3 and r[t][1] < 3]
             if not active:
                 break
+            # 已公布的对阵先按真实对阵打
+            todo = [(a, b) for a, b in fixed if a in active and b in active and frozenset((a, b)) not in seen
+                    and r[a] == r[b]]
+            for a, b in todo:
+                seen.add(frozenset((a, b)))
+                bo = 3 if (r[a][0] == 2 or r[a][1] == 2) else 1
+                w, l = play(a, b, bo)
+                r[w][0] += 1
+                r[l][1] += 1
+            if todo:
+                continue
             groups = defaultdict(list)
             for t in active:
                 groups[tuple(r[t])].append(t)
@@ -140,7 +171,8 @@ def simulate(m, rec, played, n=20000, seed=7):
 def run(n=20000):
     m = P.build("lol")
     rec, played, swiss = swiss_state(m)
-    probs, tot = simulate(m, rec, played, n)
+    fixed = upcoming_pairs(m)
+    probs, tot = simulate(m, rec, played, n, fixed=fixed)
     order = sorted(probs, key=lambda t: -probs[t].get("champ", 0))
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     data = dict(created=now, data_until=str(m.frame.date.max()), n_sims=tot,
@@ -156,6 +188,7 @@ def run(n=20000):
     L = [f"# S16（2026 英雄联盟全球总决赛）预测", "",
          f"- 生成时间：{now}；数据截至：{data['data_until'][:16]}（已包含本届入围赛和瑞士轮已赛结果）",
          f"- 方法：完整模式模型（看过所有往届大赛）+ 蒙特卡洛模拟剩余瑞士轮和淘汰赛 {tot} 次",
+         f"- 已公布的下一轮对阵（按真实对阵模拟）：" + "，".join(f"{m.disp(a)} vs {m.disp(b)}" for a, b in fixed),
          f"- **预测冠军：{data['predicted_champion']}**（夺冠概率 {probs[order[0]]['champ']:.0%}）", "",
          "| 队伍 | 赛区 | 瑞士轮战绩 | 进8强 | 进4强 | 进决赛 | 夺冠 |", "|---|---|---|---|---|---|---|"]
     for t in order:

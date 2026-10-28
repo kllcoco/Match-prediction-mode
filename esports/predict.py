@@ -142,3 +142,138 @@ def bracket(m, qf_pairs, bos=(5, 5, 5)):
     qf = [(resolve(m, a), resolve(m, b)) for a, b in qf_pairs]
     probs, path = B.simulate_se8(m, qf, list(bos))
     return probs, path
+
+
+ROLE_CN = ["上单", "打野", "中单", "下路", "辅助"]
+
+
+def _pname(p):
+    return p.split(":", 1)[-1] if isinstance(p, str) else "?"
+
+
+def _player_champs(m, player, k=3):
+    """某个选手的招牌英雄：(英雄, 场次, 胜率)"""
+    d = m.draft
+    if d is None:
+        return []
+    n, w = d.pool.get(player, {}), d.poolw.get(player, {})
+    return sorted(((c, n[c], (w[c] + 1) / (n[c] + 2)) for c in n if n[c] >= 2), key=lambda x: (-x[1], -x[2]))[:k]
+
+
+def analysis(m, a_name, b_name, best_of=None):
+    """完整赛前分析：数据对比 / BP / 胜负手 / 逐局胜率 / 比分。"""
+    a, b = resolve(m, a_name), resolve(m, b_name)
+    bo = best_of or (5 if m.game == "lol" else 3)
+    A, B = m.disp(a), m.disp(b)
+    s = m.rater.s
+    ra, rb = s.roster.get(a) or [], s.roster.get(b) or []
+    L = [f"# {A} vs {B}（BO{bo}）赛前分析", ""]
+
+    # 一、逐位置对比
+    L += ["## 一、逐位置对比（首发近 20 局表现）", "",
+          f"| 位置 | {A} | {B} | 对位伤害差/分 | 对位KDA差 | 分均死亡 | 谁占优 |", "|---|---|---|---|---|---|---|"]
+    lane_edge = []
+    for i in range(min(5, len(ra), len(rb))):
+        pa, _ = m.rater.perf([ra[i]])
+        pb, _ = m.rater.perf([rb[i]])
+        f = lambda x: "—" if x != x else f"{x:+.1f}"
+        sa = np.nan_to_num(pa[1]) + 0.3 * np.nan_to_num(pa[0]) - np.nan_to_num(pa[3])
+        sb = np.nan_to_num(pb[1]) + 0.3 * np.nan_to_num(pb[0]) - np.nan_to_num(pb[3])
+        who = A if sa > sb else B
+        lane_edge.append((abs(sa - sb), i, who))
+        L.append(f"| {ROLE_CN[i]} | {_pname(ra[i])} | {_pname(rb[i])} | {f(pa[1])} / {f(pb[1])} | {f(pa[0])} / {f(pb[0])} | "
+                 f"{'—' if pa[3] != pa[3] else f'{pa[3]:.2f}'} / {'—' if pb[3] != pb[3] else f'{pb[3]:.2f}'} | {who} |")
+    ta, tb = s.tstats.get(a), s.tstats.get(b)
+    if ta and tb:
+        ga, gb = np.mean([x[0] for x in ta]), np.mean([x[0] for x in tb])
+        oa, ob = np.mean([x[1] for x in ta]), np.mean([x[1] for x in tb])
+        L += ["", f"团队局内：近 15 局经济占比 {A} {50 + ga * 100:.1f}% / {B} {50 + gb * 100:.1f}%；"
+                  f"资源控制（推塔+小龙+2×大龙 场均差）{A} {oa * 10:+.1f} / {B} {ob * 10:+.1f}"]
+
+    # 二、BP
+    if m.draft is not None:
+        d = m.draft
+        plan = d.plan(ra, rb)
+        L += ["", "## 二、BP 分析", ""]
+        meta = "、".join(f"{c}({p:.0%})" for c, p in d.meta_top(6))
+        L.append(f"- 版本热门（近期出场率=选+禁）：{meta}")
+        strong = "、".join(c for c, _ in d.strongest(5))
+        if strong:
+            L.append(f"- 数据里胜率贡献最大的强势英雄：{strong}")
+        for team, ros in ((A, ra), (B, rb)):
+            sig = []
+            for i, p in enumerate(ros[:5]):
+                ch = _player_champs(m, p, 2)
+                if ch:
+                    sig.append(f"{ROLE_CN[i]}{_pname(p)}：" + "、".join(f"{c}({n}局{wr:.0%})" for c, n, wr in ch))
+            if sig:
+                L.append(f"- {team} 招牌英雄：" + "；".join(sig))
+        def why(c, ros):
+            for i, p in enumerate(ros[:5]):
+                n = d.pool.get(p, {}).get(c, 0)
+                if n >= 2:
+                    return f"（针对{ROLE_CN[i]} {_pname(p)}，近期 {n} 局）"
+            return "（版本强势）"
+        L.append(f"- {A} 建议先禁：" + "、".join(c + why(c, rb) for c in plan["bansA"][:3]))
+        L.append(f"- {B} 大概率先禁：" + "、".join(c + why(c, ra) for c in plan["bansB"][:3]))
+        if getattr(m, "fearless", 0):
+            pa_, pb_ = m.rater.pool(ra), m.rater.pool(rb)
+            L.append(f"- 无畏征召：英雄池深度 {A} {pa_:.0f} vs {B} {pb_:.0f}（每人近 30 局用过的不同英雄数）")
+            for gm in d.fearless_series(ra, rb, bo):
+                L.append(f"  - 第{gm['game']}局预计：{A} {'/'.join(gm['picksA'])}　vs　{B} {'/'.join(gm['picksB'])}")
+
+    # 三、胜负手
+    x = m.x(a, b)
+    con = m.lr.contributions(x)
+    for k in list(con):
+        if k.endswith("_g") and k[:-2] in con:
+            con[k[:-2]] += con.pop(k)
+    GROUP = {"实力底蕴（长期战绩/经验）": ["elo", "exp"], "近期状态": ["form"],
+             "选手对位（输出/KDA/死亡/参团）": ["pdmg", "pkda", "pdeath", "pkp", "pwr"],
+             "局内运营（经济/资源）": ["tgold", "tobj"], "英雄池/无畏征召": ["pool", "pool_f"], "蓝色方": ["side"]}
+    gs = {g: sum(con.get(k, 0) for k in ks) for g, ks in GROUP.items()}
+    L += ["", "## 三、胜负手", ""]
+    pro_a = [g for g, v in sorted(gs.items(), key=lambda z: -z[1]) if v > 0.03]
+    pro_b = [g for g, v in sorted(gs.items(), key=lambda z: z[1]) if v < -0.03]
+    if m.is_cross(a, b):
+        L.append(f"- 跨赛区对决（{s.home.get(a)} vs {s.home.get(b)}）：赛区水位差 {(s.league.get(s.home.get(a), 0) - s.league.get(s.home.get(b), 0)):+.0f} 分")
+    L.append(f"- {A} 的优势：" + ("、".join(pro_a) if pro_a else "不明显"))
+    L.append(f"- {B} 的优势：" + ("、".join(pro_b) if pro_b else "不明显"))
+    key = sorted(lane_edge, reverse=True)[:2]
+    for mag, i, who in key:
+        if mag >= 0.3:
+            L.append(f"- 关键对位：{ROLE_CN[i]} {_pname(ra[i])} vs {_pname(rb[i])}，数据上 {who} 明显占优——这条线打崩/打穿往往决定走势")
+    if ta and tb:
+        early = A if ga > gb else B
+        L.append(f"- 节奏：{early} 平时更能把经济领先滚起来；另一方的机会在于拖住前期、靠团战和资源反打")
+
+    # 四、逐局胜率 & 比分
+    L += ["", "## 四、胜率与比分", ""]
+    per = []
+    for k in range(1, bo + 1):
+        m.rater.ctx = (getattr(m, "fearless", 0), k)
+        per.append(m.p_game(a, b))
+    m.rater.ctx = (0, 1)
+    ps = m.p_series(a, b, bo)
+    L.append("- 逐局胜率（" + A + "）：" + "，".join(f"第{k}局 {p:.0%}" for k, p in enumerate(per, 1)))
+    # 逐局胜率不同 -> 精确算各比分
+    need = bo // 2 + 1
+    dist = {}
+    def rec(k, w, l, prob):
+        if w == need or l == need:
+            key = f"{w}:{l}"
+            dist[key] = dist.get(key, 0) + prob
+            return
+        p = per[k]
+        rec(k + 1, w + 1, l, prob * p)
+        rec(k + 1, w, l + 1, prob * (1 - p))
+    rec(0, 0, 0, 1.0)
+    top = sorted(dist.items(), key=lambda z: -z[1])
+    L.append(f"- 系列赛胜率：{A} {ps:.0%} — {1 - ps:.0%} {B}")
+    L.append("- 比分概率：" + "，".join(f"{fmt_score(k, A, B)} {v:.0%}" for k, v in top))
+    best = top[0][0]
+    fav = A if ps >= 0.5 else B
+    pf = max(ps, 1 - ps)
+    L += ["", f"**结论：{fav} 晋级（{pf:.0%}），最可能比分 {fmt_score(best, A, B)}。**"
+              + ("五五开的比赛，比分 2:1 / 3:2 的可能性也很高。" if pf < 0.6 else "")]
+    return "\n".join(L)

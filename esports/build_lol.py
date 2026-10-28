@@ -126,7 +126,8 @@ def build():
     cn = ChampNames(pd.unique(oe[champ_cols].values.ravel()))
     lp = g.source != "oe"
     for c in champ_cols:
-        g.loc[lp, c] = g.loc[lp, c].map(lambda x: cn(x) if isinstance(x, str) else x)
+        g[c] = g[c].astype(object)
+        g.loc[lp, c] = g.loc[lp, c].map(lambda x: cn(x) if isinstance(x, str) else None)
     keep = keep_cols()
     g = g[keep].sort_values("date").reset_index(drop=True)
     OUT.parent.mkdir(parents=True, exist_ok=True)

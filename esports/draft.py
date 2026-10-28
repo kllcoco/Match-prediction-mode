@@ -183,14 +183,25 @@ class Draft:
     def plan(self, rA, rB, n_bans=5, n_picks=5, used=()):
         """给 A vs B 出一套 BP 预案。used：无畏征召下本系列赛已经用过、不能再选的英雄。"""
         cA, cB = self.comfort(rA), self.comfort(rB)
-        cand = (set(self.presence) | set(cA) | set(cB)) - set(used)
+        # 候选只考虑：版本热门（出场率 ≥5%）或某一方的常用英雄（≥3 局）——冷门英雄样本太少，估计不稳
+        cand = ({c for c, v in self.presence.items() if v >= 0.05}
+                | {c for c, (n, _) in cA.items() if n >= 3} | {c for c, (n, _) in cB.items() if n >= 3}) - set(used)
+        if len(cand) < 25:
+            cand |= set(sorted(self.presence, key=lambda c: -self.presence[c])[:40]) - set(used)
         if getattr(self, "ban_lr", None) is not None:
             cand = sorted(cand)
             def score(lr, own, opp):
                 X = np.array([self._feat(c, own, opp) for c in cand])
                 return dict(zip(cand, lr.predict(X)))
-            banA, banB = score(self.ban_lr, cA, cB), score(self.ban_lr, cB, cA)
             pkA, pkB = score(self.pick_lr, cA, cB), score(self.pick_lr, cB, cA)
+            # ban 位 = 对面最可能选、且选了胜率高的英雄（对面选人概率 × 对面在这个英雄上的胜率优势）
+            def threat(pk, comf):
+                out = {}
+                for c in cand:
+                    n, wr = comf.get(c, (0, 0.5))
+                    out[c] = pk[c] * (1 + max(0.0, wr - 0.5) * min(n, 10) / 5) + 0.3 * self.strength.get(c, 0)
+                return out
+            banA, banB = threat(pkB, cB), threat(pkA, cA)
             bansA = sorted(cand, key=lambda c: -banA[c])[:n_bans]
             bansB = [c for c in sorted(cand, key=lambda c: -banB[c]) if c not in bansA][:n_bans]
             banned = set(bansA) | set(bansB)
