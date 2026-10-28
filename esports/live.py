@@ -63,11 +63,21 @@ def html_matches(h):
                 continue
             games.append(dict(win1=int(lab.group(1) == "win"), side1=champs[0][0],
                               c1=[H.unescape(x) for _, x in champs[:5]], c2=[H.unescape(x) for _, x in champs[5:10]]))
+        # 每局禁用：veto 行，左边是 team1 的 5 个 ban，右边是 team2 的
+        vetos = re.findall(r'class="brkts-popup-veto-row">(.*?)</div></div></div>(?=<div class="brkts-popup-veto-row"|</div>)', c, re.S)
+        if not vetos:
+            vetos = re.split(r'class="brkts-popup-veto-row">', c)[1:]
+        for gi, vr in enumerate(vetos[:len(games)]):
+            halves = re.split(r"Game&#160;\d+", vr, maxsplit=1)
+            if len(halves) == 2:
+                games[gi]["b1"] = [H.unescape(x) for x in re.findall(r'title="([^"]+)"', halves[0])][:5]
+                games[gi]["b2"] = [H.unescape(x) for x in re.findall(r'title="([^"]+)"', halves[1])][:5]
         # 每局选手名 + 表现（K/D/A、伤害）+ 时长
         dets = re.split(r'class="brkts-popup-game-detail with-center-column"', c)[1:]
         for gi, dsec in enumerate(dets[:len(games)]):
             ps = re.findall(r'brkts-popup-game-detail-player-character">.*?</div><a [^>]*title="([^"]+)"', dsec, re.S)
             if len(ps) >= 10:
+                ps = [re.sub(r"\s*\(.*?\)\s*$", "", H.unescape(x)) for x in ps]  # 去掉 "(Korean player)" 这类消歧义后缀
                 games[gi]["p1"], games[gi]["p2"] = ps[:5], ps[5:10]
             st = re.findall(r'brkts-popup-game-detail-player-stats"><div>(\d+)<span class="slash">/</span>(\d+)'
                             r'<span class="slash">/</span>(\d+)</div>(?:\s*<div>\(<i[^>]*></i>&#160;([\d.]+)(K?)\))?', dsec)
@@ -158,7 +168,7 @@ def to_lol_rows(ms):
                          c1=g.get("picks1", []), c2=g.get("picks2", []), p1=g.get("players1", []),
                          p2=g.get("players2", []), k1=g.get("kills1", []), k2=g.get("kills2", []),
                          d1=g.get("deaths1", []), d2=g.get("deaths2", []), a1=g.get("assists1", []),
-                         a2=g.get("assists2", []), length=g.get("length"))
+                         a2=g.get("assists2", []), length=g.get("length"), b1=g.get("bans1", []), b2=g.get("bans2", []))
             blue1 = g.get("side1", "blue") == "blue"
             a, b = ("1", "2") if blue1 else ("2", "1")
             r = dict(date=m["date"], year=m["date"].year if m["date"] else None, league=lg, event=m["event"],
@@ -170,6 +180,8 @@ def to_lol_rows(ms):
                     cs, ps = g.get("c" + t, []), g.get("p" + t, [])
                     r[f"{s}p{i+1}"] = cs[i] if i < len(cs) else None
                     r[f"{s}n{i+1}"] = ps[i] if i < len(ps) else None
+                    bs = g.get("b" + t, [])
+                    r[f"{s}b{i+1}"] = bs[i] if i < len(bs) else None
                     for x in ("k", "d", "a", "dmg"):
                         v = g.get(x + t, [])
                         r[f"{s}{x}{i+1}"] = v[i] if i < len(v) else None

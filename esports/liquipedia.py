@@ -132,7 +132,7 @@ def parse_matches(text: str) -> list[dict]:
                     r"character\s*=\s*([^|}]+)", " ".join(mp.get(f"t{t}p{i}", "") for i in range(1, 6)))]
                 g[f"picks{t}"] += [_clean(mp[f"t{t}c{i}"]) for i in range(1, 6) if mp.get(f"t{t}c{i}")]
                 g[f"bans{t}"] = [_clean(mp[f"t{t}b{i}"]) for i in range(1, 6) if _clean(mp.get(f"t{t}b{i}", ""))]
-                g[f"players{t}"] = [_clean(m) for m in re.findall(
+                g[f"players{t}"] = [re.sub(r"\s*\(.*?\)\s*$", "", _clean(m)) for m in re.findall(
                     r"player\s*=\s*([^|}]+)", " ".join(mp.get(f"t{t}p{i}", "") for i in range(1, 6)))]
                 for key in ("kills", "deaths", "assists"):
                     g[f"{key}{t}"] = [int(x) if x.isdigit() else None for x in (

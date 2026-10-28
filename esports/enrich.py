@@ -15,7 +15,7 @@ import pandas as pd
 
 from . import liquipedia as L
 from . import live, net
-from .names import norm
+from .names import _norm, norm
 from .net import DATA
 
 ALIAS_FILE = DATA / "processed" / "team_aliases.json"
@@ -82,16 +82,16 @@ def team_aliases(df_live, old_games):
     last = {}
     o = old_games[old_games.date >= "2025-01-01"]
     for side in ("b", "r"):
-        team = o["blue" if side == "b" else "red"].map(norm)
+        team = o["blue" if side == "b" else "red"].map(_norm)
         for i in range(1, 6):
             for t, p in zip(team, o[f"{side}n{i}"]):
                 if isinstance(p, str):
                     last.setdefault(p.lower(), Counter())[t] += 1
-    known = set(o.blue.map(norm)) | set(o.red.map(norm))
+    known = set(o.blue.map(_norm)) | set(o.red.map(_norm))
     alias = {}
     for side in ("b", "r"):
         for t, *ps in df_live[["blue" if side == "b" else "red"] + [f"{side}n{i}" for i in range(1, 6)]].drop_duplicates().values:
-            k = norm(t)
+            k = _norm(t)
             if k in known or k in alias:
                 continue
             votes = Counter()
@@ -150,6 +150,8 @@ def enrich(years=(2026,)):
     old = build_lol.load()
     old = old[old.source != "liquipedia-live"]
     al = team_aliases(df, old)
+    prev = json.loads(ALIAS_FILE.read_text(encoding="utf-8")) if ALIAS_FILE.exists() else {}
+    al = {**prev, **al}  # 合并，不覆盖之前认出来的
     ALIAS_FILE.write_text(json.dumps(al, ensure_ascii=False, indent=1), encoding="utf-8")
     print("补全", filled, "条；自动认亲：", al)
 

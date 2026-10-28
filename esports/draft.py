@@ -195,18 +195,21 @@ class Draft:
                 return dict(zip(cand, lr.predict(X)))
             pkA, pkB = score(self.pick_lr, cA, cB), score(self.pick_lr, cB, cA)
             # ban 位 = 对面最可能选、且选了胜率高的英雄（对面选人概率 × 对面在这个英雄上的胜率优势）
-            def threat(pk, comf):
+            def threat(pk, comf, own_pk, own_comf):
                 out = {}
                 for c in cand:
                     n, wr = comf.get(c, (0, 0.5))
-                    out[c] = pk[c] * (1 + max(0.0, wr - 0.5) * min(n, 10) / 5) + 0.3 * self.strength.get(c, 0)
+                    on, owr = own_comf.get(c, (0, 0.5))
+                    out[c] = (pk[c] * (1 + max(0.0, wr - 0.5) * min(n, 10) / 5) + 0.3 * self.strength.get(c, 0)
+                              # 自己的拿手英雄一般是抢来用，而不是禁掉
+                              - own_pk[c] * (1 + max(0.0, owr - 0.5) * min(on, 10) / 5))
                 return out
-            banA, banB = threat(pkB, cB), threat(pkA, cA)
+            banA, banB = threat(pkB, cB, pkA, cA), threat(pkA, cA, pkB, cB)
             bansA = sorted(cand, key=lambda c: -banA[c])[:n_bans]
             bansB = [c for c in sorted(cand, key=lambda c: -banB[c]) if c not in bansA][:n_bans]
             banned = set(bansA) | set(bansB)
-            picksA = self._by_role(sorted(cand, key=lambda c: -pkA[c]), banned)
-            picksB = self._by_role(sorted(cand, key=lambda c: -pkB[c]), banned | set(picksA))
+            picksA = self._by_player(rA, pkA, banned | set(used))
+            picksB = self._by_player(rB, pkB, banned | set(used) | set(picksA))
         else:
             thrB = sorted(cand, key=lambda c: -self.value(c, cB))  # 对面最想拿的
             thrA = sorted(cand, key=lambda c: -self.value(c, cA))
@@ -219,6 +222,25 @@ class Draft:
         sig = lambda comf: sorted(((c, n, wr) for c, (n, wr) in comf.items() if n >= 3), key=lambda x: (-x[1], -x[2]))[:5]
         return dict(bansA=bansA, bansB=bansB, picksA=picksA, picksB=picksB, edge=edge,
                     signatureA=sig(cA), signatureB=sig(cB))
+
+    def _by_player(self, roster, pk, banned):
+        """每个位置从该选手自己的英雄池里选：常用 + 胜率高 + 版本强的优先；被禁/已用就换下一个。
+        选手英雄池用完（无畏征召后几局）才退回到该位置的版本热门英雄。"""
+        out = []
+        taken = set(banned)
+        for i, p in enumerate((roster or [None] * 5)[:5]):
+            n, w = self.pool.get(p, {}), self.poolw.get(p, {})
+            own = [c for c in n if c not in taken]
+            if own:
+                c = max(own, key=lambda c: 0.25 * min(n[c], 8) + 1.5 * ((w[c] + 1) / (n[c] + 2) - 0.5)
+                        + 2.0 * pk.get(c, 0) + (0.3 if self.role.get(c) == i else -1.0))
+            else:
+                meta = [c for c in pk if self.role.get(c) == i and c not in taken]
+                c = max(meta, key=lambda c: pk[c]) if meta else None
+            if c:
+                out.append(c)
+                taken.add(c)
+        return out
 
     def _by_role(self, ranked, banned):
         """按上野中下辅各选一个（每个位置取该位置排名最高、没被禁/选的英雄）"""
