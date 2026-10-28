@@ -72,6 +72,9 @@ def reasons(model, a, b, x, contrib, display, rng):
             na, nb = s.n.get(a, 0), s.n.get(b, 0)
             txt = _pick(rng, f"{fav} 的职业比赛经验更多（{A} {na} 局 / {B} {nb} 局）",
                         f"老牌队伍经验更足：{A} 打过 {na} 局，{B} 打过 {nb} 局")
+        elif f in ("pool", "pool_f"):
+            txt = (f"{fav} 英雄池更深，无畏征召打到后面几局更有选择" if f == "pool_f"
+                   else f"{fav} 选手英雄池更深")
         elif f == "tgold":
             txt = f"{fav} 近期局内经济控制更好（场均经济占比更高）"
         elif f == "tobj":

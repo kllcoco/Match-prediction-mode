@@ -19,6 +19,7 @@ from .names import norm
 from .net import DATA
 
 ALIAS_FILE = DATA / "processed" / "team_aliases.json"
+POOL_FILE = DATA / "processed" / "player_pools.json"  # 选手本年英雄池大小（Player Stats 页的 Pool 列）
 ROLES = {"top": 0, "jgl": 1, "jungle": 1, "mid": 2, "bot": 3, "adc": 3, "sup": 4, "support": 4}
 AVG_MIN = 31.0
 
@@ -68,7 +69,7 @@ def player_stats(root, ttl=None):
             try:
                 out[c[1]] = dict(role=c[2].lower(), gp=int(c[3]), wr=float(c[6].rstrip("%")) / 100,
                                  k=float(c[8]), d=float(c[9]), a=float(c[10]), kp=float(c[11].rstrip("%")) / 100,
-                                 dpm=float(c[14]))
+                                 dpm=float(c[14]), pool=int(c[16]) if len(c) > 16 and c[16].isdigit() else None)
             except ValueError:
                 continue
     return out
@@ -106,12 +107,16 @@ def enrich(years=(2026,)):
     df = pd.read_csv(p, low_memory=False)
     roots = live.tournaments("lol", set(years))
     filled = 0
+    pools = {}
     for root in roots:
         ev = root.replace("_", " ")
         ros = rosters(root)
         if not ros:
             continue
         st = player_stats(root)
+        for name, v in st.items():
+            if v.get("pool"):
+                pools[f"lol:{name.lower()}"] = max(pools.get(f"lol:{name.lower()}", 0), v["pool"])
         # 同位置平均（用来算「比平均对手强多少」）
         role_avg = {}
         for v in st.values():
@@ -139,6 +144,7 @@ def enrich(years=(2026,)):
                 filled += 1
         print(f"{root}: 名单 {len(ros)} 队, 选手数据 {len(st)} 人")
     df.to_csv(p, index=False, compression="gzip")
+    POOL_FILE.write_text(json.dumps(pools, ensure_ascii=False), encoding="utf-8")
     old = build_lol.load()
     old = old[old.source != "liquipedia-live"]
     al = team_aliases(df, old)

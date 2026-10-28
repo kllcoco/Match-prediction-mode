@@ -41,6 +41,8 @@ def get(url: str, params: dict | None = None, gap: float = 1.0, cache: bool = Tr
                 if as_json:
                     data = json.loads(text)
                     if "error" in data:
+                        if data["error"].get("code") in ("missingtitle", "invalidtitle", "nosuchpageid"):
+                            return data  # 页面不存在：不重试、不缓存
                         raise ValueError(data["error"])
                 if cache:
                     CACHE.mkdir(parents=True, exist_ok=True)

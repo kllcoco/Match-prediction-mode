@@ -111,7 +111,7 @@ def scrape_root(root, game, ttl):
     pg0 = next(iter(rt["query"]["pages"].values()))
     src0 = pg0["revisions"][0]["slots"]["main"]["*"] if pg0.get("revisions") else ""
     ed = re.search(r"\|\s*edate\s*=\s*(\d{4}-\d{2}-\d{2})", src0)
-    if ed and pd.Timestamp(ed.group(1)) < pd.Timestamp(datetime.utcnow()) - pd.Timedelta(days=2):
+    if ed and pd.Timestamp(ed.group(1)) < pd.Timestamp(datetime.now(timezone.utc).replace(tzinfo=None)) - pd.Timedelta(days=2):
         ttl = None  # 已结束：永久缓存
     for p in pages:
         text = net.get(L.API.format(wiki=wiki), dict(action="query", prop="revisions", rvprop="content",
@@ -209,7 +209,7 @@ def to_cs_rows(ms):
 
 def update(game, since=None, years=None, verbose=True):
     """拉取 since 之后的比赛（默认：已有数据的最后一天之后）。"""
-    now = datetime.utcnow()
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
     years = years or {now.year, (now - timedelta(days=120)).year}
     roots = tournaments(game, years)
     if verbose:
@@ -225,7 +225,8 @@ def update(game, since=None, years=None, verbose=True):
         ms = [m for m in ms if m["date"] >= pd.Timestamp(since)]
     df = to_lol_rows(ms) if game == "lol" else to_cs_rows(ms)
     if len(df):
-        df = df.drop_duplicates().sort_values("date")
+        key = ["date", "blue", "red", "game"] if game == "lol" else ["date", "team1", "team2", "map", "win1"]
+        df = df.drop_duplicates(subset=key, keep="last").sort_values("date")
         df.to_csv(OUT[game], index=False, compression="gzip")
     print(f"[{game}] 新比赛数据：{len(df)} 局/图 -> {OUT[game]}")
     return df

@@ -12,7 +12,7 @@
 import json
 import random
 from collections import Counter, defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
 
 import numpy as np
 import pandas as pd
@@ -142,14 +142,14 @@ def run(n=20000):
     rec, played, swiss = swiss_state(m)
     probs, tot = simulate(m, rec, played, n)
     order = sorted(probs, key=lambda t: -probs[t].get("champ", 0))
-    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     data = dict(created=now, data_until=str(m.frame.date.max()), n_sims=tot,
                 swiss_record={m.disp(t): rec[t] for t in order},
                 probs={m.disp(t): {k: round(v, 4) for k, v in probs[t].items()} for t in order},
                 region={m.disp(t): m.rater.s.home.get(t) for t in order},
                 predicted_champion=m.disp(order[0]))
     PRED_DIR.mkdir(exist_ok=True)
-    stamp = datetime.utcnow().strftime("%Y%m%d")
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%d")
     path = PRED_DIR / f"s16_2026_{stamp}.json"
     path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     # 报告
@@ -196,7 +196,7 @@ def grade():
     last = w.iloc[-1]
     champ = last.blue if last.blue_win else last.red
     top8 = sorted(set(w.blue) | set(w.red))
-    out = [f"# S16 预测判卷（{datetime.utcnow():%Y-%m-%d}）", "", f"实际冠军：**{champ}**", f"实际 8 强：{'、'.join(top8)}", ""]
+    out = [f"# S16 预测判卷（{datetime.now(timezone.utc):%Y-%m-%d}）", "", f"实际冠军：**{champ}**", f"实际 8 强：{'、'.join(top8)}", ""]
     from .names import norm
     for f in sorted(PRED_DIR.glob("s16_2026_*.json")):
         d = json.loads(f.read_text(encoding="utf-8"))

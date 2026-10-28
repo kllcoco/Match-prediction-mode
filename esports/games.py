@@ -69,8 +69,39 @@ def lol_frame(g: pd.DataFrame, strict=True) -> pd.DataFrame:
             df[col] = [tuple(r) if not np.isnan(r).any() else None for r in v]
         else:
             df[col] = None
+    # 本局双方英雄（用来算英雄池深度）
+    for sd, col in (("b", "c1"), ("r", "c2")):
+        cc = g[[f"{sd}p{i}" for i in range(1, 6)]].values.tolist()
+        df[col] = [[x for x in r if isinstance(x, str)] or None for r in cc]
+    df["gnum"] = pd.to_numeric(g["game"], errors="coerce").fillna(1).clip(1, 5).values
+    df["fearless"] = fearless_flags(g).values
     df = df[(df.t1 != "") & (df.t2 != "") & (df.t1 != df.t2)]
     return df.sort_values("date", kind="stable").reset_index(drop=True)
+
+
+def fearless_flags(g: pd.DataFrame) -> pd.Series:
+    """从数据里识别「无畏征召」赛事：一个赛事里多局系列赛从不重复选同一英雄 -> 无畏征召。
+    数据不够判断的赛事，按同年多数赛事的情况。"""
+    cols = [f"{s}p{i}" for s in "br" for i in range(1, 6)]
+    key = g.event.astype(str) + "|" + g.date.dt.date.astype(str) + "|" + \
+        [ "|".join(sorted((str(a), str(b)))) for a, b in zip(g.blue, g.red)]
+    rep = {}
+    for k, s in g[cols].groupby(key):
+        if len(s) < 2:
+            continue
+        seen = [c for row in s.values for c in row if isinstance(c, str)]
+        if len(seen) >= 20:
+            ev = k.split("|")[0]
+            rep.setdefault(ev, []).append(int(len(seen) != len(set(seen))))
+    ev_flag = {e: int(np.mean(v) < 0.05) for e, v in rep.items() if len(v) >= 3}
+    year_flag = {}
+    for e, f in ev_flag.items():
+        y = g.loc[g.event.astype(str) == e, "year"]
+        if len(y):
+            year_flag.setdefault(int(y.iloc[0]), []).append(f)
+    year_major = {y: int(np.mean(v) >= 0.5) for y, v in year_flag.items()}
+    return pd.Series([ev_flag.get(str(e), year_major.get(int(y), 0) if y == y else 0)
+                      for e, y in zip(g.event, g.year)], index=g.index)
 
 
 # ---------------- CS ----------------

@@ -16,10 +16,12 @@ import pandas as pd
 FEATURES = ["elo", "form", "league", "side", "exp", "map"]
 PERF = ["pkda", "pdmg", "pkp", "pdeath", "pwr"]  # 选手表现特征（看数据、不看名字）
 TEAM_IG = ["tgold", "tobj"]  # 团队局内特征：经济占比、资源控制
+POOL = ["pool", "pool_f"]     # 英雄池深度；pool_f = 英雄池 × 无畏征召 × 第几局（越往后越重要）
 GATED = ["elo", "form", "exp"] + TEAM_IG + PERF
 FEATURE_CN = {
     "elo": "综合实力分差", "form": "近期状态", "league": "赛区强弱",
     "side": "蓝色方优势", "exp": "比赛经验", "map": "地图熟练度", "clutch": "大赛表现",
+    "pool": "英雄池深度", "pool_f": "无畏征召下的英雄池",
     "tgold": "局内经济", "tobj": "资源控制（推塔/小龙/大龙）",
     "pkda": "选手对位 KDA", "pdmg": "选手对位伤害", "pkp": "参团率", "pdeath": "死亡控制", "pwr": "选手近期胜率",
 }
@@ -54,6 +56,8 @@ class State:
     recent: dict = field(default_factory=lambda: defaultdict(lambda: deque(maxlen=10)))
     clutch: dict = field(default_factory=lambda: defaultdict(float))  # 大赛（季后赛/顶级赛事）超预期程度
     pcount: dict = field(default_factory=lambda: defaultdict(int))  # 选手职业场次
+    pchamps: dict = field(default_factory=dict)  # 选手 -> 最近 30 局用过的英雄
+    pool_override: dict = field(default_factory=dict)  # 联网汇总数据里的英雄池大小（没有逐局英雄时用）
     tstats: dict = field(default_factory=dict)  # 队伍 -> 最近 15 局 [(经济占比-0.5, 资源差)]
     pstats: dict = field(default_factory=dict)  # 选手 -> 最近 N 局表现 [(对位KDA差, 对位伤害差/分, 参团率, 死亡/分, 胜)]
 
@@ -66,6 +70,7 @@ class Rater:
     """按时间顺序吃比赛，边看边更新评分；每局开赛前先把特征记下来（不偷看结果）。"""
 
     def __init__(self, params: Params | None = None, use_players=True, use_league=True):
+        self.ctx = (0, 1)  # (是否无畏征召, 第几局)
         self.p = params or Params()
         self.s = State()
         self.use_players = use_players
@@ -123,6 +128,17 @@ class Rater:
                     vals[j].append(col.mean())
         return [float(np.mean(v)) if v else np.nan for v in vals], n
 
+    def pool(self, roster):
+        """首发 5 人的平均英雄池深度（最近 30 局用过的不同英雄数）"""
+        v = []
+        for p in roster or []:
+            dq = self.s.pchamps.get(p)
+            if dq and len(dq) >= 10:
+                v.append(len(set(dq)))
+            elif p in self.s.pool_override:
+                v.append(min(self.s.pool_override[p], 30))
+        return float(np.mean(v)) if v else np.nan
+
     def perf_diff(self, r1, r2):
         a, na = self.perf(r1)
         b, nb = self.perf(r2)
@@ -170,6 +186,10 @@ class Rater:
         for k, j in (("tgold", 0), ("tobj", 1)):
             a, b = s.tstats.get(t1), s.tstats.get(t2)
             f[k] = (np.mean([x[j] for x in a]) - np.mean([x[j] for x in b])) if (a and b) else 0.0
+        pa, pb = self.pool(r1 or s.roster.get(t1)), self.pool(r2 or s.roster.get(t2))
+        f["pool"] = 0.0 if (np.isnan(pa) or np.isnan(pb)) else (pa - pb) / 10
+        fl, gn = self.ctx
+        f["pool_f"] = f["pool"] * fl * (gn - 1) / 4
         # 新人比例 g：首发里职业场次 < 20 的人数（两队较大者）/5。模型据此学「新人多时更信表现数据」
         ra, rb = r1 or s.roster.get(t1) or [], r2 or s.roster.get(t2) or []
         g = min(1.0, max(sum(s.pcount[p] < 20 for p in ra), sum(s.pcount[p] < 20 for p in rb)) / 5)
@@ -192,7 +212,9 @@ class Rater:
             if row.get("domestic") and row.get("league"):
                 s.home[t] = row["league"]
         mp = row.get("map") or None
+        self.ctx = (int(row.get("fearless") or 0), int(row.get("gnum") or 1))
         f = self.features(t1, t2, row.get("side", 0.0), mp, row.get("p1"), row.get("p2"))
+        self.ctx = (0, 1)
         # 新面孔数：首发里之前职业场次 < 20 的人数（两队取较大者）
         f["nnew"] = max(sum(s.pcount[p] < 20 for p in (row.get("p1") or [])),
                         sum(s.pcount[p] < 20 for p in (row.get("p2") or [])))
@@ -229,6 +251,10 @@ class Rater:
         s.n[t1] += 1
         s.n[t2] += 1
         self._record_perf(row, y)
+        for ros, cs in ((row.get("p1"), row.get("c1")), (row.get("p2"), row.get("c2"))):
+            if ros and cs and len(cs) == len(ros):
+                for pl, c in zip(ros, cs):
+                    s.pchamps.setdefault(pl, deque(maxlen=30)).append(c)
         ts1, ts2 = row.get("ts1"), row.get("ts2")
         if ts1 and ts2:
             g1, g2 = ts1[0], ts2[0]

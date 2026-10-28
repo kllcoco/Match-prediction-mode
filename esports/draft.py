@@ -58,6 +58,13 @@ class Draft:
                              "LDL", "LCKC"] + (["WLDs", "MSI", "FST", "EWC"] if include_intl else []))]
         pcols = [f"bp{i}" for i in range(1, 6)] + [f"rp{i}" for i in range(1, 6)]
         g = g.dropna(subset=pcols[:1] + pcols[5:6])
+        # 每个英雄最常打的位置（上野中下辅）
+        rc = {}
+        for i in range(5):
+            for c in list(g[f"bp{i+1}"]) + list(g[f"rp{i+1}"]):
+                if isinstance(c, str):
+                    rc.setdefault(c, Counter())[i] += 1
+        self.role = {c: v.most_common(1)[0][0] for c, v in rc.items()}
         self.n_games = len(g)
         self._g = g
         names = pd.unique(g[pcols].values.ravel())
@@ -173,10 +180,10 @@ class Draft:
         return (2.0 * self.presence.get(c, 0) + 3.0 * self.strength.get(c, 0)
                 + 0.08 * min(n, 10) + 1.0 * (wr - 0.5) * min(n, 10) / 10)
 
-    def plan(self, rA, rB, n_bans=5, n_picks=5):
-        """给 A vs B 出一套 BP 预案。"""
+    def plan(self, rA, rB, n_bans=5, n_picks=5, used=()):
+        """给 A vs B 出一套 BP 预案。used：无畏征召下本系列赛已经用过、不能再选的英雄。"""
         cA, cB = self.comfort(rA), self.comfort(rB)
-        cand = set(self.presence) | set(cA) | set(cB)
+        cand = (set(self.presence) | set(cA) | set(cB)) - set(used)
         if getattr(self, "ban_lr", None) is not None:
             cand = sorted(cand)
             def score(lr, own, opp):
@@ -187,8 +194,8 @@ class Draft:
             bansA = sorted(cand, key=lambda c: -banA[c])[:n_bans]
             bansB = [c for c in sorted(cand, key=lambda c: -banB[c]) if c not in bansA][:n_bans]
             banned = set(bansA) | set(bansB)
-            picksA = [c for c in sorted(cand, key=lambda c: -pkA[c]) if c not in banned][:n_picks]
-            picksB = [c for c in sorted(cand, key=lambda c: -pkB[c]) if c not in banned and c not in picksA][:n_picks]
+            picksA = self._by_role(sorted(cand, key=lambda c: -pkA[c]), banned)
+            picksB = self._by_role(sorted(cand, key=lambda c: -pkB[c]), banned | set(picksA))
         else:
             thrB = sorted(cand, key=lambda c: -self.value(c, cB))  # 对面最想拿的
             thrA = sorted(cand, key=lambda c: -self.value(c, cA))
@@ -201,6 +208,28 @@ class Draft:
         sig = lambda comf: sorted(((c, n, wr) for c, (n, wr) in comf.items() if n >= 3), key=lambda x: (-x[1], -x[2]))[:5]
         return dict(bansA=bansA, bansB=bansB, picksA=picksA, picksB=picksB, edge=edge,
                     signatureA=sig(cA), signatureB=sig(cB))
+
+    def _by_role(self, ranked, banned):
+        """按上野中下辅各选一个（每个位置取该位置排名最高、没被禁/选的英雄）"""
+        out = [None] * 5
+        for c in ranked:
+            if c in banned:
+                continue
+            r = self.role.get(c)
+            if r is not None and out[r] is None:
+                out[r] = c
+            if all(out):
+                break
+        return [c for c in out if c]
+
+    def fearless_series(self, rA, rB, best_of=5):
+        """无畏征召逐局推演：每局按 BP 模型选，选过的英雄后面几局都不能再用。"""
+        used, games = set(), []
+        for k in range(1, best_of + 1):
+            p = self.plan(rA, rB, used=used)
+            games.append(dict(game=k, picksA=p["picksA"], picksB=p["picksB"], bansA=p["bansA"], bansB=p["bansB"]))
+            used |= set(p["picksA"]) | set(p["picksB"])
+        return games
 
     def meta_top(self, k=8):
         return sorted(self.presence.items(), key=lambda x: -x[1])[:k]

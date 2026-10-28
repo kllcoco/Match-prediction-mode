@@ -1,0 +1,178 @@
+{
+ "created": "2026-10-28 18:32 UTC",
+ "data_until": "2026-10-26 20:55:00",
+ "n_sims": 20000,
+ "swiss_record": {
+  "Gen.G": [
+   3,
+   0
+  ],
+  "DWG KIA": [
+   3,
+   0
+  ],
+  "T1": [
+   2,
+   1
+  ],
+  "Bilibili Gaming": [
+   2,
+   1
+  ],
+  "Hanwha Life Esports": [
+   1,
+   2
+  ],
+  "Top Esports": [
+   2,
+   1
+  ],
+  "Invictus Gaming": [
+   2,
+   1
+  ],
+  "Karmine Corp": [
+   1,
+   2
+  ],
+  "Movistar KOI": [
+   2,
+   1
+  ],
+  "G2 Esports": [
+   1,
+   2
+  ],
+  "LYON": [
+   2,
+   1
+  ],
+  "Team Liquid": [
+   1,
+   2
+  ],
+  "LOS": [
+   1,
+   2
+  ],
+  "CTBC Flying Oyster": [
+   1,
+   2
+  ],
+  "Anyone's Legend": [
+   0,
+   3
+  ],
+  "Secret Whales": [
+   0,
+   3
+  ]
+ },
+ "probs": {
+  "Gen.G": {
+   "top8": 1.0,
+   "semi": 0.7502,
+   "final": 0.5706,
+   "champ": 0.432
+  },
+  "DWG KIA": {
+   "top8": 1.0,
+   "semi": 0.6792,
+   "final": 0.4128,
+   "champ": 0.16
+  },
+  "T1": {
+   "top8": 0.8661,
+   "semi": 0.5766,
+   "final": 0.245,
+   "champ": 0.1143
+  },
+  "Bilibili Gaming": {
+   "top8": 0.8343,
+   "semi": 0.3988,
+   "final": 0.1809,
+   "champ": 0.0808
+  },
+  "Hanwha Life Esports": {
+   "top8": 0.4471,
+   "semi": 0.2967,
+   "final": 0.1192,
+   "champ": 0.0475
+  },
+  "Top Esports": {
+   "top8": 0.7518,
+   "semi": 0.2985,
+   "final": 0.1158,
+   "champ": 0.042
+  },
+  "Invictus Gaming": {
+   "top8": 0.7185,
+   "semi": 0.2561,
+   "final": 0.0872,
+   "champ": 0.0306
+  },
+  "Karmine Corp": {
+   "top8": 0.3369,
+   "semi": 0.1216,
+   "final": 0.059,
+   "champ": 0.0247
+  },
+  "Movistar KOI": {
+   "top8": 0.682,
+   "semi": 0.2355,
+   "final": 0.0752,
+   "champ": 0.0231
+  },
+  "G2 Esports": {
+   "top8": 0.3069,
+   "semi": 0.1061,
+   "final": 0.0491,
+   "champ": 0.0198
+  },
+  "LYON": {
+   "top8": 0.6634,
+   "semi": 0.1989,
+   "final": 0.0621,
+   "champ": 0.0194
+  },
+  "Team Liquid": {
+   "top8": 0.1912,
+   "semi": 0.0498,
+   "final": 0.0155,
+   "champ": 0.0038
+  },
+  "LOS": {
+   "top8": 0.1455,
+   "semi": 0.027,
+   "final": 0.0068,
+   "champ": 0.0018
+  },
+  "CTBC Flying Oyster": {
+   "top8": 0.0565,
+   "semi": 0.005,
+   "final": 0.0008,
+   "champ": 0.0001
+  },
+  "Anyone's Legend": {},
+  "Secret Whales": {}
+ },
+ "region": {
+  "Gen.G": "LCK",
+  "DWG KIA": "LCK",
+  "T1": "LCK",
+  "Bilibili Gaming": "LPL",
+  "Hanwha Life Esports": "LCK",
+  "Top Esports": "LPL",
+  "Invictus Gaming": "LPL",
+  "Karmine Corp": "LEC",
+  "Movistar KOI": "LEC",
+  "G2 Esports": "LEC",
+  "LYON": "LCS",
+  "Team Liquid": "LCS",
+  "LOS": "CBLOL",
+  "CTBC Flying Oyster": "PCS",
+  "Anyone's Legend": "LPL",
+  "Secret Whales": "PCS"
+ },
+ "predicted_champion": "Gen.G"
+}

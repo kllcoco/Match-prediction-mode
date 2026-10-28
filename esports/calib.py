@@ -12,7 +12,7 @@ from .net import DATA
 
 OUT = DATA / "processed" / "lol_cross_calib.csv"
 MAIN = {"LCK", "LPL", "LEC", "LCS", "PCS", "VCS"}
-DEFAULT_W = (0.6, 0.8)
+DEFAULT_W = (0.6, 0.8, 0.0)
 
 
 def build():
@@ -35,7 +35,8 @@ def build():
             S1 = m.rater.strength(r.t1, league="__none")[0]
             S2 = m.rater.strength(r.t2, league="__none")[0]
             rows.append(dict(date=r.date, event=ev, within=(S1 - S2) / 400,
-                             league=(s.league.get(r.h1, 0) - s.league.get(r.h2, 0)) / 400, y=r.win1))
+                             league=(s.league.get(r.h1, 0) - s.league.get(r.h2, 0)) / 400,
+                             perfz=m.perf_z(r.t1, r.t2), y=r.win1))
     df = pd.DataFrame(rows)
     df.to_csv(OUT, index=False)
     print("跨赛区校准样本:", len(df))
@@ -50,9 +51,10 @@ def weights(cutoff, min_rows=40):
     df = df[df.date < cutoff]
     if len(df) < min_rows:
         return DEFAULT_W
-    X = df[["within", "league"]].values
+    cols = ["within", "league", "perfz"] if "perfz" in df else ["within", "league"]
+    X = df[cols].values
     y = df.y.values
-    lr = Logistic(["within", "league"], l2=1e-2).fit(np.vstack([X, -X]), np.r_[y, 1 - y])
+    lr = Logistic(cols, l2=1e-2).fit(np.vstack([X, -X]), np.r_[y, 1 - y])
     return tuple(float(v) for v in lr.w)
 
 

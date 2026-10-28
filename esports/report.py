@@ -16,17 +16,16 @@ def display_map(game):
     from .names import norm
     if game == "lol":
         g = build_lol.load()
-        raw = pd.concat([g.blue, g.red])
+        a, b = "blue", "red"
     else:
         from . import build_cs
         g = build_cs.load()
-        raw = pd.concat([g.team1, g.team2])
-    vc = raw.value_counts()
+        a, b = "team1", "team2"
+    raw = pd.concat([g[["date", a]].rename(columns={a: "n"}), g[["date", b]].rename(columns={b: "n"})])
+    raw = raw.dropna().sort_values("date")
     out = {}
-    for name in vc.index:
-        k = norm(name, game)
-        if k not in out:
-            out[k] = name
+    for name in raw.n.values:  # 按时间顺序覆盖 -> 留下最新的名字
+        out[norm(name, game)] = name
     return lambda k: out.get(k, k)
 
 

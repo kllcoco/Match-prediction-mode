@@ -111,12 +111,22 @@ def build():
         lv = pd.read_csv(live, low_memory=False)
         lv["date"] = pd.to_datetime(lv.date, format="mixed")
         lv = lv[lv.date > g.date.max()]
+        # 同一场比赛可能出现在赛事主页和子页面里，按「时间+双方+第几局」去重
+        lv = lv.sort_values("date").drop_duplicates(subset=["date", "blue", "red", "game"], keep="last")
         print("并入联网新数据:", len(lv), "局")
         g = pd.concat([g, lv], ignore_index=True)
     g = pd.concat([early, g], ignore_index=True)
     for c in keep_cols():
         if c not in g.columns:
             g[c] = None
+    # 英雄名统一：Liquipedia 是小写/缩写（aurora、ez），统一成 OE 的标准写法
+    from .draft import ChampNames
+    champ_cols = [f"{s}{x}{i}" for s in "br" for x in "pb" for i in range(1, 6)]
+    oe = g[g.source == "oe"]
+    cn = ChampNames(pd.unique(oe[champ_cols].values.ravel()))
+    lp = g.source != "oe"
+    for c in champ_cols:
+        g.loc[lp, c] = g.loc[lp, c].map(lambda x: cn(x) if isinstance(x, str) else x)
     keep = keep_cols()
     g = g[keep].sort_values("date").reset_index(drop=True)
     OUT.parent.mkdir(parents=True, exist_ok=True)

@@ -10,8 +10,8 @@ from .engine import Logistic, Params, Rater, logloss, run, series_prob
 from .names import norm
 from .net import DATA
 
-from .engine import GATED, PERF, TEAM_IG
-FEATS = {"lol": ["elo", "form", "league", "side", "exp"] + TEAM_IG + PERF + [k + "_g" for k in GATED],
+from .engine import GATED, PERF, POOL, TEAM_IG
+FEATS = {"lol": ["elo", "form", "league", "side", "exp"] + TEAM_IG + PERF + POOL + [k + "_g" for k in GATED],
          "cs": ["elo", "form", "exp", "map", "pkda", "pdmg", "pkp", "pwr"]
          + [k + "_g" for k in ("elo", "form", "exp", "pkda", "pdmg", "pkp", "pwr")]}
 BURN_IN_DAYS = 90
@@ -65,6 +65,9 @@ class Model:
         self.hist = hist
         self.n_train = len(tr)
         self.cutoff = cutoff
+        # 截止日前最近的比赛是不是无畏征召（决定大赛预测时是否按无畏征召算）
+        recent = frame[(frame.date < cutoff) & (frame.date >= cutoff - pd.Timedelta(days=120))]
+        self.fearless = int(game == "lol" and "fearless" in frame and len(recent) and recent.fearless.mean() > 0.5)
         if game == "cs":
             from .veto import map_pool
             self.pool = map_pool(frame, cutoff)
@@ -99,6 +102,13 @@ class Model:
         f = self.rater.features(t1, t2, side, mp)
         return {k: f[k] for k in self.feats}
 
+    PERF_PART = set(PERF + TEAM_IG + POOL) | {k + "_g" for k in PERF + TEAM_IG}
+
+    def perf_z(self, t1, t2):
+        """表现部分的分数：只用选手表现 / 局内数据 / 英雄池这些「看数据」的特征"""
+        x = self.x(t1, t2)
+        return float(sum(w * x[k] for k, w in zip(self.feats, self.lr.w) if k in self.PERF_PART)) * self.temp
+
     def is_cross(self, t1, t2):
         h = self.rater.s.home
         return self.cross_w is not None and h.get(t1) and h.get(t2) and h.get(t1) != h.get(t2)
@@ -109,15 +119,27 @@ class Model:
             S1 = self.rater.strength(t1, league="__none")[0]
             S2 = self.rater.strength(t2, league="__none")[0]
             L = self.rater.s.league
-            a, b = self.cross_w
+            a, b, c = (tuple(self.cross_w) + (0.0,))[:3]
             z = a * (S1 - S2) / 400 + b * (L.get(self.rater.s.home[t1], 0) - L.get(self.rater.s.home[t2], 0)) / 400
+            z += c * self.perf_z(t1, t2)
             return float(1 / (1 + np.exp(-z)))
         x = self.x(t1, t2, side, mp)
         z = float(np.dot([x[k] for k in self.feats], self.lr.w)) * self.temp
         z += self.w_clutch * self.rater.features(t1, t2)["clutch"]
         return float(1 / (1 + np.exp(-z)))
 
-    def p_series(self, t1, t2, best_of):
+    def p_series(self, t1, t2, best_of, fearless=None):
+        if self.game == "lol":
+            fl = self.fearless if fearless is None else fearless
+            if fl:
+                # 无畏征召：每局的英雄池影响不同，逐局算胜率再组合
+                from .veto import _series_from_maps
+                ps = []
+                for k in range(1, best_of + 1):
+                    self.rater.ctx = (1, k)
+                    ps.append(self.p_game(t1, t2))
+                self.rater.ctx = (0, 1)
+                return _series_from_maps(ps, best_of)
         if self.game == "cs":
             from .veto import series_with_veto
             return series_with_veto(self, t1, t2, best_of)["p"]

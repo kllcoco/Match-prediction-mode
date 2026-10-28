@@ -20,13 +20,17 @@ def build(game, update=False, cutoff=None, strict=False):
     cutoff = pd.Timestamp(cutoff) if cutoff else frame.date.max() + pd.Timedelta(days=1)
     m = B.Model(game, frame, cutoff)
     m.frame = frame
+    from .enrich import POOL_FILE
+    if game == "lol" and POOL_FILE.exists():  # 联网汇总数据里的英雄池大小
+        import json
+        m.rater.s.pool_override.update(json.loads(POOL_FILE.read_text(encoding="utf-8")))
     from .report import display_map
     m.disp = display_map(game)
     m.draft = None
     if game == "lol":
         from . import build_lol, draft
         try:
-            m.draft = draft.Draft(build_lol.load(), cutoff)
+            m.draft = draft.Draft(build_lol.load(), cutoff, include_intl=not strict).train_bp()
         except Exception:
             m.draft = None
     return m
@@ -105,6 +109,12 @@ def predict(m, a_name, b_name, best_of=None, news=False):
     top = sorted(sd.items(), key=lambda x: -x[1])[:4]
     lines.append("**比分预测**：" + "，".join(f"{fmt_score(k, pa['name'], pb['name'])}（{v:.0%}）" for k, v in top))
     lines += ["", "**观点**：" + txt]
+    if m.game == "lol" and m.draft is not None and getattr(m, "fearless", 0):
+        fs = m.draft.fearless_series(m.rater.s.roster.get(a), m.rater.s.roster.get(b), bo)
+        lines += ["", f"**无畏征召 BP 推演**（用过的英雄后面不能再选；英雄池深度 {pa['name']} "
+                      f"{_pool_txt(m, a)} vs {pb['name']} {_pool_txt(m, b)}）："]
+        for gm in fs[:bo]:
+            lines.append(f"- 第{gm['game']}局：{pa['name']} {'/'.join(gm['picksA'])}　vs　{pb['name']} {'/'.join(gm['picksB'])}")
     if news:
         from . import search
         try:
@@ -114,6 +124,11 @@ def predict(m, a_name, b_name, best_of=None, news=False):
         except Exception as e:  # 搜索失败不影响预测
             lines.append(f"（网页搜索失败：{e}）")
     return dict(a=a, b=b, p_series=ps, p_game=pg, scores=sd, text="\n".join(lines), profile=(pa, pb), draft=plan)
+
+
+def _pool_txt(m, t):
+    v = m.rater.pool(m.rater.s.roster.get(t))
+    return "未知" if v != v else f"{v:.0f} 个英雄"
 
 
 def fmt_score(k, a, b):
