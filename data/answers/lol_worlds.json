@@ -1,0 +1,11238 @@
+[
+ {
+  "start": "2011-06-18",
+  "end": "2011-06-20",
+  "page": "World Championship/2011",
+  "format": "custom",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "against all authority",
+    "team2": "team gamed.de",
+    "score1": 2,
+    "score2": 0,
+    "winner": "against all authority",
+    "date": "June 19, 2011 - 11:30 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "",
+      "score1": null,
+      "score2": null,
+      "picks1": [],
+      "bans1": [],
+      "players1": [],
+      "picks2": [],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "warwick",
+       "nunu",
+       "malzahar",
+       "ashe",
+       "janna"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "brand",
+       "amumu",
+       "anivia",
+       "tristana",
+       "taric"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "counter logic gaming",
+    "team2": "fnatic",
+    "score1": 1,
+    "score2": 2,
+    "winner": "fnatic",
+    "date": "June 19, 2011 - 12:45 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "",
+      "score1": null,
+      "score2": null,
+      "picks1": [],
+      "bans1": [],
+      "players1": [],
+      "picks2": [],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "mundo",
+       "nunu",
+       "swain",
+       "vayne",
+       "sona"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "anivia",
+       "jarvan",
+       "malzahar",
+       "ashe",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "vladimir",
+       "warwick",
+       "annie",
+       "caitlyn",
+       "janna"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "gragas",
+       "nunu",
+       "swain",
+       "ashe",
+       "sona"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "team solomid",
+    "team2": "against all authority",
+    "score1": 1,
+    "score2": 2,
+    "winner": "against all authority",
+    "date": "June 19, 2011 - 16:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jarvan",
+       "nunu",
+       "annie",
+       "corki",
+       "alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "vladimir",
+       "amumu",
+       "anivia",
+       "ashe",
+       "sona"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jarvan",
+       "nocturne",
+       "zilean",
+       "irelia",
+       "taric"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "warwick",
+       "nunu",
+       "malzahar",
+       "corki",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "singed",
+       "nunu",
+       "vladimir",
+       "caitlyn",
+       "alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "malzahar",
+       "amumu",
+       "rumble",
+       "corki",
+       "sona"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "epik gamer",
+    "team2": "fnatic",
+    "score1": 0,
+    "score2": 2,
+    "winner": "fnatic",
+    "date": "June 19, 2011 - 19:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jarvan",
+       "nunu",
+       "swain",
+       "vayne",
+       "soraka"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "malzahar",
+       "amumu",
+       "alistar",
+       "ashe",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "vayne",
+       "nunu",
+       "malzahar",
+       "blitzcrank",
+       "soraka"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "karthus",
+       "jarvan",
+       "alistar",
+       "ashe",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "against all authority",
+    "team2": "fnatic",
+    "score1": 0,
+    "score2": 2,
+    "winner": "fnatic",
+    "date": "June 20, 2011 - 13:30 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "nidalee",
+       "warwick",
+       "anivia",
+       "miss fortune",
+       "sona"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "gragas",
+       "jarvan",
+       "malzahar",
+       "corki",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "karthus",
+       "nocturne",
+       "annie",
+       "corki",
+       "janna"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "anivia",
+       "jarvan",
+       "malzahar",
+       "ashe",
+       "sona"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M3",
+    "team1": "team solomid",
+    "team2": "epik gamer",
+    "score1": 2,
+    "score2": 0,
+    "winner": "team solomid",
+    "date": "June 20, 2011 - 16:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jarvan",
+       "warwick",
+       "annie",
+       "corki",
+       "alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "tristana",
+       "nunu",
+       "malzahar",
+       "miss fortune",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "teemo",
+       "nunu",
+       "twisted fate",
+       "ashe",
+       "taric"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "singed",
+       "amumu",
+       "annie",
+       "miss fortune",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R3M2",
+    "team1": "against all authority",
+    "team2": "team solomid",
+    "score1": 2,
+    "score2": 0,
+    "winner": "against all authority",
+    "date": "June 20, 2011 - 19:30 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "",
+      "score1": null,
+      "score2": null,
+      "picks1": [],
+      "bans1": [],
+      "players1": [],
+      "picks2": [],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "sion",
+       "nunu",
+       "malzahar",
+       "vayne",
+       "janna"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "cho'gath",
+       "warwick",
+       "twisted fate",
+       "teemo",
+       "alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R4M1",
+    "team1": "fnatic",
+    "team2": "against all authority",
+    "score1": 2,
+    "score2": 1,
+    "winner": "fnatic",
+    "date": "June 20, 2011 - 23:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "",
+      "score1": null,
+      "score2": null,
+      "picks1": [],
+      "bans1": [],
+      "players1": [],
+      "picks2": [],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "brand",
+       "rammus",
+       "malzahar",
+       "corki",
+       "janna"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "irelia",
+       "jarvan",
+       "anivia",
+       "ashe",
+       "sona"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "brand",
+       "warwick",
+       "karthus",
+       "ashe",
+       "sona"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "malzahar",
+       "jarvan",
+       "irelia",
+       "corki",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M1",
+    "team1": "team gamed.de",
+    "team2": "counter logic gaming",
+    "score1": 0,
+    "score2": 1,
+    "winner": "counter logic gaming",
+    "date": "June 19, 2011 - 15:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "lux",
+       "trundle",
+       "caitlyn",
+       "ashe",
+       "taric"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "cho'gath",
+       "gangplank",
+       "zilean",
+       "corki",
+       "alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   }
+  ],
+  "name": "S1 2011 世界赛",
+  "year": 2011,
+  "season": 1
+ },
+ {
+  "start": "2012-10-04",
+  "end": "2012-10-13",
+  "page": "World Championship/2012/Playoffs",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "moscow five",
+    "team2": "invictus gaming",
+    "score1": 2,
+    "score2": 0,
+    "winner": "moscow five",
+    "date": "October 5, 2012 - 11:00 {{Abbr/PST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "xin",
+       "lee",
+       "eve",
+       "kog",
+       "zyra"
+      ],
+      "bans1": [
+       "maokai",
+       "alistar",
+       "jayce"
+      ],
+      "players1": [
+       "Darien",
+       "Diamondprox",
+       "Alex Ich",
+       "Genja",
+       "GoSu Pepper"
+      ],
+      "picks2": [
+       "yorick",
+       "shen",
+       "cassiopeia",
+       "ez",
+       "leona"
+      ],
+      "bans2": [
+       "gragas",
+       "nunu",
+       "sona"
+      ],
+      "players2": [
+       "PDD",
+       "illuSioN",
+       "zz1tai",
+       "kid",
+       "XiaoXiao"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "olaf",
+       "lee",
+       "zil",
+       "kog",
+       "sona"
+      ],
+      "bans1": [
+       "yorick",
+       "maokai",
+       "jayce"
+      ],
+      "players1": [
+       "Darien",
+       "Diamondprox",
+       "Alex Ich",
+       "Genja",
+       "GoSu Pepper"
+      ],
+      "picks2": [
+       "vlad",
+       "shen",
+       "ryze",
+       "ez",
+       "ali"
+      ],
+      "bans2": [
+       "evelynn",
+       "gragas",
+       "xerath"
+      ],
+      "players2": [
+       "PDD",
+       "illuSioN",
+       "zz1tai",
+       "kid",
+       "XiaoXiao"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "taipei assassins",
+    "team2": "najin sword",
+    "score1": 2,
+    "score2": 0,
+    "winner": "taipei assassins",
+    "date": "October 5, 2012 - 13:00 {{Abbr/PST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "skarner",
+       "ori",
+       "kog",
+       "nunu"
+      ],
+      "bans1": [
+       "evelynn",
+       "maokai",
+       "sona"
+      ],
+      "players1": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ],
+      "picks2": [
+       "olaf",
+       "mao",
+       "vlad",
+       "corki",
+       "leona"
+      ],
+      "bans2": [
+       "vladimir",
+       "morgana",
+       "karthus"
+      ],
+      "players2": [
+       "MaKNooN",
+       "Watch",
+       "SSONG",
+       "PraY",
+       "Cain"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "skarner",
+       "anivia",
+       "ez",
+       "blitz"
+      ],
+      "bans1": [
+       "jayce",
+       "evelynn",
+       "orianna"
+      ],
+      "players1": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ],
+      "picks2": [
+       "jax",
+       "mao",
+       "morg",
+       "corki",
+       "sona"
+      ],
+      "bans2": [
+       "vladimir",
+       "kog'maw",
+       "karthus"
+      ],
+      "players2": [
+       "MaKNooN",
+       "Watch",
+       "SSONG",
+       "PraY",
+       "Cain"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "team solomid",
+    "team2": "azubu frost",
+    "score1": 0,
+    "score2": 2,
+    "winner": "azubu frost",
+    "date": "October 5, 2012 - 15:00 {{Abbr/PST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "darius",
+       "Shyvana",
+       "karthus",
+       "ez",
+       "sona"
+      ],
+      "bans1": [
+       "alistar",
+       "anivia",
+       "shen"
+      ],
+      "players1": [
+       "Dyrus",
+       "TheOddOne",
+       "Reginald",
+       "Chaox",
+       "Xpecial"
+      ],
+      "picks2": [
+       "jayce",
+       "mao",
+       "lux",
+       "mf",
+       "blitz"
+      ],
+      "bans2": [
+       "orianna",
+       "yorick",
+       "vladimir"
+      ],
+      "players2": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "mao",
+       "karthus",
+       "graves",
+       "blitz"
+      ],
+      "bans1": [
+       "alistar",
+       "anivia",
+       "shen"
+      ],
+      "players1": [
+       "Dyrus",
+       "TheOddOne",
+       "Reginald",
+       "Chaox",
+       "Xpecial"
+      ],
+      "picks2": [
+       "ire",
+       "skarner",
+       "vlad",
+       "ez",
+       "taric"
+      ],
+      "bans2": [
+       "orianna",
+       "yorick",
+       "katarina"
+      ],
+      "players2": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "team we",
+    "team2": "counter logic gaming europe",
+    "score1": 1,
+    "score2": 2,
+    "winner": "counter logic gaming europe",
+    "date": "October 7, 2012 - 20:00 {{Abbr/PST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "olaf",
+       "mao",
+       "ori",
+       "graves",
+       "blitz"
+      ],
+      "bans1": [
+       "anivia",
+       "alistar",
+       "irelia"
+      ],
+      "players1": [
+       "Caomei",
+       "ClearLove",
+       "Misaya",
+       "Weixiao",
+       "Fzzf"
+      ],
+      "picks2": [
+       "malph",
+       "cho",
+       "karthus",
+       "ez",
+       "leona"
+      ],
+      "bans2": [
+       "tf",
+       "shen",
+       "skarner"
+      ],
+      "players2": [
+       "Wickd",
+       "Snoopeh",
+       "Froggen",
+       "yellowpete",
+       "Krepo"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "noc",
+       "vlad",
+       "ez",
+       "taric"
+      ],
+      "bans1": [
+       "anivia",
+       "alistar",
+       "irelia"
+      ],
+      "players1": [
+       "Caomei",
+       "ClearLove",
+       "Misaya",
+       "Weixiao",
+       "Fzzf"
+      ],
+      "picks2": [
+       "jayce",
+       "skarner",
+       "karthus",
+       "corki",
+       "sona"
+      ],
+      "bans2": [
+       "tf",
+       "orianna",
+       "blitzcrank"
+      ],
+      "players2": [
+       "Wickd",
+       "Snoopeh",
+       "Froggen",
+       "yellowpete",
+       "Krepo"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "olaf",
+       "mao",
+       "vlad",
+       "corki",
+       "leona"
+      ],
+      "bans1": [
+       "anivia",
+       "irelia",
+       "cho'gath"
+      ],
+      "players1": [
+       "Caomei",
+       "ClearLove",
+       "Misaya",
+       "Weixiao",
+       "Fzzf"
+      ],
+      "picks2": [
+       "jayce",
+       "skarner",
+       "karthus",
+       "kog",
+       "nunu"
+      ],
+      "bans2": [
+       "tf",
+       "blitzcrank",
+       "orianna"
+      ],
+      "players2": [
+       "Wickd",
+       "Snoopeh",
+       "Froggen",
+       "yellowpete",
+       "Krepo"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "moscow five",
+    "team2": "taipei assassins",
+    "score1": 1,
+    "score2": 2,
+    "winner": "taipei assassins",
+    "date": "October 10, 2012 - 17:00 {{Abbr/PST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "yorick",
+       "xin",
+       "eve",
+       "vayne",
+       "nunu"
+      ],
+      "bans1": [
+       "maokai",
+       "blitz",
+       "jayce"
+      ],
+      "players1": [
+       "Darien",
+       "Diamondprox",
+       "Alex Ich",
+       "Genja",
+       "GoSu Pepper"
+      ],
+      "picks2": [
+       "shen",
+       "udyr",
+       "karthus",
+       "kog",
+       "taric"
+      ],
+      "bans2": [
+       "lee sin",
+       "orianna",
+       "sona"
+      ],
+      "players2": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "yorick",
+       "udyr",
+       "zil",
+       "kog",
+       "zyra"
+      ],
+      "bans1": [
+       "blitz",
+       "jayce",
+       "nunu"
+      ],
+      "players1": [
+       "Darien",
+       "Diamondprox",
+       "Alex Ich",
+       "Genja",
+       "GoSu Pepper"
+      ],
+      "picks2": [
+       "nida",
+       "mao",
+       "ori",
+       "vayne",
+       "taric"
+      ],
+      "bans2": [
+       "lee sin",
+       "evelynn",
+       "sona"
+      ],
+      "players2": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "yorick",
+       "shyvana",
+       "gragas",
+       "kog",
+       "nunu"
+      ],
+      "bans1": [
+       "maokai",
+       "blitz",
+       "jayce"
+      ],
+      "players1": [
+       "Darien",
+       "Diamondprox",
+       "Alex Ich",
+       "Genja",
+       "GoSu Pepper"
+      ],
+      "picks2": [
+       "nida",
+       "mundo",
+       "anivia",
+       "ez",
+       "sona"
+      ],
+      "bans2": [
+       "lee sin",
+       "evelynn",
+       "orianna"
+      ],
+      "players2": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "azubu frost",
+    "team2": "counter logic gaming europe",
+    "score1": 2,
+    "score2": 1,
+    "winner": "azubu frost",
+    "date": "October 10, 2012 - 20:00 {{Abbr/PST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "yorick",
+       "shen",
+       "karthus",
+       "mf",
+       "ali"
+      ],
+      "bans1": [
+       "kog'maw",
+       "irelia",
+       "anivia"
+      ],
+      "players1": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ],
+      "picks2": [
+       "jayce",
+       "mao",
+       "morg",
+       "ez",
+       "soraka"
+      ],
+      "bans2": [
+       "jax",
+       "blitz",
+       "orianna"
+      ],
+      "players2": [
+       "Wickd",
+       "Snoopeh",
+       "Froggen",
+       "yellowpete",
+       "Krepo"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "vlad",
+       "mao",
+       "ahri",
+       "ez",
+       "sona"
+      ],
+      "bans1": [
+       "irelia",
+       "jayce",
+       "karthus"
+      ],
+      "players1": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ],
+      "picks2": [
+       "shen",
+       "skarner",
+       "ori",
+       "kog",
+       "nunu"
+      ],
+      "bans2": [
+       "blitz",
+       "jax",
+       "anivia"
+      ],
+      "players2": [
+       "Wickd",
+       "Snoopeh",
+       "Froggen",
+       "yellowpete",
+       "Krepo"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "singed",
+       "skarner",
+       "vlad",
+       "graves",
+       "zyra"
+      ],
+      "bans1": [
+       "irelia",
+       "jayce",
+       "anivia"
+      ],
+      "players1": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ],
+      "picks2": [
+       "riven",
+       "mao",
+       "morg",
+       "ez",
+       "sona"
+      ],
+      "bans2": [
+       "jax",
+       "blitz",
+       "ahri"
+      ],
+      "players2": [
+       "Wickd",
+       "Snoopeh",
+       "Froggen",
+       "yellowpete",
+       "Krepo"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "taipei assassins",
+    "team2": "azubu frost",
+    "score1": 3,
+    "score2": 1,
+    "winner": "taipei assassins",
+    "date": "October 13, 2012 - 16:30 {{Abbr/PST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "olaf",
+       "mao",
+       "anivia",
+       "vayne",
+       "lulu"
+      ],
+      "bans1": [
+       "blitz",
+       "skarner",
+       "jax"
+      ],
+      "players1": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ],
+      "picks2": [
+       "ire",
+       "amumu",
+       "karthus",
+       "ez",
+       "sona"
+      ],
+      "bans2": [
+       "jayce",
+       "orianna",
+       "kog'maw"
+      ],
+      "players2": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "mundo",
+       "karthus",
+       "caitlyn",
+       "sona"
+      ],
+      "bans1": [
+       "blitz",
+       "skarner",
+       "jayce"
+      ],
+      "players1": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ],
+      "picks2": [
+       "jax",
+       "mao",
+       "anivia",
+       "ez",
+       "zyra"
+      ],
+      "bans2": [
+       "nidalee",
+       "kog'maw",
+       "orianna"
+      ],
+      "players2": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "mundo",
+       "orianna",
+       "vayne",
+       "nunu"
+      ],
+      "bans1": [
+       "skarner",
+       "blitz",
+       "sona"
+      ],
+      "players1": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ],
+      "picks2": [
+       "vlad",
+       "shen",
+       "anivia",
+       "ez",
+       "leona"
+      ],
+      "bans2": [
+       "jayce",
+       "nidalee",
+       "karthus"
+      ],
+      "players2": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "mundo",
+       "orianna",
+       "ez",
+       "nunu"
+      ],
+      "bans1": [
+       "blitz",
+       "skarner",
+       "sona"
+      ],
+      "players1": [
+       "Stanley",
+       "Lilballz",
+       "Toyz",
+       "BeBe",
+       "MiSTakE"
+      ],
+      "picks2": [
+       "jayce",
+       "shyvana",
+       "lux",
+       "graves",
+       "lulu"
+      ],
+      "bans2": [
+       "nidalee",
+       "karthus",
+       "mao"
+      ],
+      "players2": [
+       "Shy",
+       "CloudTemplar",
+       "RapidStar",
+       "Woong",
+       "MadLife"
+      ]
+     }
+    ]
+   }
+  ],
+  "name": "S2 2012 世界赛",
+  "year": 2012,
+  "season": 2
+ },
+ {
+  "start": "2013-09-15",
+  "end": "2013-10-04",
+  "page": "World Championship/2013/Playoffs",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "gamania bears",
+    "team2": "sk telecom t1 k",
+    "score1": 0,
+    "score2": 2,
+    "winner": "sk telecom t1 k",
+    "date": "September 24, 2013 - 19:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shyvana",
+       "elise",
+       "kassadin",
+       "varus",
+       "zyra"
+      ],
+      "bans1": [
+       "corki",
+       "aatrox",
+       "zed"
+      ],
+      "players1": [
+       "Steak",
+       "Winds",
+       "Maple",
+       "NL",
+       "SwordArt"
+      ],
+      "picks2": [
+       "renekton",
+       "vi",
+       "ahri",
+       "caitlyn",
+       "nami"
+      ],
+      "bans2": [
+       "fizz",
+       "shen",
+       "thresh"
+      ],
+      "players2": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "elise",
+       "ahri",
+       "varus",
+       "annie"
+      ],
+      "bans1": [
+       "corki",
+       "aatrox",
+       "zed"
+      ],
+      "players1": [
+       "Steak",
+       "Winds",
+       "Maple",
+       "NL",
+       "SwordArt"
+      ],
+      "picks2": [
+       "shen",
+       "lee sin",
+       "lissandra",
+       "ezreal",
+       "thresh"
+      ],
+      "bans2": [
+       "fizz",
+       "zyra",
+       "renekton"
+      ],
+      "players2": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "najin black sword",
+    "team2": "gambit esports",
+    "score1": 2,
+    "score2": 1,
+    "winner": "najin black sword",
+    "date": "September 23, 2013 - 16:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "diana",
+       "nunu",
+       "ahri",
+       "twitch",
+       "thresh"
+      ],
+      "bans1": [
+       "kassadin",
+       "zed",
+       "evelynn"
+      ],
+      "players1": [
+       "Expession",
+       "Watch",
+       "Nagne",
+       "PraY",
+       "Cain"
+      ],
+      "picks2": [
+       "shen",
+       "elise",
+       "fizz",
+       "varus",
+       "sona"
+      ],
+      "bans2": [
+       "caitlyn",
+       "jax",
+       "corki"
+      ],
+      "players2": [
+       "Darien",
+       "Diamondprox",
+       "Alex Ich",
+       "Genja",
+       "Voidle"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "elise",
+       "ahri",
+       "twitch",
+       "thresh"
+      ],
+      "bans1": [
+       "kassadin",
+       "evelynn",
+       "fizz"
+      ],
+      "players1": [
+       "Expession",
+       "Watch",
+       "Nagne",
+       "PraY",
+       "Cain"
+      ],
+      "picks2": [
+       "malphite",
+       "aatrox",
+       "orianna",
+       "corki",
+       "sona"
+      ],
+      "bans2": [
+       "jax",
+       "zed",
+       "shen"
+      ],
+      "players2": [
+       "Darien",
+       "Diamondprox",
+       "Alex Ich",
+       "Genja",
+       "Voidle"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "nunu",
+       "nidalee",
+       "corki",
+       "thresh"
+      ],
+      "bans1": [
+       "fizz",
+       "kassadin",
+       "zed"
+      ],
+      "players1": [
+       "Expession",
+       "Watch",
+       "Nagne",
+       "PraY",
+       "Cain"
+      ],
+      "picks2": [
+       "shen",
+       "evelynn",
+       "gragas",
+       "kog'maw",
+       "sona"
+      ],
+      "bans2": [
+       "jax",
+       "elise",
+       "ahri"
+      ],
+      "players2": [
+       "Darien",
+       "Diamondprox",
+       "Alex Ich",
+       "Genja",
+       "Voidle"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "royal club",
+    "team2": "oh my god",
+    "score1": 2,
+    "score2": 0,
+    "winner": "royal club",
+    "date": "September 24, 2013 - 22:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "jarvan iv",
+       "vladimir",
+       "caitlyn",
+       "annie"
+      ],
+      "bans1": [
+       "orianna",
+       "zed",
+       "aatrox"
+      ],
+      "players1": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ],
+      "picks2": [
+       "jax",
+       "lee sin",
+       "ahri",
+       "corki",
+       "zyra"
+      ],
+      "bans2": [
+       "shen",
+       "fizz",
+       "elise"
+      ],
+      "players2": [
+       "Gogoing",
+       "LoveLin",
+       "Cool",
+       "San",
+       "Bigpomelo"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "elise",
+       "zed",
+       "vayne",
+       "sona"
+      ],
+      "bans1": [
+       "orianna",
+       "renekton",
+       "aatrox"
+      ],
+      "players1": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ],
+      "picks2": [
+       "shen",
+       "lee sin",
+       "ahri",
+       "varus",
+       "lulu"
+      ],
+      "bans2": [
+       "annie",
+       "fizz",
+       "corki"
+      ],
+      "players2": [
+       "Gogoing",
+       "LoveLin",
+       "Cool",
+       "San",
+       "Bigpomelo"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "cloud9",
+    "team2": "fnatic",
+    "score1": 1,
+    "score2": 2,
+    "winner": "fnatic",
+    "date": "September 23, 2013 - 12:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "elise",
+       "gragas",
+       "ashe",
+       "sona"
+      ],
+      "bans1": [
+       "aatrox",
+       "orianna",
+       "ahri"
+      ],
+      "players1": [
+       "Balls",
+       "Meteos",
+       "Hai",
+       "Sneaky",
+       "LemonNation"
+      ],
+      "picks2": [
+       "lissandra",
+       "jarvan iv",
+       "kassadin",
+       "corki",
+       "zyra"
+      ],
+      "bans2": [
+       "fizz",
+       "kennen",
+       "zed"
+      ],
+      "players2": [
+       "sOAZ",
+       "Cyanide",
+       "xPeke",
+       "Puszu",
+       "YellOwStaR"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "nocturne",
+       "fizz",
+       "varus",
+       "thresh"
+      ],
+      "bans1": [
+       "aatrox",
+       "ahri",
+       "orianna"
+      ],
+      "players1": [
+       "Balls",
+       "Meteos",
+       "Hai",
+       "Sneaky",
+       "LemonNation"
+      ],
+      "picks2": [
+       "zac",
+       "elise",
+       "twisted fate",
+       "corki",
+       "zyra"
+      ],
+      "bans2": [
+       "zed",
+       "kennen",
+       "kassadin"
+      ],
+      "players2": [
+       "sOAZ",
+       "Cyanide",
+       "xPeke",
+       "Puszu",
+       "YellOwStaR"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "vladimir",
+       "nocturne",
+       "kennen",
+       "corki",
+       "zyra"
+      ],
+      "bans1": [
+       "aatrox",
+       "orianna",
+       "ahri"
+      ],
+      "players1": [
+       "Balls",
+       "Meteos",
+       "Hai",
+       "Sneaky",
+       "LemonNation"
+      ],
+      "picks2": [
+       "shen",
+       "lee sin",
+       "kassadin",
+       "varus",
+       "leona"
+      ],
+      "bans2": [
+       "fizz",
+       "zed",
+       "rumble"
+      ],
+      "players2": [
+       "sOAZ",
+       "Cyanide",
+       "xPeke",
+       "Puszu",
+       "YellOwStaR"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "sk telecom t1 k",
+    "team2": "najin black sword",
+    "score1": 3,
+    "score2": 2,
+    "winner": "sk telecom t1 k",
+    "date": "September 27, 2013 - 20:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "lee sin",
+       "ahri",
+       "ezreal",
+       "zyra"
+      ],
+      "bans1": [
+       "twitch",
+       "thresh",
+       "sona"
+      ],
+      "players1": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ],
+      "picks2": [
+       "jax",
+       "elise",
+       "gragas",
+       "corki",
+       "leona"
+      ],
+      "bans2": [
+       "vi",
+       "zed",
+       "fizz"
+      ],
+      "players2": [
+       "Expession",
+       "Watch",
+       "Nagne",
+       "PraY",
+       "Cain"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "lee sin",
+       "orianna",
+       "vayne",
+       "thresh"
+      ],
+      "bans1": [
+       "twitch",
+       "zed",
+       "shen"
+      ],
+      "players1": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ],
+      "picks2": [
+       "jax",
+       "elise",
+       "gragas",
+       "corki",
+       "zyra"
+      ],
+      "bans2": [
+       "vi",
+       "caitlyn",
+       "fizz"
+      ],
+      "players2": [
+       "Expession",
+       "Watch",
+       "Nagne",
+       "PraY",
+       "Cain"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "aatrox",
+       "ahri",
+       "vayne",
+       "zyra"
+      ],
+      "bans1": [
+       "twitch",
+       "thresh",
+       "jax"
+      ],
+      "players1": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ],
+      "picks2": [
+       "renekton",
+       "lee sin",
+       "gragas",
+       "corki",
+       "sona"
+      ],
+      "bans2": [
+       "zed",
+       "vi",
+       "fizz"
+      ],
+      "players2": [
+       "Expession",
+       "Watch",
+       "Nagne",
+       "PraY",
+       "Cain"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "lee sin",
+       "orianna",
+       "corki",
+       "zyra"
+      ],
+      "bans1": [
+       "twitch",
+       "zed",
+       "gragas"
+      ],
+      "players1": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ],
+      "picks2": [
+       "jax",
+       "elise",
+       "ahri",
+       "ezreal",
+       "thresh"
+      ],
+      "bans2": [
+       "vi",
+       "fizz",
+       "vayne"
+      ],
+      "players2": [
+       "Expession",
+       "Watch",
+       "Nagne",
+       "PraY",
+       "Cain"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "lee sin",
+       "orianna",
+       "ezreal",
+       "zyra"
+      ],
+      "bans1": [
+       "twitch",
+       "gragas",
+       "corki"
+      ],
+      "players1": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ],
+      "picks2": [
+       "shen",
+       "nocturne",
+       "ahri",
+       "caitlyn",
+       "thresh"
+      ],
+      "bans2": [
+       "zed",
+       "vi",
+       "fizz"
+      ],
+      "players2": [
+       "Expession",
+       "Watch",
+       "Nagne",
+       "PraY",
+       "Cain"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "royal club",
+    "team2": "fnatic",
+    "score1": 3,
+    "score2": 1,
+    "winner": "royal club",
+    "date": "September 28, 2013 - 12:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "elise",
+       "orianna",
+       "vayne",
+       "lulu"
+      ],
+      "bans1": [
+       "lissandra",
+       "kassadin",
+       "shen"
+      ],
+      "players1": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ],
+      "picks2": [
+       "zac",
+       "lee sin",
+       "fizz",
+       "corki",
+       "leona"
+      ],
+      "bans2": [
+       "annie",
+       "renekton",
+       "zed"
+      ],
+      "players2": [
+       "sOAZ",
+       "Cyanide",
+       "xPeke",
+       "Puszu",
+       "YellOwStaR"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "elise",
+       "orianna",
+       "ezreal",
+       "sona"
+      ],
+      "bans1": [
+       "lissandra",
+       "kassadin",
+       "shen"
+      ],
+      "players1": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ],
+      "picks2": [
+       "zac",
+       "aatrox",
+       "ahri",
+       "ashe",
+       "zyra"
+      ],
+      "bans2": [
+       "zed",
+       "vayne",
+       "annie"
+      ],
+      "players2": [
+       "sOAZ",
+       "Cyanide",
+       "xPeke",
+       "Puszu",
+       "YellOwStaR"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "elise",
+       "gragas",
+       "corki",
+       "lulu"
+      ],
+      "bans1": [
+       "lissandra",
+       "kassadin",
+       "shen"
+      ],
+      "players1": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ],
+      "picks2": [
+       "zac",
+       "aatrox",
+       "orianna",
+       "varus",
+       "leona"
+      ],
+      "bans2": [
+       "vayne",
+       "annie",
+       "zed"
+      ],
+      "players2": [
+       "sOAZ",
+       "Cyanide",
+       "xPeke",
+       "Puszu",
+       "YellOwStaR"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "elise",
+       "kayle",
+       "caitlyn",
+       "annie"
+      ],
+      "bans1": [
+       "lissandra",
+       "kassadin",
+       "aatrox"
+      ],
+      "players1": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ],
+      "picks2": [
+       "rumble",
+       "jarvan iv",
+       "fizz",
+       "varus",
+       "leona"
+      ],
+      "bans2": [
+       "zed",
+       "vayne",
+       "orianna"
+      ],
+      "players2": [
+       "sOAZ",
+       "Cyanide",
+       "xPeke",
+       "Puszu",
+       "YellOwStaR"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "sk telecom t1 k",
+    "team2": "royal club",
+    "score1": 3,
+    "score2": 0,
+    "winner": "sk telecom t1 k",
+    "date": "October 04, 2013 - 20:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "jarvan iv",
+       "gragas",
+       "corki",
+       "thresh"
+      ],
+      "bans1": [
+       "zed",
+       "annie",
+       "renekton"
+      ],
+      "players1": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ],
+      "picks2": [
+       "malphite",
+       "elise",
+       "orianna",
+       "vayne",
+       "sona"
+      ],
+      "bans2": [
+       "vi",
+       "shen",
+       "lee sin"
+      ],
+      "players2": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "lee sin",
+       "zed",
+       "ezreal",
+       "zyra"
+      ],
+      "bans1": [
+       "annie",
+       "renekton",
+       "corki"
+      ],
+      "players1": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ],
+      "picks2": [
+       "rumble",
+       "jarvan iv",
+       "kassadin",
+       "vayne",
+       "sona"
+      ],
+      "bans2": [
+       "shen",
+       "orianna",
+       "vi"
+      ],
+      "players2": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "jarvan iv",
+       "gragas",
+       "corki",
+       "zyra"
+      ],
+      "bans1": [
+       "annie",
+       "renekton",
+       "zed"
+      ],
+      "players1": [
+       "Impact",
+       "bengi",
+       "Faker",
+       "Piglet",
+       "PoohManDu"
+      ],
+      "picks2": [
+       "kennen",
+       "lee sin",
+       "fizz",
+       "caitlyn",
+       "sona"
+      ],
+      "bans2": [
+       "orianna",
+       "shen",
+       "vi"
+      ],
+      "players2": [
+       "GoDlike",
+       "Lucky",
+       "Wh1t3zZ",
+       "Uzi",
+       "Tabe"
+      ]
+     }
+    ]
+   }
+  ],
+  "name": "S3 2013 世界赛",
+  "year": 2013,
+  "season": 3
+ },
+ {
+  "start": "2014-09-18",
+  "end": "2014-10-19",
+  "page": "World Championship/2014/Playoffs",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "ssw",
+    "team2": "tsm",
+    "score1": 3,
+    "score2": 1,
+    "winner": "ssw",
+    "date": "October 3, 2014 - 17:15 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ryze",
+       "elise",
+       "jayce",
+       "twitch",
+       "thresh"
+      ],
+      "bans1": [
+       "orianna",
+       "lee sin",
+       "rumble"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "lulu",
+       "kha'zix",
+       "zed",
+       "lucian",
+       "janna"
+      ],
+      "bans2": [
+       "alistar",
+       "zilean",
+       "maokai"
+      ],
+      "players2": [
+       "Dyrus",
+       "Amazing (German player)",
+       "Bjergsen",
+       "WildTurtle",
+       "Lustboy"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "singed",
+       "kha'zix",
+       "fizz",
+       "twitch",
+       "janna"
+      ],
+      "bans1": [
+       "orianna",
+       "alistar",
+       "lee sin"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "maokai",
+       "jarvan iv",
+       "zed",
+       "corki",
+       "nami"
+      ],
+      "bans2": [
+       "zilean",
+       "rumble",
+       "thresh"
+      ],
+      "players2": [
+       "Dyrus",
+       "Amazing (German player)",
+       "Bjergsen",
+       "WildTurtle",
+       "Lustboy"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "dr. mundo",
+       "kha'zix",
+       "kassadin",
+       "tristana",
+       "morgana"
+      ],
+      "bans1": [
+       "orianna",
+       "lee sin",
+       "rumble"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "ryze",
+       "jarvan iv",
+       "yasuo",
+       "lucian",
+       "thresh"
+      ],
+      "bans2": [
+       "alistar",
+       "zilean",
+       "maokai"
+      ],
+      "players2": [
+       "Dyrus",
+       "Amazing (German player)",
+       "Bjergsen",
+       "WildTurtle",
+       "Lustboy"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kayle",
+       "lee sin",
+       "yasuo",
+       "twitch",
+       "braum"
+      ],
+      "bans1": [
+       "orianna",
+       "alistar",
+       "maokai"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "dr. mundo",
+       "kha'zix",
+       "ahri",
+       "lucian",
+       "thresh"
+      ],
+      "bans2": [
+       "zilean",
+       "rumble",
+       "ryze"
+      ],
+      "players2": [
+       "Dyrus",
+       "Amazing (German player)",
+       "Bjergsen",
+       "WildTurtle",
+       "Lustboy"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "ssb",
+    "team2": "c9",
+    "score1": 3,
+    "score2": 1,
+    "winner": "ssb",
+    "date": "October 4, 2014 - 14:15 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "nidalee",
+       "elise",
+       "jayce",
+       "tristana",
+       "thresh"
+      ],
+      "bans1": [
+       "zed",
+       "alistar",
+       "maokai"
+      ],
+      "players1": [
+       "Acorn",
+       "Spirit",
+       "Dade",
+       "Deft",
+       "Heart"
+      ],
+      "picks2": [
+       "ryze",
+       "kha'zix",
+       "syndra",
+       "lucian",
+       "morgana"
+      ],
+      "bans2": [
+       "yasuo",
+       "lee sin",
+       "zilean"
+      ],
+      "players2": [
+       "Balls",
+       "Meteos",
+       "Hai",
+       "Sneaky",
+       "LemonNation"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "kha'zix",
+       "twisted fate",
+       "twitch",
+       "thresh"
+      ],
+      "bans1": [
+       "zilean",
+       "alistar",
+       "lucian"
+      ],
+      "players1": [
+       "Acorn",
+       "Spirit",
+       "Dade",
+       "Deft",
+       "Heart"
+      ],
+      "picks2": [
+       "maokai",
+       "elise",
+       "zed",
+       "corki",
+       "morgana"
+      ],
+      "bans2": [
+       "yasuo",
+       "lee sin",
+       "ryze"
+      ],
+      "players2": [
+       "Balls",
+       "Meteos",
+       "Hai",
+       "Sneaky",
+       "LemonNation"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "lee sin",
+       "jayce",
+       "corki",
+       "braum"
+      ],
+      "bans1": [
+       "lucian",
+       "alistar",
+       "thresh"
+      ],
+      "players1": [
+       "Acorn",
+       "Spirit",
+       "Dade",
+       "Deft",
+       "Heart"
+      ],
+      "picks2": [
+       "rumble",
+       "kha'zix",
+       "syndra",
+       "graves",
+       "janna"
+      ],
+      "bans2": [
+       "yasuo",
+       "zed",
+       "zilean"
+      ],
+      "players2": [
+       "Balls",
+       "Meteos",
+       "Hai",
+       "Sneaky",
+       "LemonNation"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "rengar",
+       "yasuo",
+       "twitch",
+       "nami"
+      ],
+      "bans1": [
+       "zilean",
+       "alistar",
+       "lucian"
+      ],
+      "players1": [
+       "Acorn",
+       "Spirit",
+       "Dade",
+       "Deft",
+       "Heart"
+      ],
+      "picks2": [
+       "rumble",
+       "lee sin",
+       "talon",
+       "corki",
+       "braum"
+      ],
+      "bans2": [
+       "thresh",
+       "zed",
+       "ryze"
+      ],
+      "players2": [
+       "Balls",
+       "Meteos",
+       "Hai",
+       "Sneaky",
+       "LemonNation"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "shr",
+    "team2": "edg",
+    "score1": 3,
+    "score2": 2,
+    "winner": "shr",
+    "date": "October 5, 2014 - 14:15 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ryze",
+       "kha'zix",
+       "lulu",
+       "lucian",
+       "nami"
+      ],
+      "bans1": [
+       "maokai",
+       "alistar",
+       "rumble"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "kayle",
+       "lee sin",
+       "orianna",
+       "tristana",
+       "janna"
+      ],
+      "bans2": [
+       "rengar",
+       "zilean",
+       "fizz"
+      ],
+      "players2": [
+       "Koro1",
+       "Clearlove",
+       "U",
+       "NaMei",
+       "Fzzf"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "lee sin",
+       "orianna",
+       "twitch",
+       "janna"
+      ],
+      "bans1": [
+       "maokai",
+       "zilean",
+       "alistar"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "ryze",
+       "kha'zix",
+       "zed",
+       "lucian",
+       "thresh"
+      ],
+      "bans2": [
+       "rengar",
+       "yasuo",
+       "fizz"
+      ],
+      "players2": [
+       "Koro1",
+       "Clearlove",
+       "U",
+       "NaMei",
+       "Fzzf"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "lee sin",
+       "orianna",
+       "twitch",
+       "nami"
+      ],
+      "bans1": [
+       "maokai",
+       "alistar",
+       "kha'zix"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "ryze",
+       "evelynn",
+       "syndra",
+       "lucian",
+       "thresh"
+      ],
+      "bans2": [
+       "rengar",
+       "zilean",
+       "janna"
+      ],
+      "players2": [
+       "Koro1",
+       "Clearlove",
+       "U",
+       "NaMei",
+       "Fzzf"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "irelia",
+       "lee sin",
+       "fizz",
+       "vayne",
+       "thresh"
+      ],
+      "bans1": [
+       "maokai",
+       "zilean",
+       "alistar"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "ryze",
+       "kha'zix",
+       "orianna",
+       "lucian",
+       "braum"
+      ],
+      "bans2": [
+       "rengar",
+       "yasuo",
+       "janna"
+      ],
+      "players2": [
+       "Koro1",
+       "Clearlove",
+       "U",
+       "NaMei",
+       "Fzzf"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ryze",
+       "jarvan iv",
+       "orianna",
+       "tristana",
+       "janna"
+      ],
+      "bans1": [
+       "maokai",
+       "alistar",
+       "lucian"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "rumble",
+       "kha'zix",
+       "syndra",
+       "twitch",
+       "thresh"
+      ],
+      "bans2": [
+       "rengar",
+       "zilean",
+       "fizz"
+      ],
+      "players2": [
+       "Koro1",
+       "Clearlove",
+       "U",
+       "NaMei",
+       "Fzzf"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "nws",
+    "team2": "omg",
+    "score1": 0,
+    "score2": 3,
+    "winner": "omg",
+    "date": "October 6, 2014 - 17:15 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kassadin",
+       "kha'zix",
+       "zed",
+       "corki",
+       "morgana"
+      ],
+      "bans1": [
+       "maokai",
+       "jayce",
+       "ryze"
+      ],
+      "players1": [
+       "Save",
+       "Watch",
+       "Ggoong",
+       "Zefa",
+       "GorillA"
+      ],
+      "picks2": [
+       "irelia",
+       "lee sin",
+       "ahri",
+       "lucian",
+       "janna"
+      ],
+      "bans2": [
+       "zilean",
+       "thresh",
+       "alistar"
+      ],
+      "players2": [
+       "Gogoing",
+       "Loveling",
+       "cool",
+       "san",
+       "Cloud"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "nidalee",
+       "kha'zix",
+       "zed",
+       "corki",
+       "braum"
+      ],
+      "bans1": [
+       "zilean",
+       "irelia",
+       "lee sin"
+      ],
+      "players1": [
+       "Save",
+       "Watch",
+       "Ggoong",
+       "Zefa",
+       "GorillA"
+      ],
+      "picks2": [
+       "ryze",
+       "rengar",
+       "jayce",
+       "lucian",
+       "janna"
+      ],
+      "bans2": [
+       "alistar",
+       "lulu",
+       "thresh"
+      ],
+      "players2": [
+       "Gogoing",
+       "Loveling",
+       "cool",
+       "san",
+       "Cloud"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "lee sin",
+       "orianna",
+       "kog'maw",
+       "nami"
+      ],
+      "bans1": [
+       "irelia",
+       "lucian",
+       "jayce"
+      ],
+      "players1": [
+       "Save",
+       "Watch",
+       "Ggoong",
+       "Zefa",
+       "GorillA"
+      ],
+      "picks2": [
+       "ryze",
+       "kha'zix",
+       "zed",
+       "corki",
+       "janna"
+      ],
+      "bans2": [
+       "zilean",
+       "alistar",
+       "thresh"
+      ],
+      "players2": [
+       "Gogoing",
+       "Loveling",
+       "cool",
+       "san",
+       "Cloud"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "ssw",
+    "team2": "ssb",
+    "score1": 3,
+    "score2": 0,
+    "winner": "ssw",
+    "date": "October 11, 2014 - 17:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "akali",
+       "rengar",
+       "jayce",
+       "twitch",
+       "janna"
+      ],
+      "bans1": [
+       "rumble",
+       "maokai",
+       "thresh"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "kayle",
+       "lee sin",
+       "yasuo",
+       "varus",
+       "zilean"
+      ],
+      "bans2": [
+       "tristana",
+       "alistar",
+       "ryze"
+      ],
+      "players2": [
+       "Acorn",
+       "Spirit",
+       "Dade",
+       "Deft",
+       "Heart"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "rengar",
+       "jayce",
+       "corki",
+       "morgana"
+      ],
+      "bans1": [
+       "thresh",
+       "rumble",
+       "twitch"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "galio",
+       "kha'zix",
+       "ryze",
+       "lucian",
+       "janna"
+      ],
+      "bans2": [
+       "zilean",
+       "alistar",
+       "tristana"
+      ],
+      "players2": [
+       "Acorn",
+       "Spirit",
+       "Dade",
+       "Deft",
+       "Heart"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kassadin",
+       "lee sin",
+       "fizz",
+       "twitch",
+       "janna"
+      ],
+      "bans1": [
+       "rumble",
+       "maokai",
+       "thresh"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "ryze",
+       "rengar",
+       "twisted fate",
+       "lucian",
+       "sona"
+      ],
+      "bans2": [
+       "zilean",
+       "alistar",
+       "jayce"
+      ],
+      "players2": [
+       "Acorn",
+       "Spirit",
+       "Dade",
+       "Deft",
+       "Heart"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "shr",
+    "team2": "omg",
+    "score1": 3,
+    "score2": 2,
+    "winner": "shr",
+    "date": "October 12, 2014 - 17:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "irelia",
+       "jarvan iv",
+       "orianna",
+       "tristana",
+       "zilean"
+      ],
+      "bans1": [
+       "alistar",
+       "maokai",
+       "janna"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "rumble",
+       "kha'zix",
+       "jayce",
+       "lucian",
+       "thresh"
+      ],
+      "bans2": [
+       "rengar",
+       "lee sin",
+       "ryze"
+      ],
+      "players2": [
+       "Gogoing",
+       "Loveling",
+       "cool",
+       "san",
+       "Cloud"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "dr. mundo",
+       "kha'zix",
+       "lulu",
+       "lucian",
+       "thresh"
+      ],
+      "bans1": [
+       "alistar",
+       "ryze",
+       "zilean"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "rumble",
+       "lee sin",
+       "jayce",
+       "corki",
+       "morgana"
+      ],
+      "bans2": [
+       "rengar",
+       "janna",
+       "maokai"
+      ],
+      "players2": [
+       "Gogoing",
+       "Loveling",
+       "cool",
+       "san",
+       "Cloud"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "fiddlesticks",
+       "orianna",
+       "twitch",
+       "janna"
+      ],
+      "bans1": [
+       "alistar",
+       "jayce",
+       "zilean"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "nidalee",
+       "kha'zix",
+       "twisted fate",
+       "lucian",
+       "thresh"
+      ],
+      "bans2": [
+       "rengar",
+       "lee sin",
+       "ryze"
+      ],
+      "players2": [
+       "Gogoing",
+       "Loveling",
+       "cool",
+       "san",
+       "Cloud"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "dr. mundo",
+       "kha'zix",
+       "zilean",
+       "lucian",
+       "nami"
+      ],
+      "bans1": [
+       "alistar",
+       "ryze",
+       "jayce"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "maokai",
+       "lee sin",
+       "twisted fate",
+       "corki",
+       "thresh"
+      ],
+      "bans2": [
+       "rengar",
+       "janna",
+       "twitch"
+      ],
+      "players2": [
+       "Gogoing",
+       "Loveling",
+       "cool",
+       "san",
+       "Cloud"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "pantheon",
+       "ryze",
+       "lucian",
+       "thresh"
+      ],
+      "bans1": [
+       "alistar",
+       "jayce",
+       "tf"
+      ],
+      "players1": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ],
+      "picks2": [
+       "rumble",
+       "kha'zix",
+       "orianna",
+       "corki",
+       "janna"
+      ],
+      "bans2": [
+       "rengar",
+       "lee sin",
+       "twitch"
+      ],
+      "players2": [
+       "Gogoing",
+       "Loveling",
+       "cool",
+       "san",
+       "Cloud"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "ssw",
+    "team2": "shr",
+    "score1": 3,
+    "score2": 1,
+    "winner": "ssw",
+    "date": "October 19, 2014 - 16:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "jarvan iv",
+       "jayce",
+       "twitch",
+       "thresh"
+      ],
+      "bans1": [
+       "rengar",
+       "lee sin",
+       "lucian"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "ryze",
+       "kha'zix",
+       "orianna",
+       "tristana",
+       "janna"
+      ],
+      "bans2": [
+       "alistar",
+       "zilean",
+       "rumble"
+      ],
+      "players2": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "rengar",
+       "talon",
+       "twitch",
+       "janna"
+      ],
+      "bans1": [
+       "lucian",
+       "lee sin",
+       "maokai"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "dr. mundo",
+       "kha'zix",
+       "jayce",
+       "corki",
+       "thresh"
+      ],
+      "bans2": [
+       "alistar",
+       "zilean",
+       "ryze"
+      ],
+      "players2": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "singed",
+       "jarvan iv",
+       "fizz",
+       "twitch",
+       "thresh"
+      ],
+      "bans1": [
+       "rengar",
+       "lee sin",
+       "lucian"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "maokai",
+       "rammus",
+       "ryze",
+       "tristana",
+       "braum"
+      ],
+      "bans2": [
+       "alistar",
+       "jayce",
+       "zilean"
+      ],
+      "players2": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kassadin",
+       "rengar",
+       "orianna",
+       "corki",
+       "janna"
+      ],
+      "bans1": [
+       "lucian",
+       "lee sin",
+       "maokai"
+      ],
+      "players1": [
+       "Looper",
+       "Dandy",
+       "PawN",
+       "imp",
+       "Mata"
+      ],
+      "picks2": [
+       "ryze",
+       "pantheon",
+       "lulu",
+       "tristana",
+       "braum"
+      ],
+      "bans2": [
+       "alistar",
+       "jayce",
+       "zilean"
+      ],
+      "players2": [
+       "Cola",
+       "inSec",
+       "corn (Chinese player)",
+       "Uzi",
+       "Zero (Korean player)"
+      ]
+     }
+    ]
+   }
+  ],
+  "name": "S4 2014 世界赛",
+  "year": 2014,
+  "season": 4
+ },
+ {
+  "start": "2015-10-01",
+  "end": "2015-10-31",
+  "page": "World Championship/2015/Playoffs",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "fw",
+    "team2": "og",
+    "score1": 1,
+    "score2": 3,
+    "winner": "og",
+    "date": "October 15, 2015 - 18:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "rek'sai",
+       "leblanc",
+       "jinx",
+       "morgana"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "darius",
+       "gragas",
+       "anivia",
+       "sivir",
+       "alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "malphite",
+       "elise",
+       "viktor",
+       "jinx",
+       "morgana"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "lulu",
+       "rek'sai",
+       "anivia",
+       "kalista",
+       "tahm kench"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "rek'sai",
+       "viktor",
+       "caitlyn",
+       "morgana"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "darius",
+       "gragas",
+       "orianna",
+       "jinx",
+       "tahm kench"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "irelia",
+       "rek'sai",
+       "viktor",
+       "caitlyn",
+       "thresh"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "lulu",
+       "elise",
+       "anivia",
+       "jinx",
+       "morgana"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "skt",
+    "team2": "ahq",
+    "score1": 3,
+    "score2": 0,
+    "winner": "skt",
+    "date": "October 16, 2015 - 18:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "fiora",
+       "elise",
+       "lulu",
+       "tristana",
+       "alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "darius",
+       "rek'sai",
+       "diana",
+       "kalista",
+       "thresh"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "gragas",
+       "ryze",
+       "kalista",
+       "tahm kench"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "darius",
+       "elise",
+       "twisted fate",
+       "tristana",
+       "thresh"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "fiora",
+       "elise",
+       "kassadin",
+       "tristana",
+       "tahm kench"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "darius",
+       "rek'sai",
+       "fizz",
+       "kalista",
+       "thresh"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "fnc",
+    "team2": "edg",
+    "score1": 3,
+    "score2": 0,
+    "winner": "fnc",
+    "date": "October 17, 2015 - 15:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jarvan iv",
+       "rek'sai",
+       "viktor",
+       "kennen",
+       "alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "gragas",
+       "twisted fate",
+       "jayce",
+       "thresh"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "riven",
+       "gragas",
+       "leblanc",
+       "jinx",
+       "tahm kench"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "rek'sai",
+       "veigar",
+       "caitlyn",
+       "morgana"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "riven",
+       "rek'sai",
+       "azir",
+       "jinx",
+       "alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "darius",
+       "gragas",
+       "kassadin",
+       "sivir",
+       "kennen"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "kt",
+    "team2": "koo",
+    "score1": 1,
+    "score2": 3,
+    "winner": "koo",
+    "date": "October 18, 2015 - 15:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "darius",
+       "gragas",
+       "leblanc",
+       "kalista",
+       "thresh"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "rek'sai",
+       "veigar",
+       "ashe",
+       "tahm kench"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "gragas",
+       "leblanc",
+       "jinx",
+       "braum"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "elise",
+       "veigar",
+       "caitlyn",
+       "shen"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "malphite",
+       "rek'sai",
+       "lulu",
+       "kalista",
+       "alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "elise",
+       "viktor",
+       "ashe",
+       "shen"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "darius",
+       "gragas",
+       "cassiopeia",
+       "jinx",
+       "shen"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "elise",
+       "viktor",
+       "caitlyn",
+       "alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "og",
+    "team2": "skt",
+    "score1": 0,
+    "score2": 3,
+    "winner": "skt",
+    "date": "October 24, 2015 - 16:30 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "evelynn",
+       "viktor",
+       "tristana",
+       "alistar"
+      ],
+      "bans1": [
+       "elise",
+       "rek'sai",
+       "lulu"
+      ],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "jarvan iv",
+       "azir",
+       "kalista",
+       "shen"
+      ],
+      "bans2": [
+       "tahm kench",
+       "gangplank",
+       "mordekaiser"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "fiora",
+       "rek'sai",
+       "anivia",
+       "tristana",
+       "morgana"
+      ],
+      "bans1": [
+       "azir",
+       "lulu",
+       "kalista"
+      ],
+      "players1": [],
+      "picks2": [
+       "renekton",
+       "jarvan iv",
+       "orianna",
+       "sivir",
+       "tahm kench"
+      ],
+      "bans2": [
+       "mordekaiser",
+       "gangplank",
+       "elise"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "lee sin",
+       "lulu",
+       "sivir",
+       "alistar"
+      ],
+      "bans1": [
+       "elise",
+       "tahm kench",
+       "gangplank"
+      ],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "rek'sai",
+       "ryze",
+       "tristana",
+       "shen"
+      ],
+      "bans2": [
+       "kalista",
+       "kennen",
+       "mordekaiser"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "fnc",
+    "team2": "koo",
+    "score1": 0,
+    "score2": 3,
+    "winner": "koo",
+    "date": "October 25, 2015 - 14:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "hecarim",
+       "rek'sai",
+       "leblanc",
+       "kennen",
+       "nautilus"
+      ],
+      "bans1": [
+       "tahm kench",
+       "shen",
+       "lulu"
+      ],
+      "players1": [],
+      "picks2": [
+       "riven",
+       "zac",
+       "kassadin",
+       "kalista",
+       "alistar"
+      ],
+      "bans2": [
+       "gangplank",
+       "mordekaiser",
+       "elise"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "riven",
+       "skarner",
+       "azir",
+       "ashe",
+       "alistar"
+      ],
+      "bans1": [
+       "elise",
+       "gangplank",
+       "mordekaiser"
+      ],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "zac",
+       "veigar",
+       "kalista",
+       "tahm kench"
+      ],
+      "bans2": [
+       "leblanc",
+       "lulu",
+       "rek'sai"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "riven",
+       "rek'sai",
+       "orianna",
+       "sivir",
+       "thresh"
+      ],
+      "bans1": [
+       "tahm kench",
+       "shen",
+       "veigar"
+      ],
+      "players1": [],
+      "picks2": [
+       "hecarim",
+       "lee sin",
+       "lulu",
+       "ashe",
+       "alistar"
+      ],
+      "bans2": [
+       "gangplank",
+       "mordekaiser",
+       "elise"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "skt",
+    "team2": "koo",
+    "score1": 3,
+    "score2": 1,
+    "winner": "skt",
+    "date": "October 31, 2015 - 13:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "rek'sai",
+       "kassadin",
+       "sivir",
+       "shen"
+      ],
+      "bans1": [
+       "tahm kench",
+       "kalista",
+       "mordekaiser"
+      ],
+      "players1": [],
+      "picks2": [
+       "riven",
+       "lee sin",
+       "lulu",
+       "jinx",
+       "alistar"
+      ],
+      "bans2": [
+       "renekton",
+       "elise",
+       "gangplank"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "jarvan iv",
+       "lulu",
+       "tristana",
+       "alistar"
+      ],
+      "bans1": [
+       "gangplank",
+       "mordekaiser",
+       "elise"
+      ],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "rek'sai",
+       "viktor",
+       "kennen",
+       "shen"
+      ],
+      "bans2": [
+       "renekton",
+       "kalista",
+       "tahm kench"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rumble",
+       "rek'sai",
+       "lulu",
+       "sivir",
+       "alistar"
+      ],
+      "bans1": [
+       "tahm kench",
+       "kalista",
+       "mordekaiser"
+      ],
+      "players1": [],
+      "picks2": [
+       "fiora",
+       "lee sin",
+       "kassadin",
+       "ashe",
+       "thresh"
+      ],
+      "bans2": [
+       "renekton",
+       "elise",
+       "gangplank"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "elise",
+       "ryze",
+       "sivir",
+       "alistar"
+      ],
+      "bans1": [
+       "fiora",
+       "gangplank",
+       "mordekaiser"
+      ],
+      "players1": [],
+      "picks2": [
+       "lulu",
+       "rek'sai",
+       "kassadin",
+       "ashe",
+       "tahm kench"
+      ],
+      "bans2": [
+       "renekton",
+       "rumble",
+       "kalista"
+      ],
+      "players2": []
+     }
+    ]
+   }
+  ],
+  "name": "S5 2015 世界赛",
+  "year": 2015,
+  "season": 5
+ },
+ {
+  "start": "2016-09-29",
+  "end": "2016-10-29",
+  "page": "World Championship/2016/Knockout Stage",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "skt",
+    "team2": "rng",
+    "score1": 3,
+    "score2": 1,
+    "winner": "skt",
+    "date": "October 14, 2016 - 15:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "poppy",
+       "lee sin",
+       "viktor",
+       "ezreal",
+       "karma"
+      ],
+      "bans1": [
+       "nidalee",
+       "caitlyn",
+       "syndra"
+      ],
+      "players1": [],
+      "picks2": [
+       "jayce",
+       "rek'sai",
+       "vladimir",
+       "jhin",
+       "zyra"
+      ],
+      "bans2": [
+       "olaf",
+       "elise",
+       "ryze"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "zac",
+       "varus",
+       "jhin",
+       "zyra"
+      ],
+      "bans1": [
+       "nidalee",
+       "caitlyn",
+       "syndra"
+      ],
+      "players1": [],
+      "picks2": [
+       "poppy",
+       "olaf",
+       "viktor",
+       "ezreal",
+       "karma"
+      ],
+      "bans2": [
+       "ryze",
+       "jayce",
+       "elise"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "olaf",
+       "syndra",
+       "ezreal",
+       "karma"
+      ],
+      "bans1": [
+       "caitlyn",
+       "jayce",
+       "kennen"
+      ],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "lee sin",
+       "vladimir",
+       "jhin",
+       "zyra"
+      ],
+      "bans2": [
+       "elise",
+       "ryze",
+       "nidalee"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "irelia",
+       "elise",
+       "malzahar",
+       "jhin",
+       "zyra"
+      ],
+      "bans1": [
+       "caitlyn",
+       "nidalee",
+       "jayce"
+      ],
+      "players1": [],
+      "picks2": [
+       "kennen",
+       "lee sin",
+       "aurelion sol",
+       "ezreal",
+       "karma"
+      ],
+      "bans2": [
+       "ryze",
+       "olaf",
+       "syndra"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "roxt",
+    "team2": "edg",
+    "score1": 3,
+    "score2": 1,
+    "winner": "roxt",
+    "date": "October 15, 2016 - 15:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "lee sin",
+       "aurelion sol",
+       "caitlyn",
+       "zyra"
+      ],
+      "bans1": [
+       "rek'sai",
+       "poppy",
+       "syndra"
+      ],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "olaf",
+       "ryze",
+       "ezreal",
+       "karma"
+      ],
+      "bans2": [
+       "elise",
+       "nidalee",
+       "jhin"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "lee sin",
+       "aurelion sol",
+       "caitlyn",
+       "zyra"
+      ],
+      "bans1": [
+       "syndra",
+       "nidalee",
+       "rek'sai"
+      ],
+      "players1": [],
+      "picks2": [
+       "kennen",
+       "hecarim",
+       "ryze",
+       "jhin",
+       "karma"
+      ],
+      "bans2": [
+       "elise",
+       "jayce",
+       "olaf"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "fiora",
+       "lee sin",
+       "ryze",
+       "jhin",
+       "zyra"
+      ],
+      "bans1": [
+       "syndra",
+       "poppy",
+       "rek'sai"
+      ],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "olaf",
+       "aurelion sol",
+       "caitlyn",
+       "karma"
+      ],
+      "bans2": [
+       "elise",
+       "nidalee",
+       "jayce"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "olaf",
+       "ryze",
+       "jhin",
+       "karma"
+      ],
+      "bans1": [
+       "syndra",
+       "nidalee",
+       "rek'sai"
+      ],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "lee sin",
+       "jayce",
+       "caitlyn",
+       "nami"
+      ],
+      "bans2": [
+       "elise",
+       "aurelion sol",
+       "zyra"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "ssg",
+    "team2": "c9",
+    "score1": 3,
+    "score2": 0,
+    "winner": "ssg",
+    "date": "October 13, 2016 - 15:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ekko",
+       "olaf",
+       "cassiopeia",
+       "jhin",
+       "karma"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "rek'sai",
+       "orianna",
+       "caitlyn",
+       "alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "skarner",
+       "orianna",
+       "caitlyn",
+       "karma"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "jayce",
+       "rek'sai",
+       "cassiopeia",
+       "jhin",
+       "nami"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "poppy",
+       "olaf",
+       "cassiopeia",
+       "sivir",
+       "tahm kench"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "jayce",
+       "zac",
+       "orianna",
+       "caitlyn",
+       "karma"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "h2k",
+    "team2": "anx",
+    "score1": 3,
+    "score2": 0,
+    "winner": "h2k",
+    "date": "October 16, 2016 - 15:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "lee sin",
+       "vladimir",
+       "sivir",
+       "zyra"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "olaf",
+       "syndra",
+       "caitlyn",
+       "bard"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "lee sin",
+       "vladimir",
+       "lucian",
+       "zyra"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "elise",
+       "syndra",
+       "caitlyn",
+       "alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "lee sin",
+       "syndra",
+       "lucian",
+       "zyra"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "olaf",
+       "zilean",
+       "caitlyn",
+       "bard"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "skt",
+    "team2": "roxt",
+    "score1": 3,
+    "score2": 2,
+    "winner": "skt",
+    "date": "October 21, 2016 - 15:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "trundle",
+       "olaf",
+       "orianna",
+       "ashe",
+       "zyra"
+      ],
+      "bans1": [
+       "nidalee",
+       "aurelion sol",
+       "jayce"
+      ],
+      "players1": [
+       "Duke",
+       "bengi",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "poppy",
+       "elise",
+       "viktor",
+       "caitlyn",
+       "karma"
+      ],
+      "bans2": [
+       "ryze",
+       "ezreal",
+       "syndra"
+      ],
+      "players2": [
+       "Smeb",
+       "Peanut",
+       "kurO",
+       "PraY",
+       "GorillA"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ekko",
+       "olaf",
+       "viktor",
+       "ezreal",
+       "zyra"
+      ],
+      "bans1": [
+       "aurelion sol",
+       "jayce",
+       "jhin"
+      ],
+      "players1": [
+       "Duke",
+       "blank",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "rumble",
+       "lee sin",
+       "karma",
+       "ashe",
+       "miss fortune"
+      ],
+      "bans2": [
+       "syndra",
+       "ryze",
+       "nidalee"
+      ],
+      "players2": [
+       "Smeb",
+       "Peanut",
+       "kurO",
+       "PraY",
+       "GorillA"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ekko",
+       "olaf",
+       "orianna",
+       "caitlyn",
+       "zyra"
+      ],
+      "bans1": [
+       "aurelion sol",
+       "nidalee",
+       "jayce"
+      ],
+      "players1": [
+       "Duke",
+       "blank",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "rumble",
+       "lee sin",
+       "viktor",
+       "ashe",
+       "miss fortune"
+      ],
+      "bans2": [
+       "syndra",
+       "ryze",
+       "karma"
+      ],
+      "players2": [
+       "Smeb",
+       "Peanut",
+       "kurO",
+       "PraY",
+       "GorillA"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "nidalee",
+       "zilean",
+       "jhin",
+       "karma"
+      ],
+      "bans1": [
+       "miss fortune",
+       "jayce",
+       "aurelion sol"
+      ],
+      "players1": [
+       "Duke",
+       "bengi",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "rumble",
+       "lee sin",
+       "viktor",
+       "ashe",
+       "zyra"
+      ],
+      "bans2": [
+       "syndra",
+       "ryze",
+       "cassiopeia"
+      ],
+      "players2": [
+       "Smeb",
+       "Peanut",
+       "kurO",
+       "PraY",
+       "GorillA"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "poppy",
+       "lee sin",
+       "orianna",
+       "ashe",
+       "nami"
+      ],
+      "bans1": [
+       "miss fortune",
+       "nidalee",
+       "aurelion sol"
+      ],
+      "players1": [
+       "Duke",
+       "bengi",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "jayce",
+       "elise",
+       "karma",
+       "jhin",
+       "zyra"
+      ],
+      "bans2": [
+       "ryze",
+       "syndra",
+       "olaf"
+      ],
+      "players2": [
+       "Smeb",
+       "Peanut",
+       "kurO",
+       "PraY",
+       "GorillA"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "ssg",
+    "team2": "h2k",
+    "score1": 3,
+    "score2": 0,
+    "winner": "ssg",
+    "date": "October 22, 2016 - 15:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ekko",
+       "nidalee",
+       "viktor",
+       "ashe",
+       "miss fortune"
+      ],
+      "bans1": [
+       "caitlyn",
+       "jayce",
+       "syndra"
+      ],
+      "players1": [],
+      "picks2": [
+       "kennen",
+       "olaf",
+       "cassiopeia",
+       "sivir",
+       "zyra"
+      ],
+      "bans2": [
+       "poppy",
+       "jhin",
+       "ryze"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "olaf",
+       "cassiopeia",
+       "jhin",
+       "zyra"
+      ],
+      "bans1": [
+       "caitlyn",
+       "nidalee",
+       "syndra"
+      ],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "lee sin",
+       "ryze",
+       "sivir",
+       "karma"
+      ],
+      "bans2": [
+       "ekko",
+       "miss fortune",
+       "viktor"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "poppy",
+       "olaf",
+       "viktor",
+       "ezreal",
+       "zyra"
+      ],
+      "bans1": [
+       "caitlyn",
+       "syndra",
+       "lee sin"
+      ],
+      "players1": [],
+      "picks2": [
+       "trundle",
+       "elise",
+       "ryze",
+       "sivir",
+       "karma"
+      ],
+      "bans2": [
+       "jhin",
+       "nidalee",
+       "ashe"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "skt",
+    "team2": "ssg",
+    "score1": 3,
+    "score2": 2,
+    "winner": "skt",
+    "date": "October 29, 2016 - 15:00 {{Abbr/PDT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "trundle",
+       "olaf",
+       "orianna",
+       "jhin",
+       "karma"
+      ],
+      "bans1": [
+       "nidalee",
+       "miss fortune",
+       "ryze"
+      ],
+      "players1": [
+       "Duke",
+       "bengi",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "poppy",
+       "lee sin",
+       "viktor",
+       "caitlyn",
+       "zyra"
+      ],
+      "bans2": [
+       "ashe",
+       "syndra",
+       "cassiopeia"
+      ],
+      "players2": [
+       "CuVee",
+       "Ambition",
+       "Crown",
+       "Ruler",
+       "CoreJJ"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "lee sin",
+       "ryze",
+       "jhin",
+       "nami"
+      ],
+      "bans1": [
+       "jayce",
+       "olaf",
+       "elise"
+      ],
+      "players1": [
+       "Duke",
+       "bengi",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "kennen",
+       "kindred",
+       "cassiopeia",
+       "caitlyn",
+       "karma"
+      ],
+      "bans2": [
+       "syndra",
+       "ashe",
+       "nidalee"
+      ],
+      "players2": [
+       "CuVee",
+       "Ambition",
+       "Crown",
+       "Ruler",
+       "CoreJJ"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "trundle",
+       "elise",
+       "orianna",
+       "jhin",
+       "nami"
+      ],
+      "bans1": [
+       "nidalee",
+       "olaf",
+       "ryze"
+      ],
+      "players1": [
+       "Duke",
+       "bengi",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "poppy",
+       "lee sin",
+       "aurelion sol",
+       "ezreal",
+       "zyra"
+      ],
+      "bans2": [
+       "syndra",
+       "ashe",
+       "cassiopeia"
+      ],
+      "players2": [
+       "CuVee",
+       "Ambition",
+       "Crown",
+       "Ruler",
+       "CoreJJ"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "zac",
+       "orianna",
+       "ashe",
+       "nami"
+      ],
+      "bans1": [
+       "jayce",
+       "zyra",
+       "olaf"
+      ],
+      "players1": [
+       "Duke",
+       "blank",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "kennen",
+       "lee sin",
+       "viktor",
+       "jhin",
+       "karma"
+      ],
+      "bans2": [
+       "syndra",
+       "ryze",
+       "nidalee"
+      ],
+      "players2": [
+       "CuVee",
+       "Ambition",
+       "Crown",
+       "Ruler",
+       "CoreJJ"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "trundle",
+       "lee sin",
+       "viktor",
+       "ashe",
+       "braum"
+      ],
+      "bans1": [
+       "nidalee",
+       "zyra",
+       "aurelion sol"
+      ],
+      "players1": [
+       "Duke",
+       "bengi",
+       "Faker",
+       "Bang",
+       "Wolf (Korean player)"
+      ],
+      "picks2": [
+       "poppy",
+       "olaf",
+       "cassiopeia",
+       "jhin",
+       "tahm kench"
+      ],
+      "bans2": [
+       "syndra",
+       "ryze",
+       "karma"
+      ],
+      "players2": [
+       "CuVee",
+       "Ambition",
+       "Crown",
+       "Ruler",
+       "CoreJJ"
+      ]
+     }
+    ]
+   }
+  ],
+  "name": "S6 2016 世界赛",
+  "year": 2016,
+  "season": 6
+ },
+ {
+  "start": "2017-09-23",
+  "end": "2017-11-04",
+  "page": "World Championship/2017/Playoffs",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "skt",
+    "team2": "msf",
+    "score1": 3,
+    "score2": 2,
+    "winner": "skt",
+    "date": "October 20, 2017 - 16:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "sej",
+       "galio",
+       "cait",
+       "trundle"
+      ],
+      "bans1": [
+       "orianna",
+       "janna",
+       "xayah",
+       "gragas",
+       "trundle"
+      ],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "j4",
+       "ryze",
+       "trist",
+       "taric"
+      ],
+      "bans2": [
+       "kalista",
+       "lulu",
+       "rakan",
+       "twitch",
+       "kog'maw"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cho",
+       "j4",
+       "corki",
+       "kog",
+       "taric"
+      ],
+      "bans1": [
+       "kalista",
+       "janna",
+       "xayah",
+       "shen",
+       "orianna"
+      ],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "sej",
+       "karma",
+       "trist",
+       "blitz"
+      ],
+      "bans2": [
+       "lulu",
+       "galio",
+       "jayce",
+       "sivir",
+       "caitlyn"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "grag",
+       "taliyah",
+       "vayne",
+       "lulu"
+      ],
+      "bans1": [
+       "blitzcrank",
+       "janna",
+       "xayah",
+       "trundle",
+       "thresh"
+      ],
+      "players1": [],
+      "picks2": [
+       "j4",
+       "ivern",
+       "ori",
+       "trist",
+       "leona"
+      ],
+      "bans2": [
+       "kalista",
+       "galio",
+       "sejuani",
+       "leblanc",
+       "caitlyn"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "trundle",
+       "j4",
+       "ryze",
+       "trist",
+       "braum"
+      ],
+      "bans1": [
+       "kalista",
+       "xayah",
+       "lulu",
+       "orianna",
+       "thresh"
+      ],
+      "players1": [],
+      "picks2": [
+       "cho",
+       "sej",
+       "karma",
+       "sivir",
+       "ali"
+      ],
+      "bans2": [
+       "janna",
+       "galio",
+       "jayce",
+       "shen",
+       "taric"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "j4",
+       "taliyah",
+       "trist",
+       "tahm"
+      ],
+      "bans1": [
+       "orianna",
+       "xayah",
+       "lulu",
+       "karma",
+       "cho'gath"
+      ],
+      "players1": [],
+      "picks2": [
+       "shen",
+       "sej",
+       "syndra",
+       "varus",
+       "thresh"
+      ],
+      "bans2": [
+       "kalista",
+       "galio",
+       "janna",
+       "trundle",
+       "braum"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "rng",
+    "team2": "fnc",
+    "score1": 3,
+    "score2": 1,
+    "winner": "rng",
+    "date": "October 21, 2017 - 16:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cho'gath",
+       "sejuani",
+       "ryze",
+       "tristana",
+       "soraka"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "trundle",
+       "gragas",
+       "taliyah",
+       "sivir",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "j4",
+       "syndra",
+       "tristana",
+       "soraka"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "cho'gath",
+       "sejuani",
+       "taliyah",
+       "vayne",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cho'gath",
+       "j4",
+       "galio",
+       "kog'maw",
+       "morgana"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "sejuani",
+       "malzahar",
+       "tristana",
+       "karma"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "jarvan iv",
+       "corki",
+       "twitch",
+       "soraka"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "sejuani",
+       "galio",
+       "varus",
+       "taric"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "lz",
+    "team2": "ssg",
+    "score1": 0,
+    "score2": 3,
+    "winner": "ssg",
+    "date": "October 19, 2017 - 16:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "j4",
+       "syn",
+       "xayah",
+       "thresh"
+      ],
+      "bans1": [
+       "galio",
+       "janna",
+       "cho'gath",
+       "gnar",
+       "maokai"
+      ],
+      "players1": [],
+      "picks2": [
+       "kennen",
+       "sej",
+       "malz",
+       "trist",
+       "rakan"
+      ],
+      "bans2": [
+       "kalista",
+       "jayce",
+       "lulu",
+       "gragas",
+       "taliyah"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cho",
+       "j4",
+       "ori",
+       "varus",
+       "lulu"
+      ],
+      "bans1": [
+       "galio",
+       "malzahar",
+       "xayah",
+       "cassiopeia",
+       "trundle"
+      ],
+      "players1": [],
+      "picks2": [
+       "shen",
+       "sej",
+       "taliyah",
+       "trist",
+       "taric"
+      ],
+      "bans2": [
+       "kalista",
+       "jayce",
+       "janna",
+       "ryze",
+       "gragas"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "trundle",
+       "grag",
+       "taliyah",
+       "varus",
+       "rakan"
+      ],
+      "bans1": [
+       "kalista",
+       "xayah",
+       "lulu",
+       "malzahar",
+       "cassiopeia"
+      ],
+      "players1": [],
+      "picks2": [
+       "shen",
+       "sej",
+       "lissandra",
+       "trist",
+       "taric"
+      ],
+      "bans2": [
+       "jayce",
+       "galio",
+       "janna",
+       "jax",
+       "jarvan iv"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "we",
+    "team2": "c9",
+    "score1": 3,
+    "score2": 2,
+    "winner": "we",
+    "date": "October 22, 2017 - 16:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cho'gath",
+       "gragas",
+       "corki",
+       "kog'maw",
+       "janna"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "shen",
+       "jarvan iv",
+       "aurelion sol",
+       "caitlyn",
+       "lulu"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "maokai",
+       "sejuani",
+       "corki",
+       "kog'maw",
+       "karma"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "singed",
+       "jarvan iv",
+       "orianna",
+       "tristana",
+       "taric"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cho'gath",
+       "maokai",
+       "jayce",
+       "caitlyn",
+       "lulu"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "singed",
+       "j4",
+       "taliyah",
+       "tristana",
+       "janna"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cho'gath",
+       "j4",
+       "taliyah",
+       "kog'maw",
+       "rakan"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "trundle",
+       "sejuani",
+       "orianna",
+       "xayah",
+       "taric"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "gragas",
+       "galio",
+       "kog'maw",
+       "janna"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "shen",
+       "sejuani",
+       "orianna",
+       "caitlyn",
+       "lulu"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "skt",
+    "team2": "rng",
+    "score1": 3,
+    "score2": 2,
+    "winner": "skt",
+    "date": "October 28, 2017 - 15:30 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gangplank",
+       "zac",
+       "galio",
+       "tristana",
+       "blitzcrank"
+      ],
+      "bans1": [
+       "kalista",
+       "jarvan iv",
+       "lulu",
+       "cho'gath",
+       "corki"
+      ],
+      "players1": [],
+      "picks2": [
+       "shen",
+       "sejuani",
+       "malzahar",
+       "twitch",
+       "janna"
+      ],
+      "bans2": [
+       "jayce",
+       "xayah",
+       "gragas",
+       "ivern",
+       "nidalee"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "camille",
+       "gragas",
+       "galio",
+       "varus",
+       "leona"
+      ],
+      "bans1": [
+       "jarvan iv",
+       "janna",
+       "tristana",
+       "shen",
+       "cho'gath"
+      ],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "nocturne",
+       "malzahar",
+       "twitch",
+       "rakan"
+      ],
+      "bans2": [
+       "kalista",
+       "jayce",
+       "sejuani",
+       "karma",
+       "orianna"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "camille",
+       "zac",
+       "galio",
+       "tristana",
+       "lulu"
+      ],
+      "bans1": [
+       "kalista",
+       "janna",
+       "jarvan iv",
+       "shen",
+       "cho'gath"
+      ],
+      "players1": [],
+      "picks2": [
+       "maokai",
+       "sejuani",
+       "ryze",
+       "vayne",
+       "taric"
+      ],
+      "bans2": [
+       "jayce",
+       "xayah",
+       "gragas",
+       "trundle",
+       "gnar"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "gragas",
+       "galio",
+       "kog'maw",
+       "lulu"
+      ],
+      "bans1": [
+       "sejuani",
+       "janna",
+       "tristana",
+       "shen",
+       "cho'gath"
+      ],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "j4",
+       "ryze",
+       "twitch",
+       "soraka"
+      ],
+      "bans2": [
+       "kalista",
+       "jayce",
+       "rakan",
+       "ezreal",
+       "nidalee"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "j4",
+       "galio",
+       "caitlyn",
+       "lulu"
+      ],
+      "bans1": [
+       "kalista",
+       "janna",
+       "sejuani",
+       "leona",
+       "nocturne"
+      ],
+      "players1": [],
+      "picks2": [
+       "shen",
+       "lee sin",
+       "corki",
+       "tristana",
+       "taric"
+      ],
+      "bans2": [
+       "jayce",
+       "rakan",
+       "gragas",
+       "kog'maw",
+       "twitch"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "ssg",
+    "team2": "we",
+    "score1": 3,
+    "score2": 1,
+    "winner": "ssg",
+    "date": "October 29, 2017 - 15:30 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "j4",
+       "taliyah",
+       "trist",
+       "taric"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "shen",
+       "grag",
+       "kass",
+       "xayah",
+       "rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "grag",
+       "malz",
+       "varus",
+       "janna"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "rumble",
+       "j4",
+       "galio",
+       "twitch",
+       "taric"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "shen",
+       "grag",
+       "taliyah",
+       "varus",
+       "taric"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "cho",
+       "j4",
+       "ori",
+       "trist",
+       "karma"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "lee",
+       "galio",
+       "varus",
+       "rakan"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "kennen",
+       "j4",
+       "taliyah",
+       "kog",
+       "taric"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "skt",
+    "team2": "ssg",
+    "score1": 0,
+    "score2": 3,
+    "winner": "ssg",
+    "date": "November 04, 2017 - 15:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "gragas",
+       "cassiopeia",
+       "varus",
+       "lulu"
+      ],
+      "bans1": [
+       "kalista",
+       "tristana",
+       "galio",
+       "jarvan iv",
+       "shen"
+      ],
+      "players1": [],
+      "picks2": [
+       "kennen",
+       "zac",
+       "malz",
+       "xayah",
+       "janna"
+      ],
+      "bans2": [
+       "jayce",
+       "rakan",
+       "sejuani",
+       "syndra",
+       "taliyah"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "yasuo",
+       "gragas",
+       "ryze",
+       "varus",
+       "lulu"
+      ],
+      "bans1": [
+       "kalista",
+       "tristana",
+       "galio",
+       "shen",
+       "zac"
+      ],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "j4",
+       "malzahar",
+       "xayah",
+       "janna"
+      ],
+      "bans2": [
+       "jayce",
+       "rakan",
+       "sejuani",
+       "syndra",
+       "taliyah"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "trundle",
+       "gragas",
+       "karma",
+       "trist",
+       "leona"
+      ],
+      "bans1": [
+       "kalista",
+       "janna",
+       "galio",
+       "shen",
+       "kennen"
+      ],
+      "players1": [],
+      "picks2": [
+       "cho",
+       "sejuani",
+       "malzahar",
+       "varus",
+       "lulu"
+      ],
+      "bans2": [
+       "jayce",
+       "rakan",
+       "kassadin",
+       "taliyah",
+       "gnar"
+      ],
+      "players2": []
+     }
+    ]
+   }
+  ],
+  "name": "S7 2017 世界赛",
+  "year": 2017,
+  "season": 7
+ },
+ {
+  "start": "2018-10-01",
+  "end": "2018-11-03",
+  "page": "World Championship/2018/Playoffs",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "afs",
+    "team2": "c9",
+    "score1": 0,
+    "score2": 3,
+    "winner": "c9",
+    "date": "October 21, 2018 - 13:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Viktor",
+       "Gragas",
+       "Kassadin",
+       "Xayah",
+       "Alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Aatrox",
+       "Xin Zhao",
+       "Leblanc",
+       "Lucian",
+       "Braum"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Viktor",
+       "Xin Zhao",
+       "Ryze",
+       "Kai'sa",
+       "Alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Aatrox",
+       "Graves",
+       "Ahri",
+       "Lucian",
+       "Braum"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Gangplank",
+       "Gragas",
+       "Galio",
+       "Varus",
+       "Thresh"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Ornn",
+       "Nocturne",
+       "Lissandra",
+       "Lucian",
+       "Shen"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "fnc",
+    "team2": "edg",
+    "score1": 3,
+    "score2": 1,
+    "winner": "fnc",
+    "date": "October 21, 2018 - 17:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Swain",
+       "Elise",
+       "Irelia",
+       "Ezreal",
+       "Alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Kled",
+       "Xin Zhao",
+       "Leblanc",
+       "Xayah",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Viktor",
+       "Xin Zhao",
+       "Irelia",
+       "Sivir",
+       "Braum"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Shen",
+       "Lee Sin",
+       "Galio",
+       "Kai'sa",
+       "Alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Ornn",
+       "Xin Zhao",
+       "Yasuo",
+       "Sivir",
+       "Braum"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Poppy",
+       "Camille",
+       "Syndra",
+       "Kai'sa",
+       "Tahm"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Swain",
+       "Nocturne",
+       "Leblanc",
+       "Xayah",
+       "Thresh"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Sion",
+       "Lee Sin",
+       "Syndra",
+       "Kai'sa",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "rng",
+    "team2": "g2",
+    "score1": 2,
+    "score2": 3,
+    "winner": "g2",
+    "date": "October 20, 2018 - 17:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Urgot",
+       "Taliyah",
+       "Sion",
+       "Lucian",
+       "Leona"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Aatrox",
+       "Gragas",
+       "Ryze",
+       "Jhin",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Shen",
+       "Xin Zhao",
+       "Lissandra",
+       "Lucian",
+       "Rakan"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Akali",
+       "Gragas",
+       "Irelia",
+       "Varus",
+       "Tahm"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Poppy",
+       "Lee Sin",
+       "Lissandra",
+       "Kai'sa",
+       "Alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Aatrox",
+       "Gragas",
+       "Cassiopeia",
+       "Tristana",
+       "Braum"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Poppy",
+       "Taliyah",
+       "Galio",
+       "Lucian",
+       "Gragas"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Ryze",
+       "Nocturne",
+       "Aatrox",
+       "Sivir",
+       "Tahm"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Sion",
+       "Nocturne",
+       "Ryze",
+       "Sivir",
+       "Thresh"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Aatrox",
+       "Olaf",
+       "Leblanc",
+       "Jhin",
+       "Braum"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "kt",
+    "team2": "ig",
+    "score1": 2,
+    "score2": 3,
+    "winner": "ig",
+    "date": "October 20, 2018 - 13:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Aatrox",
+       "Xin Zhao",
+       "Galio",
+       "Kai'Sa",
+       "Shen"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Urgot",
+       "Camille",
+       "Lissandra",
+       "Xayah",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Urgot",
+       "Kindred",
+       "Swain",
+       "Kai'sa",
+       "Leona"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Sion",
+       "Xin Zhao",
+       "Galio",
+       "Xayah",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Irelia",
+       "Gragas",
+       "Azir",
+       "Kai'sa",
+       "Rakan"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Fiora",
+       "Xin Zhao",
+       "Lissandra",
+       "Xayah",
+       "Alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Irelia",
+       "Gragas",
+       "Urgot",
+       "Tristana",
+       "Tahm"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Aatrox",
+       "Camille",
+       "Syndra",
+       "Kai'sa",
+       "Braum"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Swain",
+       "Taliyah",
+       "Urgot",
+       "Tristana",
+       "Braum"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Sion",
+       "Kindred",
+       "Leblanc",
+       "Xayah",
+       "Alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "c9",
+    "team2": "fnc",
+    "score1": 0,
+    "score2": 3,
+    "winner": "fnc",
+    "date": "October 28, 2018 - 17:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Ekko",
+       "Xin Zhao",
+       "Lissandra",
+       "Tristana",
+       "Braum"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Viktor",
+       "Lee Sin",
+       "Leblanc",
+       "Sivir",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Aatrox",
+       "Graves",
+       "Lissandra",
+       "Viktor",
+       "Leona"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Jayce",
+       "Xin Zhao",
+       "Azir",
+       "Sivir",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Ekko",
+       "Xin Zhao",
+       "Lissandra",
+       "Lucian",
+       "Braum"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Viktor",
+       "Rek'Sai",
+       "Aatrox",
+       "Xayah",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "g2",
+    "team2": "ig",
+    "score1": 0,
+    "score2": 3,
+    "winner": "ig",
+    "date": "October 27, 2018 - 17:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Swain",
+       "Xin Zhao",
+       "Aatrox",
+       "Sivir",
+       "Alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Akali",
+       "Jarvan",
+       "Jayce",
+       "Lucian",
+       "Braum"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Aatrox",
+       "Gragas",
+       "Irelia",
+       "Jhin",
+       "Tahm"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Jayce",
+       "Taliyah",
+       "Leblanc",
+       "Ezreal",
+       "Alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Irelia",
+       "Camille",
+       "Lissandra",
+       "Sivir",
+       "Alistar"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Aatrox",
+       "Lee Sin",
+       "Leblanc",
+       "Kai'sa",
+       "Braum"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "fnc",
+    "team2": "ig",
+    "score1": 0,
+    "score2": 3,
+    "winner": "ig",
+    "date": "November 03, 2018 - 17:00 {{Abbr/KST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Urgot",
+       "Lee Sin",
+       "Irelia",
+       "Jhin",
+       "Braum"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Sion",
+       "Camille",
+       "Lissandra",
+       "Kai'sa",
+       "Alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Urgot",
+       "Lee Sin",
+       "Azir",
+       "Ezreal",
+       "Braum"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Irelia",
+       "Gragas",
+       "Syndra",
+       "Lucian",
+       "Alistar"
+      ],
+      "bans2": [],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "Urgot",
+       "Jax",
+       "Viktor",
+       "Xayah",
+       "Thresh"
+      ],
+      "bans1": [],
+      "players1": [],
+      "picks2": [
+       "Aatrox",
+       "Camille",
+       "Galio",
+       "Kai'sa",
+       "Rakan"
+      ],
+      "bans2": [],
+      "players2": []
+     }
+    ]
+   }
+  ],
+  "name": "S8 2018 世界赛",
+  "year": 2018,
+  "season": 8
+ },
+ {
+  "start": "2019-10-02",
+  "end": "2019-11-10",
+  "page": "World Championship/2019/Playoffs",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "dwg",
+    "team2": "g2",
+    "score1": 1,
+    "score2": 3,
+    "winner": "g2",
+    "date": "October 27, 2019 - 17:00 {{Abbr/CET}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kayle",
+       "lee sin",
+       "leblanc",
+       "kai'sa",
+       "leona"
+      ],
+      "bans1": [
+       "ryze",
+       "elise",
+       "yasuo",
+       "pantheon",
+       "renekton"
+      ],
+      "players1": [],
+      "picks2": [
+       "jayce",
+       "gragas",
+       "syndra",
+       "xayah",
+       "rakan"
+      ],
+      "bans2": [
+       "akali",
+       "nautilus",
+       "qiyana",
+       "camille",
+       "quinn"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "lee sin",
+       "ryze",
+       "kai'sa",
+       "leona"
+      ],
+      "bans1": [
+       "yuumi",
+       "pantheon",
+       "yasuo",
+       "syndra",
+       "xayah"
+      ],
+      "players1": [],
+      "picks2": [
+       "jayce",
+       "elise",
+       "renekton",
+       "orianna",
+       "alistar"
+      ],
+      "bans2": [
+       "akali",
+       "kayle",
+       "qiyana",
+       "nautilus",
+       "quinn"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "lee sin",
+       "corki",
+       "yasuo",
+       "gragas"
+      ],
+      "bans1": [
+       "elise",
+       "pantheon",
+       "ornn",
+       "syndra",
+       "xayah"
+      ],
+      "players1": [],
+      "picks2": [
+       "yorick",
+       "rek'sai",
+       "ryze",
+       "kai'sa",
+       "nautilus"
+      ],
+      "bans2": [
+       "akali",
+       "yuumi",
+       "qiyana",
+       "ezreal",
+       "renekton"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "irelia",
+       "taliyah",
+       "kayle",
+       "kai'sa",
+       "ornn"
+      ],
+      "bans1": [
+       "elise",
+       "pantheon",
+       "leblanc",
+       "syndra",
+       "rakan"
+      ],
+      "players1": [],
+      "picks2": [
+       "ryze",
+       "gragas",
+       "yasuo",
+       "xayah",
+       "nautilus"
+      ],
+      "bans2": [
+       "akali",
+       "alistar",
+       "qiyana",
+       "leona",
+       "renekton"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "skt",
+    "team2": "spy",
+    "score1": 3,
+    "score2": 1,
+    "winner": "skt",
+    "date": "October 27, 2019 - 12:00 {{Abbr/CET}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "lucian",
+       "elise",
+       "lissandra",
+       "draven",
+       "thresh"
+      ],
+      "bans1": [
+       "nautilus",
+       "qiyana",
+       "syndra",
+       "xayah",
+       "pantheon"
+      ],
+      "players1": [],
+      "picks2": [
+       "gangplank",
+       "gragas",
+       "leblanc",
+       "kai'sa",
+       "blitzcrank"
+      ],
+      "bans2": [
+       "akali",
+       "jayce",
+       "renekton",
+       "kayle",
+       "ryze"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "fiora",
+       "elise",
+       "tristana",
+       "kai'sa",
+       "nautilus"
+      ],
+      "bans1": [
+       "qiyana",
+       "morgana",
+       "xayah",
+       "leblanc",
+       "gragas"
+      ],
+      "players1": [],
+      "picks2": [
+       "poppy",
+       "olaf",
+       "ryze",
+       "ezreal",
+       "pyke"
+      ],
+      "bans2": [
+       "camille",
+       "pantheon",
+       "syndra",
+       "renekton",
+       "akali"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "skarner",
+       "azir",
+       "draven",
+       "thresh"
+      ],
+      "bans1": [
+       "qiyana",
+       "gangplank",
+       "xayah",
+       "cho'gath",
+       "gragas"
+      ],
+      "players1": [],
+      "picks2": [
+       "ornn",
+       "rek'sai",
+       "ryze",
+       "kai'sa",
+       "nautilus"
+      ],
+      "bans2": [
+       "taliyah",
+       "pantheon",
+       "syndra",
+       "akali",
+       "elise"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "quinn",
+       "gragas",
+       "ryze",
+       "varus",
+       "leona"
+      ],
+      "bans1": [
+       "qiyana",
+       "nautilus",
+       "xayah",
+       "pyke",
+       "ornn"
+      ],
+      "players1": [],
+      "picks2": [
+       "renekton",
+       "taliyah",
+       "syndra",
+       "kai'sa",
+       "thresh"
+      ],
+      "bans2": [
+       "ezreal",
+       "pantheon",
+       "blitzcrank",
+       "elise",
+       "akali"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "grf",
+    "team2": "ig",
+    "score1": 1,
+    "score2": 3,
+    "winner": "ig",
+    "date": "October 26, 2019 - 12:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "elise",
+       "poppy",
+       "garen",
+       "yuumi"
+      ],
+      "bans1": [
+       "vayne",
+       "pantheon",
+       "kayle",
+       "jayce",
+       "sona"
+      ],
+      "players1": [],
+      "picks2": [
+       "yasuo",
+       "gragas",
+       "qiyana",
+       "kog'maw",
+       "lulu"
+      ],
+      "bans2": [
+       "renekton",
+       "kled",
+       "akali",
+       "ryze",
+       "leblanc"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "jarvan iv",
+       "galio",
+       "xayah",
+       "rakan"
+      ],
+      "bans1": [
+       "gragas",
+       "vladimir",
+       "syndra",
+       "ryze",
+       "renekton"
+      ],
+      "players1": [],
+      "picks2": [
+       "kayle",
+       "lee sin",
+       "leblanc",
+       "kai'sa",
+       "nautilus"
+      ],
+      "bans2": [
+       "elise",
+       "pantheon",
+       "rek'sai",
+       "qiyana",
+       "akali"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kayle",
+       "elise",
+       "sion",
+       "xayah",
+       "rakan"
+      ],
+      "bans1": [
+       "fiora",
+       "pantheon",
+       "olaf",
+       "jayce",
+       "gragas"
+      ],
+      "players1": [],
+      "picks2": [
+       "vladimir",
+       "lee sin",
+       "qiyana",
+       "kai'sa",
+       "morgana"
+      ],
+      "bans2": [
+       "renekton",
+       "camille",
+       "akali",
+       "kled",
+       "leblanc"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "karthus",
+       "sion",
+       "xayah",
+       "rakan"
+      ],
+      "bans1": [
+       "syndra",
+       "yasuo",
+       "leblanc",
+       "lucian",
+       "renekton"
+      ],
+      "players1": [],
+      "picks2": [
+       "kayle",
+       "gragas",
+       "aatrox",
+       "kai'sa",
+       "leona"
+      ],
+      "bans2": [
+       "ryze",
+       "pantheon",
+       "elise",
+       "qiyana",
+       "akali"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "fpx",
+    "team2": "fnc",
+    "score1": 3,
+    "score2": 1,
+    "winner": "fpx",
+    "date": "October 26, 2019 - 17:00 {{Abbr/CEST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "camille",
+       "olaf",
+       "ryze",
+       "xayah",
+       "rakan"
+      ],
+      "bans1": [
+       "akali",
+       "jax",
+       "gangplank",
+       "lee sin",
+       "gragas"
+      ],
+      "players1": [],
+      "picks2": [
+       "rengar",
+       "elise",
+       "twisted fate",
+       "garen",
+       "yuumi"
+      ],
+      "bans2": [
+       "jarvan iv",
+       "pantheon",
+       "kled",
+       "qiyana",
+       "renekton"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "gragas",
+       "kayle",
+       "varus",
+       "tahm kench"
+      ],
+      "bans1": [
+       "pyke",
+       "pantheon",
+       "rakan",
+       "xayah",
+       "akali"
+      ],
+      "players1": [],
+      "picks2": [
+       "gangplank",
+       "lee sin",
+       "twisted fate",
+       "kai'sa",
+       "alistar"
+      ],
+      "bans2": [
+       "qiyana",
+       "yasuo",
+       "ryze",
+       "kled",
+       "renekton"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "renekton",
+       "rek'sai",
+       "ryze",
+       "lucian",
+       "nautilus"
+      ],
+      "bans1": [
+       "akali",
+       "rakan",
+       "gragas",
+       "pyke",
+       "gangplank"
+      ],
+      "players1": [],
+      "picks2": [
+       "ornn",
+       "lee sin",
+       "veigar",
+       "kai'sa",
+       "alistar"
+      ],
+      "bans2": [
+       "tahm kench",
+       "pantheon",
+       "vayne",
+       "qiyana",
+       "xayah"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "camille",
+       "gragas",
+       "ryze",
+       "varus",
+       "tahm kench"
+      ],
+      "bans1": [
+       "akali",
+       "ornn",
+       "gangplank",
+       "jax",
+       "veigar"
+      ],
+      "players1": [],
+      "picks2": [
+       "kayle",
+       "lee sin",
+       "cassiopeia",
+       "kai'sa",
+       "pyke"
+      ],
+      "bans2": [
+       "kled",
+       "pantheon",
+       "renekton",
+       "qiyana",
+       "xayah"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "g2",
+    "team2": "skt",
+    "score1": 3,
+    "score2": 1,
+    "winner": "g2",
+    "date": "November 3, 2019 - 12:00 {{Abbr/CET}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kled",
+       "rek'sai",
+       "ryze",
+       "xayah",
+       "rakan"
+      ],
+      "bans1": [
+       "nautilus",
+       "pantheon",
+       "tristana",
+       "akali",
+       "elise"
+      ],
+      "players1": [],
+      "picks2": [
+       "renekton",
+       "gragas",
+       "neeko",
+       "kai'sa",
+       "leona"
+      ],
+      "bans2": [
+       "syndra",
+       "ornn",
+       "qiyana",
+       "olaf",
+       "quinn"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ornn",
+       "jarvan iv",
+       "ryze",
+       "ezreal",
+       "galio"
+      ],
+      "bans1": [
+       "elise",
+       "syndra",
+       "akali",
+       "kayle",
+       "kai'sa"
+      ],
+      "players1": [],
+      "picks2": [
+       "renekton",
+       "lee sin",
+       "leblanc",
+       "yasuo",
+       "gragas"
+      ],
+      "bans2": [
+       "olaf",
+       "pantheon",
+       "rek'sai",
+       "qiyana",
+       "xayah"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "camille",
+       "elise",
+       "orianna",
+       "xayah",
+       "nautilus"
+      ],
+      "bans1": [
+       "fiora",
+       "pantheon",
+       "jax",
+       "akali",
+       "rakan"
+      ],
+      "players1": [],
+      "picks2": [
+       "renekton",
+       "rek'sai",
+       "ryze",
+       "kai'sa",
+       "leona"
+      ],
+      "bans2": [
+       "syndra",
+       "kayle",
+       "qiyana",
+       "kled",
+       "yasuo"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ornn",
+       "olaf",
+       "syndra",
+       "yasuo",
+       "gragas"
+      ],
+      "bans1": [
+       "akali",
+       "jax",
+       "renekton",
+       "leblanc",
+       "kai'sa"
+      ],
+      "players1": [],
+      "picks2": [
+       "vladimir",
+       "elise",
+       "qiyana",
+       "varus",
+       "nautilus"
+      ],
+      "bans2": [
+       "thresh",
+       "pantheon",
+       "kayle",
+       "ryze",
+       "xayah"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "ig",
+    "team2": "fpx",
+    "score1": 1,
+    "score2": 3,
+    "winner": "fpx",
+    "date": "November 2, 2019 - 12:00 {{Abbr/CET}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "quinn",
+       "gragas",
+       "syndra",
+       "varus",
+       "alistar"
+      ],
+      "bans1": [
+       "lucian",
+       "pantheon",
+       "kalista",
+       "ryze",
+       "xayah"
+      ],
+      "players1": [],
+      "picks2": [
+       "renekton",
+       "qiyana",
+       "rumble",
+       "ezreal",
+       "nautilus"
+      ],
+      "bans2": [
+       "akali",
+       "tahm kench",
+       "kayle",
+       "braum",
+       "kai'sa"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "vladimir",
+       "gragas",
+       "lucian",
+       "varus",
+       "tahm kench"
+      ],
+      "bans1": [
+       "renekton",
+       "rumble",
+       "ryze",
+       "leblanc",
+       "qiyana"
+      ],
+      "players1": [],
+      "picks2": [
+       "mordekaiser",
+       "lee sin",
+       "nautilus",
+       "kai'sa",
+       "blitzcrank"
+      ],
+      "bans2": [
+       "kayle",
+       "pantheon",
+       "jayce",
+       "akali",
+       "xayah"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "lucian",
+       "gragas",
+       "jayce",
+       "ezreal",
+       "alistar"
+      ],
+      "bans1": [
+       "rakan",
+       "pantheon",
+       "rumble",
+       "ryze",
+       "renekton"
+      ],
+      "players1": [],
+      "picks2": [
+       "gangplank",
+       "qiyana",
+       "nautilus",
+       "xayah",
+       "thresh"
+      ],
+      "bans2": [
+       "akali",
+       "leona",
+       "kayle",
+       "vladimir",
+       "kai'sa"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kayle",
+       "olaf",
+       "galio",
+       "kai'sa",
+       "rakan"
+      ],
+      "bans1": [
+       "renekton",
+       "lee sin",
+       "ryze",
+       "rek'sai",
+       "qiyana"
+      ],
+      "players1": [],
+      "picks2": [
+       "gangplank",
+       "gragas",
+       "nautilus",
+       "varus",
+       "tahm kench"
+      ],
+      "bans2": [
+       "leona",
+       "pantheon",
+       "syndra",
+       "akali",
+       "xayah"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "g2",
+    "team2": "fpx",
+    "score1": 0,
+    "score2": 3,
+    "winner": "fpx",
+    "date": "November 10, 2019 - 13:00 {{Abbr/CET}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ryze",
+       "elise",
+       "pyke",
+       "varus",
+       "tahm kench"
+      ],
+      "bans1": [
+       "blitzcrank",
+       "pantheon",
+       "braum",
+       "qiyana",
+       "xayah"
+      ],
+      "players1": [],
+      "picks2": [
+       "gangplank",
+       "lee sin",
+       "nautilus",
+       "sivir",
+       "thresh"
+      ],
+      "bans2": [
+       "syndra",
+       "rek'sai",
+       "gragas",
+       "olaf",
+       "kai'sa"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "akali",
+       "elise",
+       "tristana",
+       "yasuo",
+       "gragas"
+      ],
+      "bans1": [
+       "renekton",
+       "gangplank",
+       "nautilus",
+       "kayle",
+       "qiyana"
+      ],
+      "players1": [],
+      "picks2": [
+       "kled",
+       "lee sin",
+       "ryze",
+       "kai'sa",
+       "galio"
+      ],
+      "bans2": [
+       "olaf",
+       "pantheon",
+       "rek'sai",
+       "syndra",
+       "xayah"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ryze",
+       "jarvan iv",
+       "veigar",
+       "ezreal",
+       "nautilus"
+      ],
+      "bans1": [
+       "rumble",
+       "pantheon",
+       "akali",
+       "qiyana",
+       "rakan"
+      ],
+      "players1": [],
+      "picks2": [
+       "gangplank",
+       "lee sin",
+       "galio",
+       "xayah",
+       "thresh"
+      ],
+      "bans2": [
+       "syndra",
+       "olaf",
+       "gragas",
+       "rek'sai",
+       "kai'sa"
+      ],
+      "players2": []
+     }
+    ]
+   }
+  ],
+  "name": "S9 2019 世界赛",
+  "year": 2019,
+  "season": 9
+ },
+ {
+  "start": "2020-09-25",
+  "end": "2020-10-31",
+  "page": "World Championship/2020/Playoffs",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "tes",
+    "team2": "fnc",
+    "score1": 3,
+    "score2": 2,
+    "winner": "tes",
+    "date": "October 17, 2020 - 18:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ornn",
+       "grav",
+       "zoe",
+       "ez",
+       "leo"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "singed",
+       "kind",
+       "galio",
+       "senna",
+       "rakan"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gp",
+       "j4",
+       "syl",
+       "senna",
+       "tk"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "ornn",
+       "kind",
+       "ori",
+       "ashe",
+       "braum"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "sion",
+       "lee",
+       "ori",
+       "ez",
+       "karm"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "ornn",
+       "k6",
+       "vel",
+       "jhin",
+       "rakan"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "sion",
+       "nid",
+       "jc",
+       "senna",
+       "tk"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "ornn",
+       "grav",
+       "galio",
+       "ashe",
+       "sett"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "vlad",
+       "lee",
+       "syl",
+       "ez",
+       "leo"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "gp",
+       "grag",
+       "tf",
+       "senna",
+       "rakan"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "sn",
+    "team2": "jdg",
+    "score1": 3,
+    "score2": 1,
+    "winner": "sn",
+    "date": "October 16, 2020 - 18:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gp",
+       "grav",
+       "galio",
+       "mf",
+       "bard"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "rene",
+       "lil",
+       "zoe",
+       "jhin",
+       "leo"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gp",
+       "grav",
+       "zoe",
+       "jhin",
+       "leo"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "rene",
+       "lil",
+       "galio",
+       "mf",
+       "sett"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gp",
+       "kind",
+       "galio",
+       "jhin",
+       "bard"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "voli",
+       "lil",
+       "tf",
+       "ez",
+       "panth"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "voli",
+       "kind",
+       "zoe",
+       "jhin",
+       "thr"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "rene",
+       "grav",
+       "tf",
+       "ashe",
+       "blitz"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "gen",
+    "team2": "g2",
+    "score1": 0,
+    "score2": 3,
+    "winner": "g2",
+    "date": "October 18, 2020 - 18:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "voli",
+       "lil",
+       "azir",
+       "kali",
+       "tar"
+      ],
+      "bans1": [
+       "syndra",
+       "ornn",
+       "graves",
+       "ashe",
+       "senna"
+      ],
+      "players1": [
+       "Rascal",
+       "Clid",
+       "Bdd",
+       "Ruler",
+       "Life"
+      ],
+      "picks2": [
+       "cam",
+       "nid",
+       "tf",
+       "jhin",
+       "panth"
+      ],
+      "bans2": [
+       "sett",
+       "lucian",
+       "renekton",
+       "gragas",
+       "galio"
+      ],
+      "players2": [
+       "Wunder",
+       "Jankos",
+       "Caps",
+       "Perkz",
+       "Mikyx"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cam",
+       "nid",
+       "tf",
+       "ashe",
+       "leo"
+      ],
+      "bans1": [
+       "syndra",
+       "ornn",
+       "graves",
+       "pantheon",
+       "thresh"
+      ],
+      "players1": [
+       "Rascal",
+       "Clid",
+       "Bdd",
+       "Ruler",
+       "Life"
+      ],
+      "picks2": [
+       "shen",
+       "lil",
+       "syl",
+       "jhin",
+       "tk"
+      ],
+      "bans2": [
+       "sett",
+       "lucian",
+       "renekton",
+       "kalista",
+       "senna"
+      ],
+      "players2": [
+       "Wunder",
+       "Jankos",
+       "Caps",
+       "Perkz",
+       "Mikyx"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "voli",
+       "kind",
+       "tf",
+       "ez",
+       "tk"
+      ],
+      "bans1": [
+       "ornn",
+       "lillia",
+       "lucian",
+       "nautilus",
+       "pantheon"
+      ],
+      "players1": [
+       "Rascal",
+       "Clid",
+       "Bdd",
+       "Ruler",
+       "Life"
+      ],
+      "picks2": [
+       "rene",
+       "grav",
+       "syl",
+       "jhin",
+       "rakan"
+      ],
+      "bans2": [
+       "sett",
+       "kalista",
+       "nidalee",
+       "karma",
+       "gragas"
+      ],
+      "players2": [
+       "Wunder",
+       "Jankos",
+       "Caps",
+       "Perkz",
+       "Mikyx"
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "dwg",
+    "team2": "drx",
+    "score1": 3,
+    "score2": 0,
+    "winner": "dwg",
+    "date": "October 15, 2020 - 18:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ken",
+       "grav",
+       "syn",
+       "jhin",
+       "leo"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "jc",
+       "kind",
+       "ori",
+       "cait",
+       "lulu"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ornn",
+       "grav",
+       "tf",
+       "aph",
+       "thr"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "jax",
+       "nid",
+       "galio",
+       "senna",
+       "tk"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ornn",
+       "kind",
+       "ori",
+       "ashe",
+       "panth"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "vlad",
+       "grav",
+       "vel",
+       "senna",
+       "braum"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "tes",
+    "team2": "sn",
+    "score1": 1,
+    "score2": 3,
+    "winner": "sn",
+    "date": "October 25, 2020 - 18:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jc",
+       "sett",
+       "ori",
+       "jhin",
+       "panth"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "wuk",
+       "lee",
+       "azir",
+       "ez",
+       "rakan"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gp",
+       "lee",
+       "ori",
+       "ez",
+       "leo"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "ornn",
+       "kind",
+       "zoe",
+       "jhin",
+       "bard"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rene",
+       "lee",
+       "ekko",
+       "cait",
+       "lux"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "jax",
+       "shen",
+       "ori",
+       "ez",
+       "leo"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ornn",
+       "grav",
+       "ori",
+       "ashe",
+       "tk"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "jax",
+       "j4",
+       "aka",
+       "ez",
+       "leo"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "g2",
+    "team2": "dwg",
+    "score1": 1,
+    "score2": 3,
+    "winner": "dwg",
+    "date": "October 24, 2020 - 18:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rene",
+       "lil",
+       "syl",
+       "luc",
+       "rakan"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "gp",
+       "hec",
+       "tf",
+       "jhin",
+       "leo"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "cam",
+       "kind",
+       "tf",
+       "ez",
+       "leo"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "fio",
+       "grav",
+       "syl",
+       "ashe",
+       "sett"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "sion",
+       "kind",
+       "aka",
+       "jhin",
+       "panth"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "lulu",
+       "grav",
+       "syn",
+       "ashe",
+       "leo"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ornn",
+       "grav",
+       "syl",
+       "senna",
+       "naut"
+      ],
+      "bans1": [],
+      "players1": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      "picks2": [
+       "sett",
+       "kind",
+       "tf",
+       "cait",
+       "braum"
+      ],
+      "bans2": [],
+      "players2": [
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "sn",
+    "team2": "dwg",
+    "score1": 1,
+    "score2": 3,
+    "winner": "dwg",
+    "date": "October 31, 2020 - 18:00 {{Abbr/CST}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "wuk",
+       "shen",
+       "azir",
+       "ez",
+       "leo"
+      ],
+      "bans1": [
+       "nidalee",
+       "lucian",
+       "twisted fate",
+       "thresh",
+       "caitlyn"
+      ],
+      "players1": [
+       "Bin",
+       "SofM",
+       "Angel (Chinese player)",
+       "huanfeng",
+       "SwordArt"
+      ],
+      "picks2": [
+       "ornn",
+       "grav",
+       "ori",
+       "ashe",
+       "panth"
+      ],
+      "bans2": [
+       "camille",
+       "syndra",
+       "jhin",
+       "jarvan iv",
+       "gangplank"
+      ],
+      "players2": [
+       "Nuguri",
+       "Canyon",
+       "ShowMaker",
+       "Ghost (Korean player)",
+       "BeryL"
+      ]
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "fio",
+       "ren",
+       "syn",
+       "jhin",
+       "leo"
+      ],
+      "bans1": [
+       "nidalee",
+       "twisted fate",
+       "ashe",
+       "senna",
+       "draven"
+      ],
+      "players1": [
+       "Bin",
+       "SofM",
+       "Angel (Chinese player)",
+       "huanfeng",
+       "SwordArt"
+      ],
+      "picks2": [
+       "ornn",
+       "eve",
+       "luc",
+       "aph",
+       "thr"
+      ],
+      "bans2": [
+       "camille",
+       "sylas",
+       "graves",
+       "lee sin",
+       "wukong"
+      ],
+      "players2": [
+       "Nuguri",
+       "Canyon",
+       "ShowMaker",
+       "Ghost (Korean player)",
+       "BeryL"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "nid",
+       "aka",
+       "ez",
+       "ali"
+      ],
+      "bans1": [
+       "twisted fate",
+       "ashe",
+       "lucian",
+       "lulu",
+       "pantheon"
+      ],
+      "players1": [
+       "Bin",
+       "SofM",
+       "Angel (Chinese player)",
+       "huanfeng",
+       "SwordArt"
+      ],
+      "picks2": [
+       "ken",
+       "grav",
+       "syn",
+       "jhin",
+       "braum"
+      ],
+      "bans2": [
+       "camille",
+       "renekton",
+       "leona",
+       "bard",
+       "thresh"
+      ],
+      "players2": [
+       "Nuguri",
+       "Canyon",
+       "ShowMaker",
+       "Ghost (Korean player)",
+       "BeryL"
+      ]
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gp",
+       "grav",
+       "ori",
+       "aph",
+       "leo"
+      ],
+      "bans1": [
+       "nidalee",
+       "twisted fate",
+       "ashe",
+       "kennen",
+       "lulu"
+      ],
+      "players1": [
+       "Bin",
+       "SofM",
+       "Angel (Chinese player)",
+       "huanfeng",
+       "SwordArt"
+      ],
+      "picks2": [
+       "ornn",
+       "kind",
+       "syn",
+       "cait",
+       "panth"
+      ],
+      "bans2": [
+       "camille",
+       "jhin",
+       "akali",
+       "ezreal",
+       "jax"
+      ],
+      "players2": [
+       "Nuguri",
+       "Canyon",
+       "ShowMaker",
+       "Ghost (Korean player)",
+       "BeryL"
+      ]
+     }
+    ]
+   }
+  ],
+  "name": "S10 2020 世界赛",
+  "year": 2020,
+  "season": 10
+ },
+ {
+  "start": "2021-10-05",
+  "end": "2021-11-06",
+  "page": "World Championship/2021/Knockout Stage",
+  "format": "se8",
+  "series": [
+   {
+    "round": "R1M1",
+    "team1": "rng",
+    "team2": "edg",
+    "score1": 2,
+    "score2": 3,
+    "winner": "edg",
+    "date": "October 23, 2021 - 12:00 {{Abbr/GMT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ire",
+       "xin",
+       "ryze",
+       "aphelios",
+       "naut"
+      ],
+      "bans1": [
+       "lee",
+       "tf",
+       "lb",
+       "graves",
+       "zoe"
+      ],
+      "players1": [],
+      "picks2": [
+       "jayce",
+       "j4",
+       "malza",
+       "luc",
+       "nami"
+      ],
+      "bans2": [
+       "grag",
+       "galio",
+       "yuumi",
+       "lulu",
+       "thresh"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jayce",
+       "xin",
+       "annie",
+       "mf",
+       "ali"
+      ],
+      "bans1": [
+       "lee",
+       "lb",
+       "tf",
+       "poppy",
+       "malph"
+      ],
+      "players1": [],
+      "picks2": [
+       "graves",
+       "olaf",
+       "ryze",
+       "ez",
+       "yuumi"
+      ],
+      "bans2": [
+       "j4",
+       "luc",
+       "galio",
+       "naut",
+       "rakan"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "luc",
+       "xin",
+       "galio",
+       "mf",
+       "rakan"
+      ],
+      "bans1": [
+       "lb",
+       "yuumi",
+       "j4",
+       "thresh",
+       "zoe"
+      ],
+      "players1": [],
+      "picks2": [
+       "graves",
+       "olaf",
+       "azir",
+       "aphelios",
+       "lulu"
+      ],
+      "bans2": [
+       "tf",
+       "ryze",
+       "lee",
+       "ziggs",
+       "nami"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "j4",
+       "annie",
+       "aphelios",
+       "lulu"
+      ],
+      "bans1": [
+       "lee",
+       "tf",
+       "lb",
+       "olaf",
+       "poppy"
+      ],
+      "players1": [],
+      "picks2": [
+       "graves",
+       "xin",
+       "ryze",
+       "mf",
+       "yuumi"
+      ],
+      "bans2": [
+       "galio",
+       "luc",
+       "naut",
+       "rakan",
+       "rell"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gwen",
+       "lee",
+       "ori",
+       "mf",
+       "naut"
+      ],
+      "bans1": [
+       "tf",
+       "lb",
+       "aph",
+       "olaf",
+       "pop"
+      ],
+      "players1": [],
+      "picks2": [
+       "graves",
+       "j4",
+       "ryze",
+       "ez",
+       "yuumi"
+      ],
+      "bans2": [
+       "galio",
+       "luc",
+       "annie",
+       "ken",
+       "malz"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M2",
+    "team1": "gen",
+    "team2": "c9",
+    "score1": 3,
+    "score2": 0,
+    "winner": "gen",
+    "date": "October 25, 2021 - 12:00 {{Abbr/GMT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "xinzhao",
+       "aatrox",
+       "aphelios",
+       "lulu"
+      ],
+      "bans1": [
+       "lb",
+       "ire",
+       "tf",
+       "rakan",
+       "leo"
+      ],
+      "players1": [],
+      "picks2": [
+       "jarvan",
+       "leesin",
+       "yasuo",
+       "ziggs",
+       "nautilus"
+      ],
+      "bans2": [
+       "yuu",
+       "rene",
+       "mf",
+       "azir",
+       "sett"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "grav",
+       "lee",
+       "syn",
+       "jhin",
+       "rakan"
+      ],
+      "bans1": [
+       "lb",
+       "tf",
+       "yuu",
+       "ire",
+       "jc"
+      ],
+      "players1": [],
+      "picks2": [
+       "malph",
+       "pop",
+       "syl",
+       "mf",
+       "leo"
+      ],
+      "bans2": [
+       "aph",
+       "nami",
+       "j4",
+       "azir",
+       "ken"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "rene",
+       "lee",
+       "zoe",
+       "jhin",
+       "rakan"
+      ],
+      "bans1": [
+       "lb",
+       "tf",
+       "yuu",
+       "olaf",
+       "xz"
+      ],
+      "players1": [],
+      "picks2": [
+       "grav",
+       "j4",
+       "syn",
+       "mf",
+       "leo"
+      ],
+      "bans2": [
+       "aph",
+       "nami",
+       "ire",
+       "ken",
+       "azir"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M3",
+    "team1": "t1",
+    "team2": "hle",
+    "score1": 3,
+    "score2": 0,
+    "winner": "t1",
+    "date": "October 22, 2021 - 12:00 {{Abbr/GMT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "grav",
+       "talon",
+       "ori",
+       "aph",
+       "thr"
+      ],
+      "bans1": [
+       "syl",
+       "lb",
+       "j4",
+       "leo",
+       "rakan"
+      ],
+      "players1": [],
+      "picks2": [
+       "ire",
+       "xz",
+       "zoe",
+       "mf",
+       "braum"
+      ],
+      "bans2": [
+       "yuu",
+       "lee",
+       "tf",
+       "ryze",
+       "azir"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gwen",
+       "pop",
+       "liss",
+       "aph",
+       "braum"
+      ],
+      "bans1": [
+       "lee",
+       "tf",
+       "j4",
+       "rakan",
+       "leo"
+      ],
+      "players1": [],
+      "picks2": [
+       "rene",
+       "xz",
+       "lb",
+       "var",
+       "naut"
+      ],
+      "bans2": [
+       "jc",
+       "yuu",
+       "grav",
+       "ken",
+       "thr"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gnar",
+       "talon",
+       "liss",
+       "aph",
+       "thr"
+      ],
+      "bans1": [
+       "lee",
+       "tf",
+       "j4",
+       "rakan",
+       "leo"
+      ],
+      "players1": [],
+      "picks2": [
+       "rene",
+       "olaf",
+       "lb",
+       "var",
+       "braum"
+      ],
+      "bans2": [
+       "jc",
+       "yuu",
+       "grav",
+       "gwen",
+       "ken"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R1M4",
+    "team1": "dk",
+    "team2": "madl",
+    "score1": 3,
+    "score2": 0,
+    "winner": "dk",
+    "date": "October 24, 2021 - 12:00 {{Abbr/GMT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gwen",
+       "lee",
+       "syndra",
+       "mf",
+       "rakan"
+      ],
+      "bans1": [
+       "ire",
+       "nami",
+       "j4",
+       "thr",
+       "xz"
+      ],
+      "players1": [],
+      "picks2": [
+       "gnar",
+       "graves",
+       "ori",
+       "aphelios",
+       "leo"
+      ],
+      "bans2": [
+       "lb",
+       "yuu",
+       "tf",
+       "ken",
+       "jc"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ken",
+       "lee",
+       "azir",
+       "jhin",
+       "leo"
+      ],
+      "bans1": [
+       "luc",
+       "lb",
+       "yuu",
+       "xz",
+       "ryze"
+      ],
+      "players1": [],
+      "picks2": [
+       "jc",
+       "j4",
+       "ori",
+       "mf",
+       "rakan"
+      ],
+      "bans2": [
+       "aph",
+       "tf",
+       "grav",
+       "ire",
+       "syn"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jc",
+       "lee",
+       "syn",
+       "zig",
+       "pyke"
+      ],
+      "bans1": [
+       "yuu",
+       "luc",
+       "lb",
+       "j4",
+       "xz"
+      ],
+      "players1": [],
+      "picks2": [
+       "wuk",
+       "grag",
+       "vik",
+       "mf",
+       "rakan"
+      ],
+      "bans2": [
+       "aph",
+       "grav",
+       "tf",
+       "leo",
+       "ez"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M1",
+    "team1": "edg",
+    "team2": "gen",
+    "score1": 3,
+    "score2": 2,
+    "winner": "edg",
+    "date": "October 31, 2021 - 12:00 {{Abbr/GMT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jax",
+       "j4",
+       "ori",
+       "luc",
+       "nami"
+      ],
+      "bans1": [
+       "syndra",
+       "aphelios",
+       "graves",
+       "azir",
+       "kennen"
+      ],
+      "players1": [],
+      "picks2": [
+       "gwen",
+       "lee",
+       "sera",
+       "mf",
+       "lulu"
+      ],
+      "bans2": [
+       "tf",
+       "lb",
+       "yuumi",
+       "jayce",
+       "ryze"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "graves",
+       "j4",
+       "ryze",
+       "jinx",
+       "lulu"
+      ],
+      "bans1": [
+       "yuumi",
+       "syndra",
+       "aphelios",
+       "kennen",
+       "galio"
+      ],
+      "players1": [],
+      "picks2": [
+       "rene",
+       "lee",
+       "azir",
+       "jhin",
+       "rakan"
+      ],
+      "bans2": [
+       "lb",
+       "tf",
+       "luc",
+       "ez",
+       "draven"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "gwen",
+       "j4",
+       "vik",
+       "luc",
+       "nami"
+      ],
+      "bans1": [
+       "syndra",
+       "graves",
+       "aphelios",
+       "azir",
+       "kennen"
+      ],
+      "players1": [],
+      "picks2": [
+       "rene",
+       "lee",
+       "zoe",
+       "mf",
+       "lulu"
+      ],
+      "bans2": [
+       "lb",
+       "yuumi",
+       "tf",
+       "ryze",
+       "ori"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "kennen",
+       "j4",
+       "zoe",
+       "luc",
+       "nami"
+      ],
+      "bans1": [
+       "syndra",
+       "aphelios",
+       "lee",
+       "xin",
+       "poppy"
+      ],
+      "players1": [],
+      "picks2": [
+       "graves",
+       "viego",
+       "azir",
+       "mf",
+       "lulu"
+      ],
+      "bans2": [
+       "lb",
+       "yuumi",
+       "tf",
+       "ryze",
+       "ori"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "graves",
+       "j4",
+       "ryze",
+       "jhin",
+       "leo"
+      ],
+      "bans1": [
+       "yuumi",
+       "lee",
+       "aphelios",
+       "syndra",
+       "azir"
+      ],
+      "players1": [],
+      "picks2": [
+       "rene",
+       "xin",
+       "ori",
+       "mf",
+       "rakan"
+      ],
+      "bans2": [
+       "lb",
+       "tf",
+       "luc",
+       "zoe",
+       "kennen"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R2M2",
+    "team1": "t1",
+    "team2": "dk",
+    "score1": 2,
+    "score2": 3,
+    "winner": "dk",
+    "date": "October 30, 2021 - 12:00 {{Abbr/GMT}}",
+    "games": [
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jc",
+       "pop",
+       "ryze",
+       "kai",
+       "leo"
+      ],
+      "bans1": [
+       "yuu",
+       "syn",
+       "tf",
+       "zig",
+       "rakan"
+      ],
+      "players1": [],
+      "picks2": [
+       "luc",
+       "lee",
+       "lb",
+       "jhin",
+       "mao"
+      ],
+      "bans2": [
+       "aph",
+       "nami",
+       "grav",
+       "thr",
+       "jinx"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "yas",
+       "lee",
+       "liss",
+       "jhin",
+       "rakan"
+      ],
+      "bans1": [
+       "ryze",
+       "tf",
+       "j4",
+       "mf",
+       "zig"
+      ],
+      "players1": [],
+      "picks2": [
+       "grav",
+       "xz",
+       "lb",
+       "dra",
+       "ali"
+      ],
+      "bans2": [
+       "yuu",
+       "aph",
+       "luc",
+       "gwen",
+       "ken"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ken",
+       "xz",
+       "ryze",
+       "jhin",
+       "zil"
+      ],
+      "bans1": [
+       "yuu",
+       "lee",
+       "tf",
+       "leo",
+       "jc"
+      ],
+      "players1": [],
+      "picks2": [
+       "luc",
+       "j4",
+       "syn",
+       "mf",
+       "mao"
+      ],
+      "bans2": [
+       "aph",
+       "nami",
+       "grav",
+       "gwen",
+       "rakan"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jc",
+       "j4",
+       "ryze",
+       "luc",
+       "lulu"
+      ],
+      "bans1": [
+       "yuu",
+       "lee",
+       "tf",
+       "ken",
+       "ire"
+      ],
+      "players1": [],
+      "picks2": [
+       "grag",
+       "qiy",
+       "lb",
+       "jhin",
+       "rakan"
+      ],
+      "bans2": [
+       "aph",
+       "nami",
+       "grav",
+       "jinx",
+       "zig"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ken",
+       "xz",
+       "azir",
+       "aph",
+       "zil"
+      ],
+      "bans1": [
+       "lb",
+       "j4",
+       "ryze",
+       "qiy",
+       "kass"
+      ],
+      "players1": [],
+      "picks2": [
+       "grav",
+       "talon",
+       "zoe",
+       "zig",
+       "rakan"
+      ],
+      "bans2": [
+       "lee",
+       "yuu",
+       "tf",
+       "lulu",
+       "thr"
+      ],
+      "players2": []
+     }
+    ]
+   },
+   {
+    "round": "R3M1",
+    "team1": "edg",
+    "team2": "dk",
+    "score1": 3,
+    "score2": 2,
+    "winner": "edg",
+    "date": "November 6, 2021 - 12:00 {{Abbr/GMT}}",
+    "games": [
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "grav",
+       "j4",
+       "ryze",
+       "jhin",
+       "zil"
+      ],
+      "bans1": [
+       "yuu",
+       "tf",
+       "lee",
+       "talon",
+       "qiy"
+      ],
+      "players1": [],
+      "picks2": [
+       "yas",
+       "xz",
+       "lb",
+       "zig",
+       "rakan"
+      ],
+      "bans2": [
+       "aph",
+       "nami",
+       "liss",
+       "ken",
+       "leo"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ire",
+       "xz",
+       "lb",
+       "kai",
+       "rakan"
+      ],
+      "bans1": [
+       "yuu",
+       "tf",
+       "lee",
+       "liss",
+       "pop"
+      ],
+      "players1": [],
+      "picks2": [
+       "grav",
+       "qiy",
+       "malz",
+       "jhin",
+       "leo"
+      ],
+      "bans2": [
+       "aph",
+       "nami",
+       "j4",
+       "xay",
+       "ez"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 2,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "jc",
+       "xz",
+       "tf",
+       "jhin",
+       "leo"
+      ],
+      "bans1": [
+       "qiy",
+       "rakan",
+       "grav",
+       "ire",
+       "luc"
+      ],
+      "players1": [],
+      "picks2": [
+       "grag",
+       "lee",
+       "syl",
+       "aph",
+       "braum"
+      ],
+      "bans2": [
+       "yuu",
+       "nami",
+       "j4",
+       "zig",
+       "jinx"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "blue",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "grav",
+       "vie",
+       "zoe",
+       "luc",
+       "lulu"
+      ],
+      "bans1": [
+       "qiy",
+       "aph",
+       "tf",
+       "ken",
+       "jc"
+      ],
+      "players1": [],
+      "picks2": [
+       "gwen",
+       "talon",
+       "ori",
+       "jhin",
+       "nami"
+      ],
+      "bans2": [
+       "yuu",
+       "j4",
+       "lee",
+       "ryze",
+       "lb"
+      ],
+      "players2": []
+     },
+     {
+      "winner": 1,
+      "map": "",
+      "side1": "red",
+      "score1": null,
+      "score2": null,
+      "picks1": [
+       "ken",
+       "xz",
+       "zoe",
+       "aph",
+       "rakan"
+      ],
+      "bans1": [
+       "yuu",
+       "lee",
+       "tf",
+       "qiy",
+       "talon"
+      ],
+      "players1": [],
+      "picks2": [
+       "grav",
+       "trun",
+       "syn",
+       "zig",
+       "leo"
+      ],
+      "bans2": [
+       "j4",
+       "ryze",
+       "nami",
+       "vie",
+       "lb"
+      ],
+      "players2": []
+     }
+    ]
+   }
+  ],
+  "name": "S11 2021 世界赛",
+  "year": 2021,
+  "season": 11
+ },
+ {
+  "start": "2022-09-29",
+  "end": "2022-11-05",
+  "page": "OE data",
+  "format": "se8",
+  "series": [
+   {
+    "team1": "JD Gaming",
+    "team2": "Rogue",
+    "score1": 3,
+    "score2": 0,
+    "winner": "JD Gaming",
+    "date": "2022-10-20 20:05:33",
+    "games": [],
+    "round": "R1M1"
+   },
+   {
+    "team1": "Royal Never Give Up",
+    "team2": "T1",
+    "score1": 0,
+    "score2": 3,
+    "winner": "T1",
+    "date": "2022-10-21 20:06:43",
+    "games": [],
+    "round": "R1M2"
+   },
+   {
+    "team1": "DRX",
+    "team2": "EDward Gaming",
+    "score1": 3,
+    "score2": 2,
+    "winner": "DRX",
+    "date": "2022-10-23 20:09:58",
+    "games": [],
+    "round": "R1M3"
+   },
+   {
+    "team1": "DWG KIA",
+    "team2": "Gen.G",
+    "score1": 2,
+    "score2": 3,
+    "winner": "Gen.G",
+    "date": "2022-10-22 20:06:03",
+    "games": [],
+    "round": "R1M4"
+   },
+   {
+    "team1": "JD Gaming",
+    "team2": "T1",
+    "score1": 1,
+    "score2": 3,
+    "winner": "T1",
+    "date": "2022-10-29 20:11:43",
+    "games": [],
+    "round": "R2M1"
+   },
+   {
+    "team1": "DRX",
+    "team2": "Gen.G",
+    "score1": 3,
+    "score2": 1,
+    "winner": "DRX",
+    "date": "2022-10-30 20:35:05",
+    "games": [],
+    "round": "R2M2"
+   },
+   {
+    "team1": "DRX",
+    "team2": "T1",
+    "score1": 3,
+    "score2": 2,
+    "winner": "DRX",
+    "date": "2022-11-05 23:41:08",
+    "games": [],
+    "round": "R3M1"
+   }
+  ],
+  "name": "S12 2022 世界赛",
+  "year": 2022,
+  "season": 12
+ },
+ {
+  "start": "2023-10-10",
+  "end": "2023-11-19",
+  "page": "OE data",
+  "format": "se8",
+  "series": [
+   {
+    "team1": "Bilibili Gaming",
+    "team2": "Gen.G",
+    "score1": 3,
+    "score2": 2,
+    "winner": "Bilibili Gaming",
+    "date": "2023-11-03 08:12:32",
+    "games": [],
+    "round": "R1M1"
+   },
+   {
+    "team1": "NRG",
+    "team2": "Weibo Gaming",
+    "score1": 0,
+    "score2": 3,
+    "winner": "Weibo Gaming",
+    "date": "2023-11-02 08:13:28",
+    "games": [],
+    "round": "R1M2"
+   },
+   {
+    "team1": "JD Gaming",
+    "team2": "KT Rolster",
+    "score1": 3,
+    "score2": 1,
+    "winner": "JD Gaming",
+    "date": "2023-11-04 08:13:16",
+    "games": [],
+    "round": "R1M3"
+   },
+   {
+    "team1": "LNG Esports",
+    "team2": "T1",
+    "score1": 0,
+    "score2": 3,
+    "winner": "T1",
+    "date": "2023-11-05 08:12:27",
+    "games": [],
+    "round": "R1M4"
+   },
+   {
+    "team1": "Bilibili Gaming",
+    "team2": "Weibo Gaming",
+    "score1": 2,
+    "score2": 3,
+    "winner": "Weibo Gaming",
+    "date": "2023-11-11 08:16:53",
+    "games": [],
+    "round": "R2M1"
+   },
+   {
+    "team1": "JD Gaming",
+    "team2": "T1",
+    "score1": 1,
+    "score2": 3,
+    "winner": "T1",
+    "date": "2023-11-12 08:17:10",
+    "games": [],
+    "round": "R2M2"
+   },
+   {
+    "team1": "T1",
+    "team2": "Weibo Gaming",
+    "score1": 3,
+    "score2": 0,
+    "winner": "T1",
+    "date": "2023-11-19 08:56:48",
+    "games": [],
+    "round": "R3M1"
+   }
+  ],
+  "name": "S13 2023 世界赛",
+  "year": 2023,
+  "season": 13
+ },
+ {
+  "start": "2024-09-25",
+  "end": "2024-11-02",
+  "page": "OE data",
+  "format": "se8",
+  "series": [
+   {
+    "team1": "Bilibili Gaming",
+    "team2": "Hanwha Life Esports",
+    "score1": 3,
+    "score2": 1,
+    "winner": "Bilibili Gaming",
+    "date": "2024-10-18 12:14:53",
+    "games": [],
+    "round": "R1M1"
+   },
+   {
+    "team1": "LNG Esports",
+    "team2": "Weibo Gaming",
+    "score1": 1,
+    "score2": 3,
+    "winner": "Weibo Gaming",
+    "date": "2024-10-17 12:16:56",
+    "games": [],
+    "round": "R1M2"
+   },
+   {
+    "team1": "FlyQuest",
+    "team2": "Gen.G",
+    "score1": 2,
+    "score2": 3,
+    "winner": "Gen.G",
+    "date": "2024-10-20 12:16:21",
+    "games": [],
+    "round": "R1M3"
+   },
+   {
+    "team1": "T1",
+    "team2": "Top Esports",
+    "score1": 3,
+    "score2": 0,
+    "winner": "T1",
+    "date": "2024-10-19 12:15:26",
+    "games": [],
+    "round": "R1M4"
+   },
+   {
+    "team1": "Bilibili Gaming",
+    "team2": "Weibo Gaming",
+    "score1": 3,
+    "score2": 0,
+    "winner": "Bilibili Gaming",
+    "date": "2024-10-26 12:22:30",
+    "games": [],
+    "round": "R2M1"
+   },
+   {
+    "team1": "Gen.G",
+    "team2": "T1",
+    "score1": 1,
+    "score2": 3,
+    "winner": "T1",
+    "date": "2024-10-27 13:17:55",
+    "games": [],
+    "round": "R2M2"
+   },
+   {
+    "team1": "Bilibili Gaming",
+    "team2": "T1",
+    "score1": 2,
+    "score2": 3,
+    "winner": "T1",
+    "date": "2024-11-02 14:35:39",
+    "games": [],
+    "round": "R3M1"
+   }
+  ],
+  "name": "S14 2024 世界赛",
+  "year": 2024,
+  "season": 14
+ },
+ {
+  "start": "2025-10-14",
+  "end": "2025-11-09",
+  "page": "OE data",
+  "format": "se8",
+  "series": [
+   {
+    "team1": "Gen.G",
+    "team2": "Hanwha Life Esports",
+    "score1": 3,
+    "score2": 1,
+    "winner": "Gen.G",
+    "date": "2025-10-28 07:13:37",
+    "games": [],
+    "round": "R1M1"
+   },
+   {
+    "team1": "CTBC Flying Oyster",
+    "team2": "KT Rolster",
+    "score1": 0,
+    "score2": 3,
+    "winner": "KT Rolster",
+    "date": "2025-10-29 07:13:13",
+    "games": [],
+    "round": "R1M2"
+   },
+   {
+    "team1": "Anyone's Legend",
+    "team2": "T1",
+    "score1": 2,
+    "score2": 3,
+    "winner": "T1",
+    "date": "2025-10-31 07:14:12",
+    "games": [],
+    "round": "R1M3"
+   },
+   {
+    "team1": "G2 Esports",
+    "team2": "Top Esports",
+    "score1": 1,
+    "score2": 3,
+    "winner": "Top Esports",
+    "date": "2025-10-30 07:15:39",
+    "games": [],
+    "round": "R1M4"
+   },
+   {
+    "team1": "Gen.G",
+    "team2": "KT Rolster",
+    "score1": 1,
+    "score2": 3,
+    "winner": "KT Rolster",
+    "date": "2025-11-01 07:16:36",
+    "games": [],
+    "round": "R2M1"
+   },
+   {
+    "team1": "T1",
+    "team2": "Top Esports",
+    "score1": 3,
+    "score2": 0,
+    "winner": "T1",
+    "date": "2025-11-02 07:15:05",
+    "games": [],
+    "round": "R2M2"
+   },
+   {
+    "team1": "KT Rolster",
+    "team2": "T1",
+    "score1": 2,
+    "score2": 3,
+    "winner": "T1",
+    "date": "2025-11-09 07:32:16",
+    "games": [],
+    "round": "R3M1"
+   }
+  ],
+  "name": "S15 2025 世界赛",
+  "year": 2025,
+  "season": 15
+ }
+]
