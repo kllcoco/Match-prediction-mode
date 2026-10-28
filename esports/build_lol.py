@@ -89,6 +89,13 @@ def build():
         early = early[early.year <= 2015]
         early["patch"] = None
     g = g[g.year >= 2016]  # 2015 年及以前用 Liquipedia（OE 早期缺 LCK/LPL）
+    live = DATA / "processed" / "lol_live.csv.gz"
+    if live.exists():  # 联网更新拿到的新比赛（只要基础数据之后的）
+        lv = pd.read_csv(live, low_memory=False)
+        lv["date"] = pd.to_datetime(lv.date, format="mixed")
+        lv = lv[lv.date > g.date.max()]
+        print("并入联网新数据:", len(lv), "局")
+        g = pd.concat([g, lv], ignore_index=True)
     g = pd.concat([early, g], ignore_index=True)
     for c in keep_cols():
         if c not in g.columns:

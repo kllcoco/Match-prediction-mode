@@ -35,6 +35,9 @@ def lol_frame(g: pd.DataFrame, strict=True) -> pd.DataFrame:
     df["league"] = lg
     df["domestic"] = lg.notna()
     df["big"] = g.league.isin(LOL_BIG).astype(int)
+    # 校准集：主要赛区的国内季后赛（和世界赛淘汰赛最像，但不是大赛）
+    df["cal"] = ((pd.to_numeric(g.playoffs, errors="coerce").fillna(0) > 0) & lg.isin(
+        ["LCK", "LPL", "LEC", "LCS", "PCS"]) & (g.league.map(lambda x: x in LOL_REGION))).astype(int)
     df["skip"] = df.big if strict else 0
     for s, col in (("b", "p1"), ("r", "p2")):
         names = g[[f"{s}n{i}" for i in range(1, 6)]].values.tolist()
@@ -57,6 +60,10 @@ def cs_frame(m: pd.DataFrame, strict=True) -> pd.DataFrame:
         df[col] = [[f"cs:{x.lower()}" for x in r.split("|")] if isinstance(r, str) and r.count("|") >= 3 else None
                    for r in (m[c] if c in m else [None] * len(m))]
     df["big"] = m.major.astype(int)
+    from .tune import TIER1
+    pat = TIER1["cs"].replace("^(", "^(?:")
+    df["cal"] = (m.event.fillna("").str.contains(pat, regex=True)
+                 & ~m.event.fillna("").str.contains("Qualif|Open|Closed|Showmatch|Minor|RMR", regex=True)).astype(int)
     df["skip"] = df.big if strict else 0
     df = df[(df.t1 != "") & (df.t2 != "") & (df.t1 != df.t2)]
     return df.sort_values("date", kind="stable").reset_index(drop=True)

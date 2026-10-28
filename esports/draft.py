@@ -49,16 +49,17 @@ class ChampNames:
 
 
 class Draft:
-    def __init__(self, games: pd.DataFrame, cutoff, elo_of=None, window_days=180, meta_days=60):
+    def __init__(self, games: pd.DataFrame, cutoff, elo_of=None, window_days=180, meta_days=60, include_intl=False):
         """games: build_lol.load() 原始表（含 bp/rp/bb/rb/bn/rn）"""
         self.cutoff = cutoff
         g = games[(games.date < cutoff) & (games.date >= cutoff - pd.Timedelta(days=window_days))]
         g = g[g.league.isin(["LCK", "LPL", "LEC", "LCS", "EU LCS", "NA LCS", "PCS", "LMS", "VCS", "CBLOL",
                              "LJL", "LCP", "LTA N", "LTA S", "OGN", "TCL", "LLA", "LCL", "OPL", "LCO", "GPL",
-                             "LDL", "LCKC"])]
+                             "LDL", "LCKC"] + (["WLDs", "MSI", "FST", "EWC"] if include_intl else []))]
         pcols = [f"bp{i}" for i in range(1, 6)] + [f"rp{i}" for i in range(1, 6)]
         g = g.dropna(subset=pcols[:1] + pcols[5:6])
         self.n_games = len(g)
+        self._g = g
         names = pd.unique(g[pcols].values.ravel())
         self.cn = ChampNames(names)
         # --- 1. 英雄强度（逻辑回归，L2 收缩，扣除实力差）---
@@ -80,6 +81,9 @@ class Draft:
         m = g[g.date >= cutoff - pd.Timedelta(days=meta_days)]
         if len(m) < 100:
             m = g
+        if include_intl:  # 大赛本身（同一版本）的 BP 权重最高：近 14 天的比赛重复计入 3 次
+            rec = g[g.date >= cutoff - pd.Timedelta(days=14)]
+            m = pd.concat([m] + [rec] * 3)
         bcols = [f"bb{i}" for i in range(1, 6)] + [f"rb{i}" for i in range(1, 6)]
         pk = Counter(c for c in m[pcols].values.ravel() if isinstance(c, str))
         bn = Counter(c for c in m[bcols].values.ravel() if isinstance(c, str))
@@ -97,6 +101,48 @@ class Draft:
                         key = f"lol:{pl.lower().strip()}"
                         self.pool[key][c] += 1
                         self.poolw[key][c] += int(win == w)
+
+    # ---------- 训练 BP 模型 ----------
+    BP_FEATS = ["presence", "banrate", "pickrate", "strength", "opp_n", "opp_wr", "own_n", "own_wr"]
+
+    def _feat(self, c, own, opp):
+        on, ow = own.get(c, (0, 0.5))
+        pn, pw = opp.get(c, (0, 0.5))
+        return [self.presence.get(c, 0), self.banrate.get(c, 0), self.pickrate.get(c, 0),
+                self.strength.get(c, 0), np.log1p(pn), (pw - 0.5) * min(pn, 10) / 10,
+                np.log1p(on), (ow - 0.5) * min(on, 10) / 10]
+
+    def train_bp(self, max_games=1500, seed=0):
+        """用真实比赛的禁选记录训练两个小模型：会不会 ban 某英雄 / 会不会选某英雄。"""
+        from .engine import Logistic
+        g = self._g
+        if len(g) > max_games:
+            g = g.sample(max_games, random_state=seed)
+        cands = [c for c, v in sorted(self.presence.items(), key=lambda x: -x[1])[:90]]
+        Xb, yb, Xp, yp = [], [], [], []
+        for _, r in g.iterrows():
+            for me, op in (("b", "r"), ("r", "b")):
+                ro = [f"lol:{str(r[f'{me}n{i}']).lower().strip()}" for i in range(1, 6)]
+                rp = [f"lol:{str(r[f'{op}n{i}']).lower().strip()}" for i in range(1, 6)]
+                own, opp = self.comfort(ro), self.comfort(rp)
+                bans = {r[f"{me}b{i}"] for i in range(1, 6)}
+                picks = {r[f"{me}p{i}"] for i in range(1, 6)}
+                allb = bans | {r[f"{op}b{i}"] for i in range(1, 6)}
+                for c in cands:
+                    # 去掉本局自己的贡献（避免偷看答案）
+                    o2 = dict(own)
+                    if c in picks and c in o2:
+                        n, w = o2[c]
+                        o2[c] = (max(n - 1, 0), w)
+                    f = self._feat(c, o2, opp)
+                    Xb.append(f)
+                    yb.append(int(c in bans))
+                    if c not in allb:
+                        Xp.append(f)
+                        yp.append(int(c in picks))
+        self.ban_lr = Logistic(self.BP_FEATS, l2=1e-3).fit(np.array(Xb), np.array(yb))
+        self.pick_lr = Logistic(self.BP_FEATS, l2=1e-3).fit(np.array(Xp), np.array(yp))
+        return self
 
     @staticmethod
     def _ridge_logit(X, y, lam=0.05, iters=30):
@@ -131,13 +177,26 @@ class Draft:
         """给 A vs B 出一套 BP 预案。"""
         cA, cB = self.comfort(rA), self.comfort(rB)
         cand = set(self.presence) | set(cA) | set(cB)
-        thrB = sorted(cand, key=lambda c: -self.value(c, cB))  # 对面最想拿的
-        thrA = sorted(cand, key=lambda c: -self.value(c, cA))
-        bansA = thrB[:n_bans]
-        bansB = [c for c in thrA if c not in bansA][:n_bans]
-        banned = set(bansA) | set(bansB)
-        picksA = [c for c in thrA if c not in banned][:n_picks]
-        picksB = [c for c in thrB if c not in banned and c not in picksA][:n_picks]
+        if getattr(self, "ban_lr", None) is not None:
+            cand = sorted(cand)
+            def score(lr, own, opp):
+                X = np.array([self._feat(c, own, opp) for c in cand])
+                return dict(zip(cand, lr.predict(X)))
+            banA, banB = score(self.ban_lr, cA, cB), score(self.ban_lr, cB, cA)
+            pkA, pkB = score(self.pick_lr, cA, cB), score(self.pick_lr, cB, cA)
+            bansA = sorted(cand, key=lambda c: -banA[c])[:n_bans]
+            bansB = [c for c in sorted(cand, key=lambda c: -banB[c]) if c not in bansA][:n_bans]
+            banned = set(bansA) | set(bansB)
+            picksA = [c for c in sorted(cand, key=lambda c: -pkA[c]) if c not in banned][:n_picks]
+            picksB = [c for c in sorted(cand, key=lambda c: -pkB[c]) if c not in banned and c not in picksA][:n_picks]
+        else:
+            thrB = sorted(cand, key=lambda c: -self.value(c, cB))  # 对面最想拿的
+            thrA = sorted(cand, key=lambda c: -self.value(c, cA))
+            bansA = thrB[:n_bans]
+            bansB = [c for c in thrA if c not in bansA][:n_bans]
+            banned = set(bansA) | set(bansB)
+            picksA = [c for c in thrA if c not in banned][:n_picks]
+            picksB = [c for c in thrB if c not in banned and c not in picksA][:n_picks]
         edge = sum(self.strength.get(c, 0) for c in picksA) - sum(self.strength.get(c, 0) for c in picksB)
         sig = lambda comf: sorted(((c, n, wr) for c, (n, wr) in comf.items() if n >= 3), key=lambda x: (-x[1], -x[2]))[:5]
         return dict(bansA=bansA, bansB=bansB, picksA=picksA, picksB=picksB, edge=edge,

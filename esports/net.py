@@ -24,11 +24,11 @@ def _wait(host: str, gap: float):
 
 
 def get(url: str, params: dict | None = None, gap: float = 1.0, cache: bool = True,
-        retries: int = 4, as_json: bool = False):
-    """GET 请求。gap=同一网站两次请求的最小间隔秒数（礼貌爬取）。"""
+        retries: int = 4, as_json: bool = False, ttl: float | None = None):
+    """GET 请求。gap=同一网站两次请求的最小间隔秒数（礼貌爬取）；ttl=缓存有效秒数（None=永久）。"""
     key = hashlib.md5((url + json.dumps(params or {}, sort_keys=True)).encode()).hexdigest()
     path = CACHE / f"{key}.txt"
-    if cache and path.exists():
+    if cache and path.exists() and (ttl is None or time.time() - path.stat().st_mtime < ttl):
         text = path.read_text(encoding="utf-8")
         return json.loads(text) if as_json else text
     host = url.split("/")[2]

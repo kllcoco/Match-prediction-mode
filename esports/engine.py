@@ -16,7 +16,7 @@ import pandas as pd
 FEATURES = ["elo", "form", "league", "side", "exp", "map"]
 FEATURE_CN = {
     "elo": "综合实力分差", "form": "近期状态", "league": "赛区强弱",
-    "side": "蓝色方优势", "exp": "比赛经验", "map": "地图熟练度",
+    "side": "蓝色方优势", "exp": "比赛经验", "map": "地图熟练度", "clutch": "大赛表现",
 }
 
 
@@ -29,6 +29,8 @@ class Params:
     season_shrink: float = 0.25   # 跨年时队伍分回归均值的比例
     idle_days: float = 120.0      # 长时间不比赛开始回归
     form_alpha: float = 0.15
+    clutch_alpha: float = 0.05
+    k_big: float = 1.5            # 大赛(世界赛/MSI/Major)内的比赛：评分更新更快，跟上「赛中回暖/下滑」
 
 
 @dataclass
@@ -44,6 +46,7 @@ class State:
     last: dict = field(default_factory=dict)        # 队伍 -> 最近比赛日期
     year: int = 0
     recent: dict = field(default_factory=lambda: defaultdict(lambda: deque(maxlen=10)))
+    clutch: dict = field(default_factory=lambda: defaultdict(float))  # 大赛（季后赛/顶级赛事）超预期程度
 
 
 def expect(d):
@@ -100,7 +103,8 @@ class Rater:
         S2, _, L2 = self.strength(t2, r2, l2)
         m = (s.tmap[(t1, mp)] - s.tmap[(t2, mp)]) / 400.0 if mp else 0.0
         return dict(elo=(S1 - S2) / 400.0, form=s.form[t1] - s.form[t2], league=(L1 - L2) / 400.0,
-                    side=side, exp=math.log1p(s.n[t1]) - math.log1p(s.n[t2]), map=m)
+                    side=side, exp=math.log1p(s.n[t1]) - math.log1p(s.n[t2]), map=m,
+                    clutch=s.clutch[t1] - s.clutch[t2])
 
     # ---------- 更新 ----------
     def update(self, row):
@@ -122,8 +126,9 @@ class Rater:
         e = expect(S1 - S2)
         y = row["win1"]
         d = y - e
-        s.team[t1] += P.k_team * d
-        s.team[t2] -= P.k_team * d
+        kb = P.k_big if row.get("big") else 1.0
+        s.team[t1] += P.k_team * kb * d
+        s.team[t2] -= P.k_team * kb * d
         if self.use_players:
             for x in self.players_of(t1):
                 s.player[x] += P.k_player * d
@@ -137,6 +142,10 @@ class Rater:
             em = expect(s.tmap[(t1, mp)] - s.tmap[(t2, mp)] + (S1 - S2))
             s.tmap[(t1, mp)] += P.k_map * (y - em)
             s.tmap[(t2, mp)] -= P.k_map * (y - em)
+        if row.get("cal") or row.get("big"):
+            c = P.clutch_alpha
+            s.clutch[t1] = (1 - c) * s.clutch[t1] + c * d
+            s.clutch[t2] = (1 - c) * s.clutch[t2] - c * d
         a = P.form_alpha
         s.form[t1] = (1 - a) * s.form[t1] + a * d
         s.form[t2] = (1 - a) * s.form[t2] - a * d
@@ -219,5 +228,6 @@ def run(games: pd.DataFrame, rater: Rater, cutoff=None, train_mask=None):
         f["date"] = r["date"]
         f["cross"] = int(bool(r.get("cross")))
         f["event"] = r.get("event") or ""
+        f["cal"] = int(bool(r.get("cal") or r.get("big")))
         rows.append(f)
     return pd.DataFrame(rows)

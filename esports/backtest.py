@@ -12,11 +12,13 @@ from .net import DATA
 
 FEATS = {"lol": ["elo", "form", "league", "side", "exp"], "cs": ["elo", "form", "exp", "map"]}
 BURN_IN_DAYS = 90
+CLUTCH = {"on": True}
+CAL_DAYS = 1095  # 用最近 3 年的季后赛来校准
 # 赛区水位的折扣交给 calib.py 在跨赛区比赛上学习，这里不再手动打折
 REGION = {"on": True, "kw": dict(iters=800), "scale": 1.0}
 # 由 tune.py 在「非大赛」比赛上挑出来的参数
 BEST = {"cs": Params(k_team=8, k_player=8, season_shrink=0.1, idle_days=90),
-        "lol": Params()}
+        "lol": Params(k_team=16, k_player=12, season_shrink=0.2)}
 
 
 def load_frame(game, strict=True):
@@ -36,6 +38,8 @@ class Model:
             kw.setdefault("use_league", False)  # 在线赛区分关掉，改用批量赛区模型
         self.rater = Rater(params or BEST[game], **kw)
         hist = run(frame, self.rater, cutoff=cutoff)
+        self.temp = 1.0
+        self.w_clutch = 0.0
         self.lr = Logistic(self.feats)
         self.lr.w[self.feats.index("elo")] = np.log(10)  # 数据太少时退化成纯 Elo
         tr = hist
@@ -47,6 +51,14 @@ class Model:
                 y = tr.y.values
                 # 正反两个视角各来一遍：让模型对「谁是 team1」不敏感
                 self.lr.fit(np.vstack([X, -X]), np.r_[y, 1 - y])
+                # 淘汰赛温度：只在「国内季后赛 / 顶级赛事」上学一个缩放系数
+                c = tr[(tr.cal == 1) & (tr.date >= cutoff - pd.Timedelta(days=CAL_DAYS))]
+                if len(c) >= 200:
+                    z = c[self.feats].values @ self.lr.w
+                    Xc = np.c_[z, c.clutch.values]
+                    t = Logistic(["z", "clutch"], l2=1e-3).fit(np.r_[Xc, -Xc], np.r_[c.y.values, 1 - c.y.values])
+                    self.temp = float(np.clip(t.w[0], 0.3, 1.2))
+                    self.w_clutch = float(np.clip(t.w[1], 0, 10)) if CLUTCH["on"] else 0.0
         self.hist = hist
         self.n_train = len(tr)
         self.cutoff = cutoff
@@ -98,7 +110,9 @@ class Model:
             z = a * (S1 - S2) / 400 + b * (L.get(self.rater.s.home[t1], 0) - L.get(self.rater.s.home[t2], 0)) / 400
             return float(1 / (1 + np.exp(-z)))
         x = self.x(t1, t2, side, mp)
-        return float(self.lr.predict([[x[k] for k in self.feats]])[0])
+        z = float(np.dot([x[k] for k in self.feats], self.lr.w)) * self.temp
+        z += self.w_clutch * self.rater.features(t1, t2)["clutch"]
+        return float(1 / (1 + np.exp(-z)))
 
     def p_series(self, t1, t2, best_of):
         if self.game == "cs":
@@ -220,6 +234,8 @@ def backtest(game, strict=True, params=None, rater_kw=None, verbose=True, events
         r = evaluate_event(m, ev, None)
         r["cutoff"] = str(cutoff.date())
         r["weights"] = dict(zip(m.feats, map(float, m.lr.w)))
+        r["temp"] = m.temp
+        r["w_clutch"] = m.w_clutch
         out.append(r)
         if verbose:
             acc = np.mean([s["correct"] for s in r["series"]])

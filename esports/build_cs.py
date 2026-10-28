@@ -129,15 +129,22 @@ def ektarr():
     return df
 
 
-def liquipedia_extra():
-    p = DATA / "processed" / "cs_liquipedia_maps.csv.gz"
-    return pd.read_csv(p) if p.exists() else pd.DataFrame()
+def liquipedia_extra(after):
+    """联网更新拿到的新比赛（只要 ektarr 数据之后的）"""
+    p = DATA / "processed" / "cs_live.csv.gz"
+    if not p.exists():
+        return pd.DataFrame()
+    lv = pd.read_csv(p)
+    lv = lv[lv.date.astype(str).str[:10] > str(after)[:10]]
+    print("并入联网新数据:", len(lv), "张图")
+    return lv
 
 
 def build():
     mj = majors()
     m, picks = mateus()
-    df = pd.concat([camilo(), m, nafis(), ektarr(), liquipedia_extra()], ignore_index=True)
+    ek = ektarr()
+    df = pd.concat([camilo(), m, nafis(), ek, liquipedia_extra(ek.date.max())], ignore_index=True)
     df["date"] = pd.to_datetime(df.date.astype(str).str[:10])
     df["event"] = df.event.fillna("")
     df["major"] = [is_major_event(e, d, mj) for e, d in zip(df.event, df.date)]
