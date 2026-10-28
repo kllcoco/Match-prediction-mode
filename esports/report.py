@@ -11,6 +11,10 @@ from .net import ROOT
 REPORTS = ROOT / "reports"
 
 
+# 固定的显示名（大家习惯的叫法），内部数据不受影响
+DISPLAY_LOL = {"dk": "DK"}
+
+
 def display_map(game):
     """统一名 -> 好看的原名"""
     from .names import norm
@@ -26,6 +30,8 @@ def display_map(game):
     out = {}
     for name in raw.n.values:  # 按时间顺序覆盖 -> 留下最新的名字
         out[norm(name, game)] = name
+    if game == "lol":
+        out.update(DISPLAY_LOL)
     return lambda k: out.get(k, k)
 
 
