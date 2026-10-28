@@ -10,7 +10,10 @@ from .engine import Logistic, Params, Rater, logloss, run, series_prob
 from .names import norm
 from .net import DATA
 
-FEATS = {"lol": ["elo", "form", "league", "side", "exp"], "cs": ["elo", "form", "exp", "map"]}
+from .engine import GATED, PERF, TEAM_IG
+FEATS = {"lol": ["elo", "form", "league", "side", "exp"] + TEAM_IG + PERF + [k + "_g" for k in GATED],
+         "cs": ["elo", "form", "exp", "map", "pkda", "pdmg", "pkp", "pwr"]
+         + [k + "_g" for k in ("elo", "form", "exp", "pkda", "pdmg", "pkp", "pwr")]}
 BURN_IN_DAYS = 90
 CLUTCH = {"on": True}
 CAL_DAYS = 1095  # 用最近 3 年的季后赛来校准

@@ -72,7 +72,15 @@ def reasons(model, a, b, x, contrib, display, rng):
             na, nb = s.n.get(a, 0), s.n.get(b, 0)
             txt = _pick(rng, f"{fav} 的职业比赛经验更多（{A} {na} 局 / {B} {nb} 局）",
                         f"老牌队伍经验更足：{A} 打过 {na} 局，{B} 打过 {nb} 局")
-        elif f == "map":
+        elif f == "tgold":
+            txt = f"{fav} 近期局内经济控制更好（场均经济占比更高）"
+        elif f == "tobj":
+            txt = f"{fav} 资源控制更强（推塔、小龙、大龙拿得更多）"
+        elif f in ("pkda", "pdmg", "pkp", "pdeath", "pwr"):
+            txt = {"pkda": f"{fav} 选手们对线期 KDA 压制更明显", "pdmg": f"{fav} 选手对位输出更高",
+                   "pkp": f"{fav} 参团更积极、团队配合更紧", "pdeath": f"{fav} 选手死得更少、更稳",
+                   "pwr": f"{fav} 这批首发最近赢得更多"}[f]
+        elif f in ("map", "newness") or f.endswith("_g"):
             continue
         else:
             txt = f
@@ -80,11 +88,40 @@ def reasons(model, a, b, x, contrib, display, rng):
     return sorted(out, key=lambda z: -abs(z[0]))
 
 
+ROLE_CN = ["上单", "打野", "中单", "下路", "辅助"]
+
+
+def lane_duels(model, a, b, display):
+    """逐位置比较双方首发近期表现（对位伤害差、KDA 差、死亡）。"""
+    s = model.rater.s
+    ra, rb = s.roster.get(a), s.roster.get(b)
+    if not ra or not rb or len(ra) != 5 or len(rb) != 5:
+        return []
+    out = []
+    for i in range(5):
+        pa, na = model.rater.perf([ra[i]])
+        pb, nb = model.rater.perf([rb[i]])
+        if not na or not nb:
+            continue
+        # 综合分：对位伤害差 + 0.3×对位KDA差 - 死亡/分
+        sa = np.nan_to_num(pa[1]) + 0.3 * np.nan_to_num(pa[0]) - np.nan_to_num(pa[3])
+        sb = np.nan_to_num(pb[1]) + 0.3 * np.nan_to_num(pb[0]) - np.nan_to_num(pb[3])
+        if abs(sa - sb) < 0.3:
+            continue
+        w, l = (ra[i], rb[i]) if sa > sb else (rb[i], ra[i])
+        out.append((abs(sa - sb), f"{ROLE_CN[i]} {w.split(':', 1)[-1]} 近期表现优于 {l.split(':', 1)[-1]}"))
+    return [t for _, t in sorted(out, reverse=True)[:3]]
+
+
 def opinion(model, a, b, best_of, display=str, draft=None, seed=0, extra=None):
     """返回一段中文观点。draft: LOL 的 BP 预案(draft.plan 的结果)；CS 自动做地图 BP 模拟。"""
     rng = random.Random(f"{a}-{b}-{seed}")
     x = model.x(a, b)
     contrib = model.lr.contributions(x)
+    # 「× 新人比例」的特征并回原特征，一起解释
+    for k in list(contrib):
+        if k.endswith("_g") and k[:-2] in contrib:
+            contrib[k[:-2]] += contrib.pop(k)
     pg = model.p_game(a, b)
     veto = None
     if model.game == "cs":
@@ -111,6 +148,9 @@ def opinion(model, a, b, best_of, display=str, draft=None, seed=0, extra=None):
         lines.append(_pick(rng, "理由：", "主要依据：", "为什么：") + "；".join(pro[:3]) + "。")
     if con:
         lines.append(_pick(rng, "不过要注意：", "风险点：", "但是：") + con[0] + "。")
+    duel = lane_duels(model, a, b, display)
+    if duel:
+        lines.append("位置对比：" + "；".join(duel) + "。")
     if veto and veto["maps"]:
         pm = veto["pm"]
         seq = "，".join(f"{display(t)}禁{m}" for t, m in veto["bans"][:2])

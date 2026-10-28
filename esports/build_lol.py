@@ -19,7 +19,9 @@ RIOT_INTL = {"WLDs", "MSI", "FST", "MSC"}
 
 def _read_oe(path):
     cols = ["gameid", "league", "year", "split", "playoffs", "date", "game", "patch", "side",
-            "position", "playername", "teamname", "champion", "ban1", "ban2", "ban3", "ban4", "ban5", "result"]
+            "position", "playername", "teamname", "champion", "ban1", "ban2", "ban3", "ban4", "ban5", "result",
+            "gamelength", "kills", "deaths", "assists", "damagetochampions",
+            "totalgold", "towers", "dragons", "barons"]
     df = pd.read_csv(path, usecols=cols, low_memory=False, dtype=str)
     return df
 
@@ -58,6 +60,19 @@ def oe_games() -> pd.DataFrame:
         for i in range(1, 6):
             col = (side, i)
             g[f"{s}n{i}"] = pn[col] if col in pn.columns else None
+    # 选手表现：击杀/死亡/助攻/对英雄伤害（训练和联网搜索都拿得到的数据）
+    for col, short in (("kills", "k"), ("deaths", "d"), ("assists", "a"), ("damagetochampions", "dmg")):
+        ply[col] = pd.to_numeric(ply[col], errors="coerce")
+        pv = ply.drop_duplicates(["gameid", "side", "pi"]).pivot_table(
+            index="gameid", columns=["side", "pi"], values=col, aggfunc="first")
+        for s, side in (("b", "Blue"), ("r", "Red")):
+            for i in range(1, 6):
+                g[f"{s}{short}{i}"] = pv[(side, i)] if (side, i) in pv.columns else None
+    g["gamelength"] = pd.to_numeric(blue["gamelength"], errors="coerce")
+    # 团队局内数据：经济、推塔、小龙、大龙（联网的单场页也有同样的字段）
+    for col, short in (("totalgold", "gold"), ("towers", "tow"), ("dragons", "drag"), ("barons", "bar")):
+        g["b" + short] = pd.to_numeric(blue[col], errors="coerce")
+        g["r" + short] = pd.to_numeric(red[col], errors="coerce")
     g = g.reset_index()
     g["date"] = pd.to_datetime(g.date, errors="coerce")
     g = g.dropna(subset=["date", "blue_win"])
@@ -79,7 +94,9 @@ def keep_cols():
     return ["date", "year", "league", "event", "intl", "playoffs", "patch", "game", "blue", "red", "blue_win",
             *[f"bp{i}" for i in range(1, 6)], *[f"rp{i}" for i in range(1, 6)],
             *[f"bb{i}" for i in range(1, 6)], *[f"rb{i}" for i in range(1, 6)],
-            *[f"bn{i}" for i in range(1, 6)], *[f"rn{i}" for i in range(1, 6)], "source"]
+            *[f"bn{i}" for i in range(1, 6)], *[f"rn{i}" for i in range(1, 6)],
+            *[f"{s}{x}{i}" for s in "br" for x in ("k", "d", "a", "dmg") for i in range(1, 6)], "gamelength",
+            *[f"{s}{x}" for s in "br" for x in ("gold", "tow", "drag", "bar")], "source"]
 
 
 def build():

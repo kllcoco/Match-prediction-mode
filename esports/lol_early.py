@@ -126,6 +126,11 @@ def scrape(years=range(2011, 2016)):
                             qa, qb = g.get("players" + a, []), g.get("players" + b, [])
                             row[f"bn{i+1}"] = qa[i] if i < len(qa) else None
                             row[f"rn{i+1}"] = qb[i] if i < len(qb) else None
+                            for key, short in (("kills", "k"), ("deaths", "d"), ("assists", "a")):
+                                va, vb = g.get(key + a, []), g.get(key + b, [])
+                                row[f"b{short}{i+1}"] = va[i] if i < len(va) else None
+                                row[f"r{short}{i+1}"] = vb[i] if i < len(vb) else None
+                        row["gamelength"] = g.get("length")
                         rows.append(row)
                 else:
                     # 只有比分：按比分展开成若干局（无 BP）

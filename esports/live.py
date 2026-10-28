@@ -63,12 +63,23 @@ def html_matches(h):
                 continue
             games.append(dict(win1=int(lab.group(1) == "win"), side1=champs[0][0],
                               c1=[H.unescape(x) for _, x in champs[:5]], c2=[H.unescape(x) for _, x in champs[5:10]]))
-        # 每局选手名
+        # 每局选手名 + 表现（K/D/A、伤害）+ 时长
         dets = re.split(r'class="brkts-popup-game-detail with-center-column"', c)[1:]
         for gi, dsec in enumerate(dets[:len(games)]):
             ps = re.findall(r'brkts-popup-game-detail-player-character">.*?</div><a [^>]*title="([^"]+)"', dsec, re.S)
             if len(ps) >= 10:
                 games[gi]["p1"], games[gi]["p2"] = ps[:5], ps[5:10]
+            st = re.findall(r'brkts-popup-game-detail-player-stats"><div>(\d+)<span class="slash">/</span>(\d+)'
+                            r'<span class="slash">/</span>(\d+)</div>(?:\s*<div>\(<i[^>]*></i>&#160;([\d.]+)(K?)\))?', dsec)
+            if len(st) >= 10:
+                for t, part in (("1", st[:5]), ("2", st[5:10])):
+                    games[gi]["k" + t] = [int(x[0]) for x in part]
+                    games[gi]["d" + t] = [int(x[1]) for x in part]
+                    games[gi]["a" + t] = [int(x[2]) for x in part]
+                    games[gi]["dmg" + t] = [float(x[3]) * (1000 if x[4] else 1) if x[3] else None for x in part]
+            ln = re.search(r"Game \d+ - (\d+):(\d+)", dsec)
+            if ln:
+                games[gi]["length"] = int(ln.group(1)) * 60 + int(ln.group(2))
         out.append(dict(team1=names[0], team2=names[1], score1=s1, score2=s2, date=date, games=games))
     return out
 
@@ -95,6 +106,13 @@ def scrape_root(root, game, ttl):
     pages = [root] + [p["title"] for p in sub["query"]["allpages"]
                       if not re.search(r"Statistics|Player Stats|Qualif|Additional|Media|Broadcast", p["title"])]
     rows = []
+    rt = net.get(L.API.format(wiki=wiki), dict(action="query", prop="revisions", rvprop="content", rvslots="main",
+                                               format="json", redirects=1, titles=root), gap=L.GAP, as_json=True, ttl=ttl)
+    pg0 = next(iter(rt["query"]["pages"].values()))
+    src0 = pg0["revisions"][0]["slots"]["main"]["*"] if pg0.get("revisions") else ""
+    ed = re.search(r"\|\s*edate\s*=\s*(\d{4}-\d{2}-\d{2})", src0)
+    if ed and pd.Timestamp(ed.group(1)) < pd.Timestamp(datetime.utcnow()) - pd.Timedelta(days=2):
+        ttl = None  # 已结束：永久缓存
     for p in pages:
         text = net.get(L.API.format(wiki=wiki), dict(action="query", prop="revisions", rvprop="content",
                                                      rvslots="main", format="json", redirects=1, titles=p),
@@ -135,6 +153,12 @@ def to_lol_rows(ms):
         lg = _league_of(m["event"])
         games = m["games"] or [dict(win1=int(i < m["score1"])) for i in range(m["score1"] + m["score2"])]
         for gi, g in enumerate(games, 1):
+            if "win1" not in g:  # 旧格式（wiki 源码模板）字段名不同，转成统一格式
+                g = dict(win1=int(g.get("winner") == 1), side1=(g.get("side1") or "blue").lower(),
+                         c1=g.get("picks1", []), c2=g.get("picks2", []), p1=g.get("players1", []),
+                         p2=g.get("players2", []), k1=g.get("kills1", []), k2=g.get("kills2", []),
+                         d1=g.get("deaths1", []), d2=g.get("deaths2", []), a1=g.get("assists1", []),
+                         a2=g.get("assists2", []), length=g.get("length"))
             blue1 = g.get("side1", "blue") == "blue"
             a, b = ("1", "2") if blue1 else ("2", "1")
             r = dict(date=m["date"], year=m["date"].year if m["date"] else None, league=lg, event=m["event"],
@@ -146,6 +170,10 @@ def to_lol_rows(ms):
                     cs, ps = g.get("c" + t, []), g.get("p" + t, [])
                     r[f"{s}p{i+1}"] = cs[i] if i < len(cs) else None
                     r[f"{s}n{i+1}"] = ps[i] if i < len(ps) else None
+                    for x in ("k", "d", "a", "dmg"):
+                        v = g.get(x + t, [])
+                        r[f"{s}{x}{i+1}"] = v[i] if i < len(v) else None
+            r["gamelength"] = g.get("length")
             rows.append(r)
     return pd.DataFrame(rows)
 

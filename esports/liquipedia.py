@@ -134,6 +134,11 @@ def parse_matches(text: str) -> list[dict]:
                 g[f"bans{t}"] = [_clean(mp[f"t{t}b{i}"]) for i in range(1, 6) if _clean(mp.get(f"t{t}b{i}", ""))]
                 g[f"players{t}"] = [_clean(m) for m in re.findall(
                     r"player\s*=\s*([^|}]+)", " ".join(mp.get(f"t{t}p{i}", "") for i in range(1, 6)))]
+                for key in ("kills", "deaths", "assists"):
+                    g[f"{key}{t}"] = [int(x) if x.isdigit() else None for x in (
+                        (re.search(rf"{key}\s*=\s*(\d*)", mp.get(f"t{t}p{i}", "")) or [None, ""])[1] for i in range(1, 6))]
+                ln = re.match(r"(\d+):(\d+)", mp.get("length", ""))
+                g["length"] = int(ln.group(1)) * 60 + int(ln.group(2)) if ln else None
             games.append(g)
         w1 = sum(g["winner"] == 1 for g in games)
         w2 = sum(g["winner"] == 2 for g in games)

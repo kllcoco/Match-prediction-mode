@@ -21,6 +21,23 @@ CUT_NAFIS = "2020-03-19"
 CUT_EKTARR = "2023-01-01"
 
 
+MAJOR_STAGE_ALIASES = {"eleague major 2018 main qualifier", "faceit major 2018 main qualifier",
+                       "iem katowice 2019 main qualifier", "starladder major 2019 main qualifier"}
+
+
+def _stat_str(roster, d):
+    """按（排好序的）阵容顺序，把每人 (K, D, ADR, KAST) 拼成 'k,d,adr,kast|...'"""
+    if not isinstance(roster, str) or not d:
+        return None
+    out = []
+    for name in roster.split("|"):
+        v = d.get(name)
+        if v is None or any(pd.isna(x) for x in v):
+            return None
+        out.append(",".join(f"{float(x):g}" for x in v))
+    return "|".join(out)
+
+
 def majors():
     return json.loads(MAJORS_FILE.read_text(encoding="utf-8"))
 
@@ -29,15 +46,19 @@ def is_major_event(name: str, date, mj) -> int:
     """Major 正赛（含挑战者/传奇阶段）。Minor/RMR/预选赛不算。"""
     if isinstance(name, str) and name:
         low = name.lower()
+        # 2018-2019 的挑战者组在数据里叫 "Main Qualifier"，属于 Major 正赛（审计发现）
+        if low in MAJOR_STAGE_ALIASES:
+            return 1
         if re.search(r"minor|rmr|qualif|road to|showmatch|all-star|закрыт|открыт", low):
             return 0
         for m in mj:
             if any(k.lower() == low or (k.lower() in low and "stage" in low) for k in m["event_names"]):
                 return 1
         return 0
-    # 无赛事名的数据：按 Major 日期窗口判断
+    # 无赛事名的数据：按 Major 日期窗口判断（该数据源日期常差一天，前后各放宽 2 天，审计发现）
+    d = pd.Timestamp(str(date)[:10])
     for m in mj:
-        if m["start"] <= str(date)[:10] <= m["end"]:
+        if pd.Timestamp(m["start"]) - pd.Timedelta(days=2) <= d <= pd.Timestamp(m["end"]) + pd.Timedelta(days=2):
             return 1
     return 0
 
@@ -73,10 +94,22 @@ def mateus():
     df = pd.DataFrame(dict(date=r.date, event=r.event_name.fillna(""), match_id="m" + r.match_id.astype(str),
                            best_of=r.match_id.map(bo).fillna(1).astype(int), team1=r.team_1, team2=r.team_2,
                            map=r._map, win1=(r.map_winner == 1).astype(int)))
-    pl = pd.read_csv(RAW / "cs_2015_2020/players.csv", usecols=["player_name", "team", "match_id"])
+    cols = ["player_name", "team", "match_id"] + [f"map_{k}" for k in (1, 2, 3)] + \
+        [f"m{k}_{x}" for k in (1, 2, 3) for x in ("kills", "deaths", "adr", "kast")]
+    pl = pd.read_csv(RAW / "cs_2015_2020/players.csv", usecols=cols)
     ros = pl.groupby(["match_id", "team"]).player_name.apply(lambda x: "|".join(sorted(map(str, x)))).to_dict()
+    # 每张图每个选手：击杀、死亡、ADR、KAST
+    pst = {}
+    for row in pl.itertuples(index=False):
+        for k in (1, 2, 3):
+            mp = getattr(row, f"map_{k}")
+            if isinstance(mp, str):
+                pst.setdefault((row.match_id, row.team, mp), {})[str(row.player_name)] = (
+                    getattr(row, f"m{k}_kills"), getattr(row, f"m{k}_deaths"), getattr(row, f"m{k}_adr"), getattr(row, f"m{k}_kast"))
     df["roster1"] = [ros.get((mid, t)) for mid, t in zip(r.match_id, r.team_1)]
     df["roster2"] = [ros.get((mid, t)) for mid, t in zip(r.match_id, r.team_2)]
+    df["stats1"] = [_stat_str(ro, pst.get((mid, t, mp))) for ro, mid, t, mp in zip(df.roster1, r.match_id, r.team_1, r._map)]
+    df["stats2"] = [_stat_str(ro, pst.get((mid, t, mp))) for ro, mid, t, mp in zip(df.roster2, r.match_id, r.team_2, r._map)]
     df = df[df["map"] != "Default"]
     df["source"] = "mateus"
     p = p.merge(ev, on="event_id", how="left")
@@ -88,6 +121,10 @@ def nafis():
     n["date"] = pd.to_datetime(n.match_time, unit="ms")
     n = n[n.date >= CUT_NAFIS]
     ros = n.groupby(["match_url", "team"]).player_name.apply(lambda x: "|".join(sorted(set(map(str, x))))).to_dict()
+    pst = {}
+    for row in n.itertuples(index=False):
+        pst.setdefault((row.match_url, row.team, row.map_name), {})[str(row.player_name)] = (
+            row.kill_score, row.death_score, row.adr, row.kast)
     n = n.drop_duplicates(["match_url", "team", "map_name"])
     n["t1"] = n[["team", "opponent"]].min(axis=1)
     n["t2"] = n[["team", "opponent"]].max(axis=1)
@@ -97,6 +134,8 @@ def nafis():
                            best_of=bo, team1=n.team, team2=n.opponent, map=n.map_name, win1=n.map_won.astype(int)))
     df["roster1"] = [ros.get((u, t)) for u, t in zip(n.match_url, n.team)]
     df["roster2"] = [ros.get((u, t)) for u, t in zip(n.match_url, n.opponent)]
+    df["stats1"] = [_stat_str(ro, pst.get((u, t, mp))) for ro, u, t, mp in zip(df.roster1, n.match_url, n.team, n.map_name)]
+    df["stats2"] = [_stat_str(ro, pst.get((u, t, mp))) for ro, u, t, mp in zip(df.roster2, n.match_url, n.opponent, n.map_name)]
     df["source"] = "nafis"
     return df
 
@@ -105,25 +144,30 @@ def ektarr():
     e = pd.read_csv(RAW / "cs_2023_2026/cs2_all_tiers_games.csv",
                     usecols=["match_id", "tournament", "team1", "team2", "is_total", "bestOf", "score1_game",
                              "score2_game", "map_name", "datetime", "score1_match", "score2_match",
-                             *[f"team{t}_player{i}" for t in (1, 2) for i in range(1, 6)]])
+                             *[f"team{t}_player{i}{x}" for t in (1, 2) for i in range(1, 6)
+                               for x in ("", "_kills", "_deaths", "_adr", "_kast")]])
     for t in (1, 2):
         e[f"roster{t}"] = ["|".join(sorted(str(x).split(" (")[0] for x in row if isinstance(x, str))) or None
                            for row in e[[f"team{t}_player{i}" for i in range(1, 6)]].values]
     e = e[e.datetime >= CUT_EKTARR]
+    for t in (1, 2):
+        e[f"stats{t}"] = [_stat_str(ro, {str(row[5 * i]).split(" (")[0]: tuple(row[5 * i + 1: 5 * i + 5]) for i in range(5)})
+                          for ro, row in zip(e[f"roster{t}"], e[[f"team{t}_player{i}{x}" for i in range(1, 6)
+                                                                 for x in ("", "_kills", "_deaths", "_adr", "_kast")]].values)]
     maps = e[~e.is_total].dropna(subset=["score1_game", "score2_game"])
     maps = maps[maps.score1_game != maps.score2_game]
     df = pd.DataFrame(dict(date=maps.datetime.str[:10], event=maps.tournament, match_id="e" + maps.match_id.astype(str),
                            best_of=maps.bestOf, team1=maps.team1, team2=maps.team2, map=maps.map_name,
                            win1=(maps.score1_game > maps.score2_game).astype(int),
-                           roster1=maps.roster1, roster2=maps.roster2))
+                           roster1=maps.roster1, roster2=maps.roster2, stats1=maps.stats1, stats2=maps.stats2))
     # 只有总比分、没有地图明细的系列赛：按比分展开
     tot = e[e.is_total & ~e.match_id.isin(maps.match_id)].dropna(subset=["score1_match", "score2_match"])
     rows = []
     for _, r in tot.iterrows():
         for k in range(int(r.score1_match or 0)):
-            rows.append((r.datetime[:10], r.tournament, f"e{r.match_id}", r.bestOf, r.team1, r.team2, "", 1, r.roster1, r.roster2))
+            rows.append((r.datetime[:10], r.tournament, f"e{r.match_id}", r.bestOf, r.team1, r.team2, "", 1, r.roster1, r.roster2, None, None))
         for k in range(int(r.score2_match or 0)):
-            rows.append((r.datetime[:10], r.tournament, f"e{r.match_id}", r.bestOf, r.team1, r.team2, "", 0, r.roster1, r.roster2))
+            rows.append((r.datetime[:10], r.tournament, f"e{r.match_id}", r.bestOf, r.team1, r.team2, "", 0, r.roster1, r.roster2, None, None))
     df = pd.concat([df, pd.DataFrame(rows, columns=df.columns)])
     df["source"] = "ektarr"
     return df

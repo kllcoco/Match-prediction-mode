@@ -70,13 +70,32 @@ ALIASES.update({
     "lz": "longzhu", "longzhugaming": "longzhu", "msf": "misfits", "afs": "kdf", "grf": "griffin", "spy": "splyce",
     "gen": "geng", "madl": "madlions", "najinsword": "najinblacksword", "fw": "flashwolves", "h2k": "h2kgaming",
     "c9": "cloud9", "imt": "immortals", "tl": "liquid", "eg": "evilgeniuses", "fpx": "fpx", "blg": "blg",
-    "drx": "drx", "dragonx": "drx", "hle": "hle", "lng": "lng", "wbg": "wbg", "tes": "tes", "jdg": "jdg",
+    "drx": "drx", "dragonx": "drx", "dplus": "dk", "hle": "hle", "lng": "lng", "wbg": "wbg", "tes": "tes", "jdg": "jdg",
 })
 
 DROP_WORDS = r"(esports?|gaming|e-sports|team|club|clan)$"
 
 
+_DYN = None
+
+
+def _dynamic():
+    """数据自动推断出的改名（enrich.py 生成）"""
+    global _DYN
+    if _DYN is None:
+        import json
+        from pathlib import Path
+        f = Path(__file__).resolve().parent.parent / "data" / "processed" / "team_aliases.json"
+        _DYN = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    return _DYN
+
+
 def norm(name, game=None) -> str:
+    k = _norm(name, game)
+    return _dynamic().get(k, k) if game != "cs" else k
+
+
+def _norm(name, game=None) -> str:
     if name is None or (isinstance(name, float)):
         return ""
     s = unicodedata.normalize("NFKD", str(name)).encode("ascii", "ignore").decode().lower()

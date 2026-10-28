@@ -14,9 +14,14 @@ import numpy as np
 import pandas as pd
 
 FEATURES = ["elo", "form", "league", "side", "exp", "map"]
+PERF = ["pkda", "pdmg", "pkp", "pdeath", "pwr"]  # 选手表现特征（看数据、不看名字）
+TEAM_IG = ["tgold", "tobj"]  # 团队局内特征：经济占比、资源控制
+GATED = ["elo", "form", "exp"] + TEAM_IG + PERF
 FEATURE_CN = {
     "elo": "综合实力分差", "form": "近期状态", "league": "赛区强弱",
     "side": "蓝色方优势", "exp": "比赛经验", "map": "地图熟练度", "clutch": "大赛表现",
+    "tgold": "局内经济", "tobj": "资源控制（推塔/小龙/大龙）",
+    "pkda": "选手对位 KDA", "pdmg": "选手对位伤害", "pkp": "参团率", "pdeath": "死亡控制", "pwr": "选手近期胜率",
 }
 
 
@@ -29,6 +34,7 @@ class Params:
     season_shrink: float = 0.25   # 跨年时队伍分回归均值的比例
     idle_days: float = 120.0      # 长时间不比赛开始回归
     form_alpha: float = 0.15
+    perf_n: int = 20              # 每个选手记住最近多少局的表现
     clutch_alpha: float = 0.05
     k_big: float = 1.0            # 大赛内比赛的更新倍数；回测显示调大没有帮助，默认不加速
 
@@ -47,6 +53,9 @@ class State:
     year: int = 0
     recent: dict = field(default_factory=lambda: defaultdict(lambda: deque(maxlen=10)))
     clutch: dict = field(default_factory=lambda: defaultdict(float))  # 大赛（季后赛/顶级赛事）超预期程度
+    pcount: dict = field(default_factory=lambda: defaultdict(int))  # 选手职业场次
+    tstats: dict = field(default_factory=dict)  # 队伍 -> 最近 15 局 [(经济占比-0.5, 资源差)]
+    pstats: dict = field(default_factory=dict)  # 选手 -> 最近 N 局表现 [(对位KDA差, 对位伤害差/分, 参团率, 死亡/分, 胜)]
 
 
 def expect(d):
@@ -97,14 +106,77 @@ class Rater:
                     self.s.tmap[t] *= k
             self.s.year = year
 
+    def perf(self, roster):
+        """一队首发 5 人的近期表现均值（没有数据的选手跳过）。返回 (5 个指标, 有数据的人数)"""
+        vals = [[] for _ in range(5)]
+        n = 0
+        for p in roster or []:
+            dq = self.s.pstats.get(p)
+            if not dq:
+                continue
+            n += 1
+            arr = np.array(dq, dtype=float)
+            for j in range(5):
+                col = arr[:, j]
+                col = col[~np.isnan(col)]
+                if len(col):
+                    vals[j].append(col.mean())
+        return [float(np.mean(v)) if v else np.nan for v in vals], n
+
+    def perf_diff(self, r1, r2):
+        a, na = self.perf(r1)
+        b, nb = self.perf(r2)
+        out = {}
+        for k, x, y in zip(PERF, a, b):
+            out[k] = 0.0 if (np.isnan(x) or np.isnan(y)) else x - y
+        out["pwr"] = out["pwr"]
+        return out
+
+    def _record_perf(self, row, y):
+        c1, c2 = row.get("cst1"), row.get("cst2")
+        if c1 and c2 and row.get("p1") and row.get("p2"):
+            # CS：每人每图 (击杀-死亡, ADR/100, KAST/100, -, 胜)，与 LOL 共用同一套表现特征槽位
+            for st, ros, win in ((c1, row["p1"], y), (c2, row["p2"], 1 - y)):
+                for (k, d, adr, kast), pl in zip(st, ros):
+                    dq = self.s.pstats.setdefault(pl, deque(maxlen=self.p.perf_n))
+                    dq.append((k - d, adr / 100, kast / 100, np.nan, win))
+            return
+        st1, st2, gl = row.get("st1"), row.get("st2"), row.get("gamelength")
+        r1, r2 = row.get("p1"), row.get("p2")
+        if not st1 or not st2 or not r1 or not r2 or len(st1) != 5 or len(st2) != 5:
+            return
+        mins = gl / 60 if gl and gl == gl and gl > 300 else np.nan
+        tk = [np.nansum([x[0] for x in st]) for st in (st1, st2)]
+        for side, (st, op, ros, win, kills) in enumerate(((st1, st2, r1, y, tk[0]), (st2, st1, r2, 1 - y, tk[1]))):
+            for i in range(5):
+                k, d, a, dmg = st[i]
+                ok, od, oa, odmg = op[i]
+                kda = (k + a - d) - (ok + oa - od) if None not in (k, d, a, ok, od, oa) else np.nan
+                dd = (dmg - odmg) / mins / 100 if (dmg == dmg and odmg == odmg and dmg is not None and odmg is not None) else np.nan
+                kp = (k + a) / kills if (kills and k is not None and a is not None) else np.nan
+                dpm = d / mins if (d is not None and mins == mins) else np.nan
+                dq = self.s.pstats.setdefault(ros[i], deque(maxlen=self.p.perf_n))
+                dq.append((kda, dd, kp, dpm, win))
+
     def features(self, t1, t2, side=0.0, mp=None, r1=None, r2=None, l1=None, l2=None):
         s = self.s
         S1, _, L1 = self.strength(t1, r1, l1)
         S2, _, L2 = self.strength(t2, r2, l2)
         m = (s.tmap[(t1, mp)] - s.tmap[(t2, mp)]) / 400.0 if mp else 0.0
-        return dict(elo=(S1 - S2) / 400.0, form=s.form[t1] - s.form[t2], league=(L1 - L2) / 400.0,
-                    side=side, exp=math.log1p(s.n[t1]) - math.log1p(s.n[t2]), map=m,
-                    clutch=s.clutch[t1] - s.clutch[t2])
+        f = dict(elo=(S1 - S2) / 400.0, form=s.form[t1] - s.form[t2], league=(L1 - L2) / 400.0,
+                 side=side, exp=math.log1p(s.n[t1]) - math.log1p(s.n[t2]), map=m,
+                 clutch=s.clutch[t1] - s.clutch[t2])
+        f.update(self.perf_diff(r1 or s.roster.get(t1), r2 or s.roster.get(t2)))
+        for k, j in (("tgold", 0), ("tobj", 1)):
+            a, b = s.tstats.get(t1), s.tstats.get(t2)
+            f[k] = (np.mean([x[j] for x in a]) - np.mean([x[j] for x in b])) if (a and b) else 0.0
+        # 新人比例 g：首发里职业场次 < 20 的人数（两队较大者）/5。模型据此学「新人多时更信表现数据」
+        ra, rb = r1 or s.roster.get(t1) or [], r2 or s.roster.get(t2) or []
+        g = min(1.0, max(sum(s.pcount[p] < 20 for p in ra), sum(s.pcount[p] < 20 for p in rb)) / 5)
+        for k in GATED:
+            f[k + "_g"] = f[k] * g
+        f["newness"] = g
+        return f
 
     # ---------- 更新 ----------
     def update(self, row):
@@ -120,7 +192,12 @@ class Rater:
             if row.get("domestic") and row.get("league"):
                 s.home[t] = row["league"]
         mp = row.get("map") or None
-        f = self.features(t1, t2, row.get("side", 0.0), mp)
+        f = self.features(t1, t2, row.get("side", 0.0), mp, row.get("p1"), row.get("p2"))
+        # 新面孔数：首发里之前职业场次 < 20 的人数（两队取较大者）
+        f["nnew"] = max(sum(s.pcount[p] < 20 for p in (row.get("p1") or [])),
+                        sum(s.pcount[p] < 20 for p in (row.get("p2") or [])))
+        for p in (row.get("p1") or []) + (row.get("p2") or []):
+            s.pcount[p] += 1
         S1, pv1, L1 = self.strength(t1)
         S2, pv2, L2 = self.strength(t2)
         e = expect(S1 - S2)
@@ -151,6 +228,14 @@ class Rater:
         s.form[t2] = (1 - a) * s.form[t2] - a * d
         s.n[t1] += 1
         s.n[t2] += 1
+        self._record_perf(row, y)
+        ts1, ts2 = row.get("ts1"), row.get("ts2")
+        if ts1 and ts2:
+            g1, g2 = ts1[0], ts2[0]
+            share = g1 / (g1 + g2) - 0.5 if g1 and g2 else 0.0
+            obj = (ts1[1] - ts2[1]) + (ts1[2] - ts2[2]) + 2 * (ts1[3] - ts2[3])
+            s.tstats.setdefault(t1, deque(maxlen=15)).append((share, obj / 10))
+            s.tstats.setdefault(t2, deque(maxlen=15)).append((-share, -obj / 10))
         s.recent[t1].append(y)
         s.recent[t2].append(1 - y)
         s.last[t1] = s.last[t2] = date
@@ -229,5 +314,6 @@ def run(games: pd.DataFrame, rater: Rater, cutoff=None, train_mask=None):
         f["cross"] = int(bool(r.get("cross")))
         f["event"] = r.get("event") or ""
         f["cal"] = int(bool(r.get("cal") or r.get("big")))
+        f["league_raw"] = r.get("league_raw")
         rows.append(f)
     return pd.DataFrame(rows)

@@ -1,4 +1,5 @@
 """把两个游戏的数据转成评分引擎需要的统一格式，并标记哪些比赛在严格模式下要屏蔽。"""
+import numpy as np
 import pandas as pd
 
 from .names import norm
@@ -45,6 +46,29 @@ def lol_frame(g: pd.DataFrame, strict=True) -> pd.DataFrame:
     # 5 人都有名字才算（否则当作只知道队伍）
     df["p1"] = [r if r and len(r) == 5 else None for r in df.p1]
     df["p2"] = [r if r and len(r) == 5 else None for r in df.p2]
+    # 每个选手本局表现 (K, D, A, 伤害)，按上野中下辅顺序
+    def stats(sd):
+        cols = [[f"{sd}{x}{i}" for x in ("k", "d", "a", "dmg")] for i in range(1, 6)]
+        if cols[0][0] not in g:
+            return [None] * len(g)
+        arr = [g[c].to_numpy(dtype=float, na_value=np.nan) for c in sum(cols, [])]
+        out = []
+        for j in range(len(g)):
+            v = [arr[q][j] for q in range(20)]
+            if any(np.isnan(v[q]) for q in (0, 1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 14, 16, 17, 18)):
+                out.append(None)
+                continue
+            out.append([tuple(None if np.isnan(x) else float(x) for x in v[4 * i:4 * i + 4]) for i in range(5)])
+        return out
+    df["st1"], df["st2"] = stats("b"), stats("r")
+    df["gamelength"] = pd.to_numeric(g["gamelength"], errors="coerce").values if "gamelength" in g else np.nan
+    for sd, col in (("b", "ts1"), ("r", "ts2")):
+        cols = [f"{sd}{x}" for x in ("gold", "tow", "drag", "bar")]
+        if cols[0] in g:
+            v = g[cols].apply(pd.to_numeric, errors="coerce").values
+            df[col] = [tuple(r) if not np.isnan(r).any() else None for r in v]
+        else:
+            df[col] = None
     df = df[(df.t1 != "") & (df.t2 != "") & (df.t1 != df.t2)]
     return df.sort_values("date", kind="stable").reset_index(drop=True)
 
@@ -58,6 +82,9 @@ def cs_frame(m: pd.DataFrame, strict=True) -> pd.DataFrame:
                        "match_id": m.match_id, "best_of": m.best_of})
     for c, col in (("roster1", "p1"), ("roster2", "p2")):
         df[col] = [[f"cs:{x.lower()}" for x in r.split("|")] if isinstance(r, str) and r.count("|") >= 3 else None
+                   for r in (m[c] if c in m else [None] * len(m))]
+    for c, col in (("stats1", "cst1"), ("stats2", "cst2")):
+        df[col] = [[tuple(float(v) for v in x.split(",")) for x in r.split("|")] if isinstance(r, str) else None
                    for r in (m[c] if c in m else [None] * len(m))]
     df["big"] = m.major.astype(int)
     from .tune import TIER1
