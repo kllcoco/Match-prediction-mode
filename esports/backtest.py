@@ -10,8 +10,8 @@ from .engine import Logistic, Params, Rater, logloss, run, series_prob
 from .names import norm
 from .net import DATA
 
-from .engine import GATED, PERF, POOL, TEAM_IG
-FEATS = {"lol": ["elo", "form", "league", "side", "exp"] + TEAM_IG + PERF + POOL + [k + "_g" for k in GATED],
+from .engine import GATED, INTL, PERF, POOL, TEAM_IG
+FEATS = {"lol": ["elo", "form", "league", "side", "exp"] + TEAM_IG + PERF + POOL + INTL + [k + "_g" for k in GATED],
          "cs": ["elo", "form", "exp", "map", "pkda", "pdmg", "pkp", "pwr"]
          + [k + "_g" for k in ("elo", "form", "exp", "pkda", "pdmg", "pkp", "pwr")]}
 BURN_IN_DAYS = 90
@@ -72,6 +72,7 @@ class Model:
             from .veto import map_pool
             self.pool = map_pool(frame, cutoff)
         self.cross_w = None
+        self.big_ctx = 1  # 回测/S16 预测的都是国际大赛
         if game == "lol" and REGION["on"]:
             self.set_region_offsets(frame, cutoff)
             if cross:
@@ -114,6 +115,11 @@ class Model:
         return self.cross_w is not None and h.get(t1) and h.get(t2) and h.get(t1) != h.get(t2)
 
     def p_game(self, t1, t2, side=0.0, mp=None):
+        if self.rater.ctx[2] != self.big_ctx:  # 预测的是国际大赛：打开「国际赛」开关
+            self.rater.ctx = (self.rater.ctx[0], self.rater.ctx[1], self.big_ctx)
+        return self._p_game(t1, t2, side, mp)
+
+    def _p_game(self, t1, t2, side=0.0, mp=None):
         if self.is_cross(t1, t2):
             # 跨赛区：用跨赛区比赛单独校准的权重（更谦虚）
             S1 = self.rater.strength(t1, league="__none")[0]
@@ -122,6 +128,8 @@ class Model:
             a, b, c = (tuple(self.cross_w) + (0.0,))[:3]
             z = a * (S1 - S2) / 400 + b * (L.get(self.rater.s.home[t1], 0) - L.get(self.rater.s.home[t2], 0)) / 400
             z += c * self.perf_z(t1, t2)
+            if "intl_b" in self.feats:  # 国际赛超预期：权重来自主模型（在往届国际赛上学到的）
+                z += self.lr.w[self.feats.index("intl_b")] * self.x(t1, t2)["intl_b"] * self.temp
             return float(1 / (1 + np.exp(-z)))
         x = self.x(t1, t2, side, mp)
         z = float(np.dot([x[k] for k in self.feats], self.lr.w)) * self.temp
@@ -136,9 +144,9 @@ class Model:
                 from .veto import _series_from_maps
                 ps = []
                 for k in range(1, best_of + 1):
-                    self.rater.ctx = (1, k)
+                    self.rater.ctx = (1, k, self.big_ctx)
                     ps.append(self.p_game(t1, t2))
-                self.rater.ctx = (0, 1)
+                self.rater.ctx = (0, 1, 0)
                 return _series_from_maps(ps, best_of)
         if self.game == "cs":
             from .veto import series_with_veto

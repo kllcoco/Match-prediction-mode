@@ -251,9 +251,9 @@ def analysis(m, a_name, b_name, best_of=None):
     L += ["", "## 四、胜率与比分", ""]
     per = []
     for k in range(1, bo + 1):
-        m.rater.ctx = (getattr(m, "fearless", 0), k)
+        m.rater.ctx = (getattr(m, "fearless", 0), k, m.big_ctx)
         per.append(m.p_game(a, b))
-    m.rater.ctx = (0, 1)
+    m.rater.ctx = (0, 1, 0)
     ps = m.p_series(a, b, bo)
     L.append("- 逐局胜率（" + A + "）：" + "，".join(f"第{k}局 {p:.0%}" for k, p in enumerate(per, 1)))
     # 逐局胜率不同 -> 精确算各比分
